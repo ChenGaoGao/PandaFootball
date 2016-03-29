@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A76DF72E1CAAAC630086389D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF72D1CAAAC630086389D /* main.m */; };
+		A76DF7311CAAAC630086389D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7301CAAAC630086389D /* AppDelegate.m */; };
+		A76DF7341CAAAC630086389D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7331CAAAC630086389D /* FirstViewController.m */; };
+		A76DF7371CAAAC630086389D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7361CAAAC630086389D /* SecondViewController.m */; };
+		A76DF73A1CAAAC630086389D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF7381CAAAC630086389D /* Main.storyboard */; };
+		A76DF73C1CAAAC630086389D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76DF73B1CAAAC630086389D /* Assets.xcassets */; };
+		A76DF73F1CAAAC630086389D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF73D1CAAAC630086389D /* LaunchScreen.storyboard */; };
+		A76DF74A1CAAAC630086389D /* PandaFootballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7491CAAAC630086389D /* PandaFootballTests.m */; };
+		A76DF7551CAAAC630086389D /* PandaFootballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7541CAAAC630086389D /* PandaFootballUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A76DF7461CAAAC630086389D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A76DF7211CAAAC630086389D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A76DF7281CAAAC630086389D;
+			remoteInfo = PandaFootball;
+		};
+		A76DF7511CAAAC630086389D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A76DF7211CAAAC630086389D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A76DF7281CAAAC630086389D;
+			remoteInfo = PandaFootball;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A76DF7291CAAAC630086389D /* PandaFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76DF72D1CAAAC630086389D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A76DF72F1CAAAC630086389D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A76DF7301CAAAC630086389D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A76DF7321CAAAC630086389D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		A76DF7331CAAAC630086389D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		A76DF7351CAAAC630086389D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		A76DF7361CAAAC630086389D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		A76DF7391CAAAC630086389D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A76DF73B1CAAAC630086389D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A76DF73E1CAAAC630086389D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A76DF7401CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A76DF7451CAAAC630086389D /* PandaFootballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaFootballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76DF7491CAAAC630086389D /* PandaFootballTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaFootballTests.m; sourceTree = "<group>"; };
+		A76DF74B1CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A76DF7501CAAAC630086389D /* PandaFootballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaFootballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76DF7541CAAAC630086389D /* PandaFootballUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaFootballUITests.m; sourceTree = "<group>"; };
+		A76DF7561CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A76DF7261CAAAC630086389D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76DF7421CAAAC630086389D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76DF74D1CAAAC630086389D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A76DF7201CAAAC630086389D = {
+			isa = PBXGroup;
+			children = (
+				A76DF72B1CAAAC630086389D /* PandaFootball */,
+				A76DF7481CAAAC630086389D /* PandaFootballTests */,
+				A76DF7531CAAAC630086389D /* PandaFootballUITests */,
+				A76DF72A1CAAAC630086389D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A76DF72A1CAAAC630086389D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A76DF7291CAAAC630086389D /* PandaFootball.app */,
+				A76DF7451CAAAC630086389D /* PandaFootballTests.xctest */,
+				A76DF7501CAAAC630086389D /* PandaFootballUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A76DF72B1CAAAC630086389D /* PandaFootball */ = {
+			isa = PBXGroup;
+			children = (
+				A76DF72F1CAAAC630086389D /* AppDelegate.h */,
+				A76DF7301CAAAC630086389D /* AppDelegate.m */,
+				A76DF7321CAAAC630086389D /* FirstViewController.h */,
+				A76DF7331CAAAC630086389D /* FirstViewController.m */,
+				A76DF7351CAAAC630086389D /* SecondViewController.h */,
+				A76DF7361CAAAC630086389D /* SecondViewController.m */,
+				A76DF7381CAAAC630086389D /* Main.storyboard */,
+				A76DF73B1CAAAC630086389D /* Assets.xcassets */,
+				A76DF73D1CAAAC630086389D /* LaunchScreen.storyboard */,
+				A76DF7401CAAAC630086389D /* Info.plist */,
+				A76DF72C1CAAAC630086389D /* Supporting Files */,
+			);
+			path = PandaFootball;
+			sourceTree = "<group>";
+		};
+		A76DF72C1CAAAC630086389D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A76DF72D1CAAAC630086389D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A76DF7481CAAAC630086389D /* PandaFootballTests */ = {
+			isa = PBXGroup;
+			children = (
+				A76DF7491CAAAC630086389D /* PandaFootballTests.m */,
+				A76DF74B1CAAAC630086389D /* Info.plist */,
+			);
+			path = PandaFootballTests;
+			sourceTree = "<group>";
+		};
+		A76DF7531CAAAC630086389D /* PandaFootballUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A76DF7541CAAAC630086389D /* PandaFootballUITests.m */,
+				A76DF7561CAAAC630086389D /* Info.plist */,
+			);
+			path = PandaFootballUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A76DF7281CAAAC630086389D /* PandaFootball */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76DF7591CAAAC630086389D /* Build configuration list for PBXNativeTarget "PandaFootball" */;
+			buildPhases = (
+				A76DF7251CAAAC630086389D /* Sources */,
+				A76DF7261CAAAC630086389D /* Frameworks */,
+				A76DF7271CAAAC630086389D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PandaFootball;
+			productName = PandaFootball;
+			productReference = A76DF7291CAAAC630086389D /* PandaFootball.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A76DF7441CAAAC630086389D /* PandaFootballTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76DF75C1CAAAC630086389D /* Build configuration list for PBXNativeTarget "PandaFootballTests" */;
+			buildPhases = (
+				A76DF7411CAAAC630086389D /* Sources */,
+				A76DF7421CAAAC630086389D /* Frameworks */,
+				A76DF7431CAAAC630086389D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A76DF7471CAAAC630086389D /* PBXTargetDependency */,
+			);
+			name = PandaFootballTests;
+			productName = PandaFootballTests;
+			productReference = A76DF7451CAAAC630086389D /* PandaFootballTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A76DF74F1CAAAC630086389D /* PandaFootballUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76DF75F1CAAAC630086389D /* Build configuration list for PBXNativeTarget "PandaFootballUITests" */;
+			buildPhases = (
+				A76DF74C1CAAAC630086389D /* Sources */,
+				A76DF74D1CAAAC630086389D /* Frameworks */,
+				A76DF74E1CAAAC630086389D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A76DF7521CAAAC630086389D /* PBXTargetDependency */,
+			);
+			name = PandaFootballUITests;
+			productName = PandaFootballUITests;
+			productReference = A76DF7501CAAAC630086389D /* PandaFootballUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A76DF7211CAAAC630086389D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = myjoy;
+				TargetAttributes = {
+					A76DF7281CAAAC630086389D = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					A76DF7441CAAAC630086389D = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A76DF7281CAAAC630086389D;
+					};
+					A76DF74F1CAAAC630086389D = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A76DF7281CAAAC630086389D;
+					};
+				};
+			};
+			buildConfigurationList = A76DF7241CAAAC630086389D /* Build configuration list for PBXProject "PandaFootball" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A76DF7201CAAAC630086389D;
+			productRefGroup = A76DF72A1CAAAC630086389D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A76DF7281CAAAC630086389D /* PandaFootball */,
+				A76DF7441CAAAC630086389D /* PandaFootballTests */,
+				A76DF74F1CAAAC630086389D /* PandaFootballUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A76DF7271CAAAC630086389D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76DF73F1CAAAC630086389D /* LaunchScreen.storyboard in Resources */,
+				A76DF73C1CAAAC630086389D /* Assets.xcassets in Resources */,
+				A76DF73A1CAAAC630086389D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76DF7431CAAAC630086389D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76DF74E1CAAAC630086389D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A76DF7251CAAAC630086389D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76DF7371CAAAC630086389D /* SecondViewController.m in Sources */,
+				A76DF7311CAAAC630086389D /* AppDelegate.m in Sources */,
+				A76DF7341CAAAC630086389D /* FirstViewController.m in Sources */,
+				A76DF72E1CAAAC630086389D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76DF7411CAAAC630086389D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76DF74A1CAAAC630086389D /* PandaFootballTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76DF74C1CAAAC630086389D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76DF7551CAAAC630086389D /* PandaFootballUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A76DF7471CAAAC630086389D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A76DF7281CAAAC630086389D /* PandaFootball */;
+			targetProxy = A76DF7461CAAAC630086389D /* PBXContainerItemProxy */;
+		};
+		A76DF7521CAAAC630086389D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A76DF7281CAAAC630086389D /* PandaFootball */;
+			targetProxy = A76DF7511CAAAC630086389D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A76DF7381CAAAC630086389D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76DF7391CAAAC630086389D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A76DF73D1CAAAC630086389D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76DF73E1CAAAC630086389D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A76DF7571CAAAC630086389D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A76DF7581CAAAC630086389D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A76DF75A1CAAAC630086389D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PandaFootball/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootball;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A76DF75B1CAAAC630086389D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PandaFootball/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootball;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A76DF75D1CAAAC630086389D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PandaFootballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PandaFootball.app/PandaFootball";
+			};
+			name = Debug;
+		};
+		A76DF75E1CAAAC630086389D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PandaFootballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PandaFootball.app/PandaFootball";
+			};
+			name = Release;
+		};
+		A76DF7601CAAAC630086389D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PandaFootballUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootballUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PandaFootball;
+			};
+			name = Debug;
+		};
+		A76DF7611CAAAC630086389D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PandaFootballUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootballUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PandaFootball;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A76DF7241CAAAC630086389D /* Build configuration list for PBXProject "PandaFootball" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76DF7571CAAAC630086389D /* Debug */,
+				A76DF7581CAAAC630086389D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A76DF7591CAAAC630086389D /* Build configuration list for PBXNativeTarget "PandaFootball" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76DF75A1CAAAC630086389D /* Debug */,
+				A76DF75B1CAAAC630086389D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A76DF75C1CAAAC630086389D /* Build configuration list for PBXNativeTarget "PandaFootballTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76DF75D1CAAAC630086389D /* Debug */,
+				A76DF75E1CAAAC630086389D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A76DF75F1CAAAC630086389D /* Build configuration list for PBXNativeTarget "PandaFootballUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76DF7601CAAAC630086389D /* Debug */,
+				A76DF7611CAAAC630086389D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A76DF7211CAAAC630086389D /* Project object */;
+}
