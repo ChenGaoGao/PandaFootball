@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  PFBaseNavigationController.h
 //  PandaFootball
 //
 //  Created by Oliver Chen on 16/3/29.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface PFBaseNavigationController : UINavigationController
 
 @end
-
