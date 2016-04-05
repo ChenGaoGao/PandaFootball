@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		479897E31CB3C4BD00A23E62 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		A76DF7291CAAAC630086389D /* PandaFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76DF72D1CAAAC630086389D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A76DF7391CAAAC630086389D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		A7BDDE0B1CAAD2C2009D9B04 /* UIImage+PureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColor.h"; sourceTree = "<group>"; };
 		A7BDDE0C1CAAD2C2009D9B04 /* UIImage+PureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColor.m"; sourceTree = "<group>"; };
 		A7BDDE0E1CAAD361009D9B04 /* PFUIFormatMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFUIFormatMacros.h; sourceTree = "<group>"; };
-		A7BDDE0F1CAAD5C4009D9B04 /* DeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +93,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		479897DF1CB3C40300A23E62 /* CYGCommonAppLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				479897E01CB3C40300A23E62 /* Categories */,
+				479897E11CB3C40300A23E62 /* Macro */,
+				479897E21CB3C40300A23E62 /* Utils */,
+			);
+			path = CYGCommonAppLibrary;
+			sourceTree = "<group>";
+		};
+		479897E01CB3C40300A23E62 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		479897E11CB3C40300A23E62 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				479897E31CB3C4BD00A23E62 /* DeviceInfo.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		479897E21CB3C40300A23E62 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A76DF7201CAAAC630086389D = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +226,7 @@
 		A7BDDDEC1CAAB0C5009D9B04 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				479897DF1CB3C40300A23E62 /* CYGCommonAppLibrary */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -203,7 +236,6 @@
 			children = (
 				A7BDDDF31CAAB50A009D9B04 /* PFAppMacro.h */,
 				A7BDDE0E1CAAD361009D9B04 /* PFUIFormatMacros.h */,
-				A7BDDE0F1CAAD5C4009D9B04 /* DeviceInfo.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
