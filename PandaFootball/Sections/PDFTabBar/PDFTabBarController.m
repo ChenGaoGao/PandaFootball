@@ -9,6 +9,7 @@
 #import "PDFTabBarController.h"
 #import "PDFPCHMacro.h"
 #import "PDFBaseNavigationController.h"
+#import "UIImage+PureColor.h"
 
 #import "PDFHomePageController.h"
 #import "PDFDiscoverController.h"
@@ -84,6 +85,14 @@
     
     
     
+//    去掉tabBar系统默认的黑线
+//    [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:PDFColorLineTabBarDefault
+//                                                             size:CGSizeMake([[UIScreen mainScreen] bounds].size.width, 0.5f)]];
+//    [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:PDFColorWhite
+//                                                                 size:CGSizeMake([[UIScreen mainScreen] bounds].size.width, 49.0f)]];
+    //设置tabBar不透明
+    [[UITabBar appearance] setTranslucent:NO];
+//    [[UITabBar appearance] setBackgroundColor:PDFColorWhite];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        PDFColorTextTabBarDefault,   NSForegroundColorAttributeName,

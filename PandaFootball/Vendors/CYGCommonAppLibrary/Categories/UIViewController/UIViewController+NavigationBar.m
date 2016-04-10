@@ -44,8 +44,14 @@
                                                   forBarMetrics:UIBarMetricsDefault];
     
     if (isContentShowLine) {
-        self.navigationController.navigationBar.shadowImage = [UIImage imageWithColor:NAV_SHADOW_LINE_COLOR_DEFAULT
-                                                                                 size:CGSizeMake([[UIScreen mainScreen] bounds].size.width, 0.5)];
+        if ([backgroundColor isEqual:[UIColor whiteColor]]) {
+            [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:NAV_SHADOW_LINE_COLOR_LIGHT_GRAY
+                                                                                       size:CGSizeMake([[UIScreen mainScreen] bounds].size.width, 0.5)]];
+            
+        } else {
+            [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:NAV_SHADOW_LINE_COLOR_DEFAULT
+                                                                                       size:CGSizeMake([[UIScreen mainScreen] bounds].size.width, 0.5)]];
+        }
     } else {
         self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
     }
@@ -75,11 +81,11 @@
 
 #pragma mark -- setLeftBarButton
 - (void)setLeftBarButton {
-    [self setLeftBarButtonItem:[self setBackBarButton] offset:-3.5];
+    [self setLeftBarButtonItem:[self setBackBarButton] offset:[self backButtonOffset]];
 }
 
 - (void)setLeftBarButtonItem:(UIView *)view {
-    [self setLeftBarButtonItem:view offset:-3.5];
+    [self setLeftBarButtonItem:view offset:0];
 }
 
 - (void)setLeftBarButtonItem:(UIView *)view offset:(CGFloat)offset {
@@ -105,7 +111,7 @@
 
 #pragma mark - setLeftBarButton
 - (void)setRightBarButtonItem:(UIView *)view {
-    [self setRightBarButtonItem:view offset:15];
+    [self setRightBarButtonItem:view offset:0];
 }
 
 - (void)setRightBarButtonItem:(UIView *)view offset:(CGFloat)offset {
@@ -113,7 +119,7 @@
 }
 
 - (void)setRightBarButtonItems:(NSArray *)views {
-    [self setRightBarButtonItems:views offset:15];
+    [self setRightBarButtonItems:views offset:0];
 }
 
 - (void)setRightBarButtonItems:(NSArray *)views offset:(CGFloat)offset {
@@ -137,10 +143,16 @@
 #pragma mark - private methods
 - (UIButton *)setBackBarButton {
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+    backButton.backgroundColor = [UIColor redColor];
     [backButton setImage:[UIImage imageNamed:NAV_LEFT_BAR_BUTTON_IMAGE] forState:UIControlStateNormal];
     [backButton setExclusiveTouch:YES];
     [backButton addTarget:self action:@selector(backHandle:) forControlEvents:UIControlEventTouchUpInside];
     return backButton;
+}
+
+- (CGFloat)backButtonOffset {
+    UIImage *image = [UIImage imageNamed:NAV_LEFT_BAR_BUTTON_IMAGE];
+    return 15 - (44 - image.size.width) / 2;
 }
 
 - (void)backHandle:(UIButton *)sender {
@@ -151,7 +163,7 @@
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                                                            target:nil
                                                                            action:nil];
-    space.width = 1 ? margin - 20.0f : margin - 16.0f;
+    space.width = ([[UIScreen mainScreen] bounds].size.height == 736.0f ) ? margin - 20.0f : margin - 16.0f;
     return space;
 }
 

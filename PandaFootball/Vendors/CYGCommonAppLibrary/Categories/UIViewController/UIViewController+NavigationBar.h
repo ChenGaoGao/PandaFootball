@@ -107,7 +107,6 @@
  */
 - (void)setLeftBarButtonItem:(UIView *)view;
 
-
 /**
  *  设置返回按钮
  *
@@ -116,14 +115,12 @@
  */
 - (void)setLeftBarButtonItem:(UIView *)view offset:(CGFloat)offset;
 
-
 /**
  *  设置导航栏left barbutton items
  *
  *  @param views 自定义的view数组
  */
 - (void)setLeftBarButtonItems:(NSArray *)views;
-
 
 /**
  *  设置导航栏left barbutton items
@@ -142,7 +139,6 @@
  */
 - (void)setRightBarButtonItem:(UIView *)view;
 
-
 /**
  *  设置导航右边的item
  *
@@ -151,14 +147,12 @@
  */
 - (void)setRightBarButtonItem:(UIView *)view offset:(CGFloat)offset;
 
-
 /**
  *  设置导航栏右边的items
  *
  *  @param views 自定义的view数组
  */
 - (void)setRightBarButtonItems:(NSArray *)views;
-
 
 /**
  *  设置导航栏右边的items

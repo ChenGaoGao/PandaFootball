@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+StatusBar.h"
+#import "UIViewController+NavigationBar.h"
 
 @interface PDFBaseViewController : UIViewController
 
