@@ -13,12 +13,17 @@
 		A76DF73F1CAAAC630086389D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF73D1CAAAC630086389D /* LaunchScreen.storyboard */; };
 		A76DF74A1CAAAC630086389D /* PandaFootballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7491CAAAC630086389D /* PandaFootballTests.m */; };
 		A76DF7551CAAAC630086389D /* PandaFootballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7541CAAAC630086389D /* PandaFootballUITests.m */; };
+		A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */; };
+		A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F311CBA96D30034CE4B /* UIViewController+NavigationBar.m */; };
+		A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F331CBA96D30034CE4B /* UIViewController+StatusBar.m */; };
+		A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F3A1CBAB39F0034CE4B /* PDFBaseViewController.m */; };
+		A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F3D1CBAB3B80034CE4B /* PDFBaseNavigationController.m */; };
+		A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F411CBAB4230034CE4B /* PDFTabBarController.m */; };
+		A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F491CBAB6210034CE4B /* PDFHomePageController.m */; };
+		A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F4C1CBAB6350034CE4B /* PDFDiscoverController.m */; };
+		A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F4F1CBAB6470034CE4B /* PDFFootballTeamController.m */; };
+		A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */; };
 		A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */; };
-		A7BDDDFC1CAACE0B009D9B04 /* PFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDDFB1CAACE0B009D9B04 /* PFBaseViewController.m */; };
-		A7BDDDFF1CAACE42009D9B04 /* PFBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDDFE1CAACE42009D9B04 /* PFBaseNavigationController.m */; };
-		A7BDDE061CAAD216009D9B04 /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDE051CAAD216009D9B04 /* UIViewController+StatusBar.m */; };
-		A7BDDE091CAAD228009D9B04 /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDE081CAAD228009D9B04 /* UIViewController+NavigationBar.m */; };
-		A7BDDE0D1CAAD2C2009D9B04 /* UIImage+PureColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDE0C1CAAD2C2009D9B04 /* UIImage+PureColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,20 +57,31 @@
 		A76DF7501CAAAC630086389D /* PandaFootballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaFootballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76DF7541CAAAC630086389D /* PandaFootballUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaFootballUITests.m; sourceTree = "<group>"; };
 		A76DF7561CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7A80F2D1CBA96D30034CE4B /* UIImage+PureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColor.h"; sourceTree = "<group>"; };
+		A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColor.m"; sourceTree = "<group>"; };
+		A7A80F301CBA96D30034CE4B /* UIViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBar.h"; sourceTree = "<group>"; };
+		A7A80F311CBA96D30034CE4B /* UIViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationBar.m"; sourceTree = "<group>"; };
+		A7A80F321CBA96D30034CE4B /* UIViewController+StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StatusBar.h"; sourceTree = "<group>"; };
+		A7A80F331CBA96D30034CE4B /* UIViewController+StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StatusBar.m"; sourceTree = "<group>"; };
+		A7A80F371CBAB35C0034CE4B /* PDFAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFAppMacro.h; sourceTree = "<group>"; };
+		A7A80F381CBAB36A0034CE4B /* PDFUIFormatMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFUIFormatMacros.h; sourceTree = "<group>"; };
+		A7A80F391CBAB39F0034CE4B /* PDFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFBaseViewController.h; sourceTree = "<group>"; };
+		A7A80F3A1CBAB39F0034CE4B /* PDFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFBaseViewController.m; sourceTree = "<group>"; };
+		A7A80F3C1CBAB3B80034CE4B /* PDFBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFBaseNavigationController.h; sourceTree = "<group>"; };
+		A7A80F3D1CBAB3B80034CE4B /* PDFBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFBaseNavigationController.m; sourceTree = "<group>"; };
+		A7A80F401CBAB4230034CE4B /* PDFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFTabBarController.h; sourceTree = "<group>"; };
+		A7A80F411CBAB4230034CE4B /* PDFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFTabBarController.m; sourceTree = "<group>"; };
+		A7A80F481CBAB6210034CE4B /* PDFHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFHomePageController.h; sourceTree = "<group>"; };
+		A7A80F491CBAB6210034CE4B /* PDFHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFHomePageController.m; sourceTree = "<group>"; };
+		A7A80F4B1CBAB6350034CE4B /* PDFDiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDiscoverController.h; sourceTree = "<group>"; };
+		A7A80F4C1CBAB6350034CE4B /* PDFDiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDiscoverController.m; sourceTree = "<group>"; };
+		A7A80F4E1CBAB6470034CE4B /* PDFFootballTeamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFFootballTeamController.h; sourceTree = "<group>"; };
+		A7A80F4F1CBAB6470034CE4B /* PDFFootballTeamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFFootballTeamController.m; sourceTree = "<group>"; };
+		A7A80F511CBAB6560034CE4B /* PDFMyCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFMyCenterController.h; sourceTree = "<group>"; };
+		A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFMyCenterController.m; sourceTree = "<group>"; };
+		A7A80F551CBACB380034CE4B /* PDFPCHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFPCHMacro.h; sourceTree = "<group>"; };
 		A7BDDDEF1CAAB138009D9B04 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7BDDDF31CAAB50A009D9B04 /* PFAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFAppMacro.h; sourceTree = "<group>"; };
-		A7BDDDFA1CAACE0B009D9B04 /* PFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFBaseViewController.h; sourceTree = "<group>"; };
-		A7BDDDFB1CAACE0B009D9B04 /* PFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFBaseViewController.m; sourceTree = "<group>"; };
-		A7BDDDFD1CAACE42009D9B04 /* PFBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFBaseNavigationController.h; sourceTree = "<group>"; };
-		A7BDDDFE1CAACE42009D9B04 /* PFBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFBaseNavigationController.m; sourceTree = "<group>"; };
-		A7BDDE041CAAD216009D9B04 /* UIViewController+StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StatusBar.h"; sourceTree = "<group>"; };
-		A7BDDE051CAAD216009D9B04 /* UIViewController+StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StatusBar.m"; sourceTree = "<group>"; };
-		A7BDDE071CAAD228009D9B04 /* UIViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBar.h"; sourceTree = "<group>"; };
-		A7BDDE081CAAD228009D9B04 /* UIViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationBar.m"; sourceTree = "<group>"; };
-		A7BDDE0B1CAAD2C2009D9B04 /* UIImage+PureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColor.h"; sourceTree = "<group>"; };
-		A7BDDE0C1CAAD2C2009D9B04 /* UIImage+PureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColor.m"; sourceTree = "<group>"; };
-		A7BDDE0E1CAAD361009D9B04 /* PFUIFormatMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFUIFormatMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,8 @@
 		479897E01CB3C40300A23E62 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				A7A80F2C1CBA96D30034CE4B /* UIImage */,
+				A7A80F2F1CBA96D30034CE4B /* UIViewController */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -190,9 +208,79 @@
 			path = PandaFootballUITests;
 			sourceTree = "<group>";
 		};
+		A7A80F2C1CBA96D30034CE4B /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				A7A80F2D1CBA96D30034CE4B /* UIImage+PureColor.h */,
+				A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		A7A80F2F1CBA96D30034CE4B /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A7A80F301CBA96D30034CE4B /* UIViewController+NavigationBar.h */,
+				A7A80F311CBA96D30034CE4B /* UIViewController+NavigationBar.m */,
+				A7A80F321CBA96D30034CE4B /* UIViewController+StatusBar.h */,
+				A7A80F331CBA96D30034CE4B /* UIViewController+StatusBar.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		A7A80F3F1CBAB3ED0034CE4B /* PDFTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A7A80F401CBAB4230034CE4B /* PDFTabBarController.h */,
+				A7A80F411CBAB4230034CE4B /* PDFTabBarController.m */,
+			);
+			path = PDFTabBar;
+			sourceTree = "<group>";
+		};
+		A7A80F431CBAB5A90034CE4B /* PDFMyCenter */ = {
+			isa = PBXGroup;
+			children = (
+				A7A80F511CBAB6560034CE4B /* PDFMyCenterController.h */,
+				A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */,
+			);
+			path = PDFMyCenter;
+			sourceTree = "<group>";
+		};
+		A7A80F441CBAB5B00034CE4B /* PDFFootballTeam */ = {
+			isa = PBXGroup;
+			children = (
+				A7A80F4E1CBAB6470034CE4B /* PDFFootballTeamController.h */,
+				A7A80F4F1CBAB6470034CE4B /* PDFFootballTeamController.m */,
+			);
+			path = PDFFootballTeam;
+			sourceTree = "<group>";
+		};
+		A7A80F451CBAB5B60034CE4B /* PDFDiscover */ = {
+			isa = PBXGroup;
+			children = (
+				A7A80F4B1CBAB6350034CE4B /* PDFDiscoverController.h */,
+				A7A80F4C1CBAB6350034CE4B /* PDFDiscoverController.m */,
+			);
+			path = PDFDiscover;
+			sourceTree = "<group>";
+		};
+		A7A80F471CBAB5E40034CE4B /* PDFHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				A7A80F481CBAB6210034CE4B /* PDFHomePageController.h */,
+				A7A80F491CBAB6210034CE4B /* PDFHomePageController.m */,
+			);
+			path = PDFHomePage;
+			sourceTree = "<group>";
+		};
 		A7BDDDE81CAAB08B009D9B04 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				A7A80F3F1CBAB3ED0034CE4B /* PDFTabBar */,
+				A7A80F471CBAB5E40034CE4B /* PDFHomePage */,
+				A7A80F451CBAB5B60034CE4B /* PDFDiscover */,
+				A7A80F441CBAB5B00034CE4B /* PDFFootballTeam */,
+				A7A80F431CBAB5A90034CE4B /* PDFMyCenter */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -234,8 +322,9 @@
 		A7BDDDED1CAAB0DE009D9B04 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
-				A7BDDDF31CAAB50A009D9B04 /* PFAppMacro.h */,
-				A7BDDE0E1CAAD361009D9B04 /* PFUIFormatMacros.h */,
+				A7A80F551CBACB380034CE4B /* PDFPCHMacro.h */,
+				A7A80F371CBAB35C0034CE4B /* PDFAppMacro.h */,
+				A7A80F381CBAB36A0034CE4B /* PDFUIFormatMacros.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -259,8 +348,6 @@
 		A7BDDDF51CAACCB1009D9B04 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				A7BDDE0A1CAAD2AB009D9B04 /* UIimage */,
-				A7BDDE001CAAD1DD009D9B04 /* UIViewController */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -290,32 +377,12 @@
 		A7BDDDF91CAACDE5009D9B04 /* BaseViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A7BDDDFA1CAACE0B009D9B04 /* PFBaseViewController.h */,
-				A7BDDDFB1CAACE0B009D9B04 /* PFBaseViewController.m */,
-				A7BDDDFD1CAACE42009D9B04 /* PFBaseNavigationController.h */,
-				A7BDDDFE1CAACE42009D9B04 /* PFBaseNavigationController.m */,
+				A7A80F391CBAB39F0034CE4B /* PDFBaseViewController.h */,
+				A7A80F3A1CBAB39F0034CE4B /* PDFBaseViewController.m */,
+				A7A80F3C1CBAB3B80034CE4B /* PDFBaseNavigationController.h */,
+				A7A80F3D1CBAB3B80034CE4B /* PDFBaseNavigationController.m */,
 			);
 			path = BaseViewControllers;
-			sourceTree = "<group>";
-		};
-		A7BDDE001CAAD1DD009D9B04 /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A7BDDE041CAAD216009D9B04 /* UIViewController+StatusBar.h */,
-				A7BDDE051CAAD216009D9B04 /* UIViewController+StatusBar.m */,
-				A7BDDE071CAAD228009D9B04 /* UIViewController+NavigationBar.h */,
-				A7BDDE081CAAD228009D9B04 /* UIViewController+NavigationBar.m */,
-			);
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		A7BDDE0A1CAAD2AB009D9B04 /* UIimage */ = {
-			isa = PBXGroup;
-			children = (
-				A7BDDE0B1CAAD2C2009D9B04 /* UIImage+PureColor.h */,
-				A7BDDE0C1CAAD2C2009D9B04 /* UIImage+PureColor.m */,
-			);
-			path = UIimage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,13 +515,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7BDDE0D1CAAD2C2009D9B04 /* UIImage+PureColor.m in Sources */,
-				A7BDDDFF1CAACE42009D9B04 /* PFBaseNavigationController.m in Sources */,
+				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
+				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
+				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
-				A7BDDE091CAAD228009D9B04 /* UIViewController+NavigationBar.m in Sources */,
-				A7BDDDFC1CAACE0B009D9B04 /* PFBaseViewController.m in Sources */,
+				A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */,
+				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
+				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
+				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
-				A7BDDE061CAAD216009D9B04 /* UIViewController+StatusBar.m in Sources */,
+				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
+				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
+				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
