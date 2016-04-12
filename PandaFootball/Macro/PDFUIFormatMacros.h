@@ -9,6 +9,7 @@
 #ifndef PDFUIFormatMacros_h
 #define PDFUIFormatMacros_h
 
+#import "DeviceInfo.h"
 
 /**
  *  Color
@@ -26,6 +27,7 @@
 //通用颜色
 #define PDFColorGreen               RGB( 76, 176,  80)
 #define PDFColorWhite               RGB(255, 255, 255)
+#define PDFColorBackground          RGB(245, 245, 245)
 
 //文字颜色
 #define PDFColorTextBodyDefault     RGB( 36,  36,  36)      //body表示正文
@@ -40,7 +42,8 @@
 #define PDFColorTextTabBarGreen     PDFColorGreen
 
 //分割线颜色
-#define PDFColorLineTabBarDefault   RGB(178, 178, 178)
+#define PDFColorLineSplit           RGB(224, 224, 224)
+#define PDFColorLineTabBar          RGB(178, 178, 178)
 
 
 /**
@@ -84,5 +87,14 @@
 #define PDFSpaceDigger              (16.0f)
 #define PDFSpaceSmaller             (10.0f)
 #define PDFSpaceSmallest            (8.0f)
+
+
+
+/**
+ *  通用控件大小
+ */
+#define PDFNavagationBarWidth       (44.0f)
+#define PDFNavagationBarHeight      (44.0f)
+
 
 #endif /* PDFUIFormatMacros_h */

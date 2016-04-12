@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
 		47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */; };
+		A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */; };
 		A76DF72E1CAAAC630086389D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF72D1CAAAC630086389D /* main.m */; };
 		A76DF73A1CAAAC630086389D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF7381CAAAC630086389D /* Main.storyboard */; };
 		A76DF73C1CAAAC630086389D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76DF73B1CAAAC630086389D /* Assets.xcassets */; };
@@ -51,6 +52,8 @@
 		47CBDE3C1CBCD9BC0003F746 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		47CBDE401CBCDAA60003F746 /* CYGBasePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGBasePopupView.h; sourceTree = "<group>"; };
 		47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGBasePopupView.m; sourceTree = "<group>"; };
+		A75F5A1A1CBD370F00EF1CD3 /* PDFPopupContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFPopupContentView.h; sourceTree = "<group>"; };
+		A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFPopupContentView.m; sourceTree = "<group>"; };
 		A76DF7291CAAAC630086389D /* PandaFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76DF72D1CAAAC630086389D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A76DF7391CAAAC630086389D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +186,15 @@
 				47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */,
 			);
 			path = CYGBasePopupView;
+			sourceTree = "<group>";
+		};
+		A75F5A191CBD365500EF1CD3 /* PopupViewContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				A75F5A1A1CBD370F00EF1CD3 /* PDFPopupContentView.h */,
+				A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */,
+			);
+			path = PopupViewContentViews;
 			sourceTree = "<group>";
 		};
 		A76DF7201CAAAC630086389D = {
@@ -412,6 +424,7 @@
 		A7BDDDF81CAACCC8009D9B04 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A75F5A191CBD365500EF1CD3 /* PopupViewContentViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -571,6 +584,7 @@
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
+				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

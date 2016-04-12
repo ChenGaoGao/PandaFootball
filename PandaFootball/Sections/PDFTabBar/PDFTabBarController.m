@@ -31,7 +31,7 @@
     
     //首页
     PDFHomePageController *homePageViewController = [[PDFHomePageController alloc] initWithNibName:nil bundle:nil];
-    homePageViewController.title = @"首页";
+    homePageViewController.title = @"球约";
     homePageViewController.tabBarItem.image =
     [[UIImage imageNamed:@"TBHomeGray.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     homePageViewController.tabBarItem.selectedImage =
@@ -83,16 +83,8 @@
     
     self.viewControllers = (NSArray *)viewControllerArray;
     
-    
-    
-//    去掉tabBar系统默认的黑线
-//    [[UITabBar appearance] setShadowImage:[UIImage imageWithColor:PDFColorLineTabBarDefault
-//                                                             size:CGSizeMake([[UIScreen mainScreen] bounds].size.width, 0.5f)]];
-//    [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:PDFColorWhite
-//                                                                 size:CGSizeMake([[UIScreen mainScreen] bounds].size.width, 49.0f)]];
     //设置tabBar不透明
     [[UITabBar appearance] setTranslucent:NO];
-//    [[UITabBar appearance] setBackgroundColor:PDFColorWhite];
     
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        PDFColorTextTabBarDefault,   NSForegroundColorAttributeName,

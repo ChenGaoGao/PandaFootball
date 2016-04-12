@@ -21,9 +21,20 @@ typedef NS_ENUM(NSInteger, PopupDirectionType) {
 @protocol CYGBasePopupViewDelegate <NSObject>
 
 @optional
-
-- (void)basePopupViewDismiss:(CYGBasePopupView *)popupView;
+/**
+ *  点击半透明背景的代理方法
+ *
+ *  @param popupView  弹出框(self)
+ *  @param background 背景Button(backgroundButton)
+ */
 - (void)basePopupView:(CYGBasePopupView *)popupView backgroundClicked:(UIButton *)background;
+
+/**
+ *  弹出框消失的代理
+ *
+ *  @param popupView 弹出框(self)
+ */
+- (void)basePopupViewDismiss:(CYGBasePopupView *)popupView;
 
 @end
 

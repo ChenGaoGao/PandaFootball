@@ -17,8 +17,7 @@
 
 @implementation CYGBasePopupView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.clipsToBounds = YES;
@@ -32,7 +31,13 @@
     return self;
 }
 
-#pragma mark - public methods
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    
+    self.backgroundButton.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+}
+
+#pragma mark - PublicMethods
 - (void)showInView:(UIView *)view {
     [self showInView:view animated:YES];
 }
@@ -42,8 +47,6 @@
     
     if (self.superview == nil) {
         [view addSubview:self];
-        
-        self.backgroundButton.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     }
     
     if (animated) {
@@ -78,7 +81,7 @@
     }
 }
 
-#pragma mark - private methods
+#pragma mark - PrivateMethods
 - (void)showContentAnimationWithType:(PopupDirectionType)directionType {
     if (!self.contentView) {
         return;
@@ -86,15 +89,28 @@
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.keyPath = @"position.y";
-    animation.keyTimes = @[ @0, @(3 / 5.0), @1 ];
-    animation.duration = _animationTime * 5.0 / 3.0;
     animation.additive = YES;
+    animation.duration = _animationTime * 5.0 / 3.0;
+    animation.keyTimes = @[ @0, @(3 / 5.0), @1 ];
     
     switch (directionType) {
         case PopupDirectionTypeTop: {
+            self.contentView.frame = CGRectMake(0,
+                                                0,
+                                                self.contentView.frame.size.width,
+                                                self.contentView.frame.size.height);
+            
             animation.values = @[ @(-self.contentView.frame.size.height), @10, @0 ];
+            
             break;
         } case PopupDirectionTypeBottom: {
+            self.contentView.frame = CGRectMake(0,
+                                                self.frame.size.height - self.contentView.frame.size.height,
+                                                self.contentView.frame.size.width,
+                                                self.contentView.frame.size.height);
+            
+            animation.values = @[ @(self.contentView.frame.size.height), @0, @0 ];
+            
             break;
         } case PopupDirectionTypeCenter: {
             break;
@@ -133,6 +149,7 @@
             animation.toValue = @(-self.contentView.frame.size.height);
             break;
         } case PopupDirectionTypeBottom: {
+            animation.toValue = @(self.contentView.frame.size.height);
             break;
         } case PopupDirectionTypeCenter: {
             break;
@@ -156,7 +173,7 @@
     [self.backgroundButton.layer addAnimation:animation forKey:@"opacity"];
 }
 
-#pragma mark - event response
+#pragma mark - EventResponse
 - (void)backgroundButtonHandle:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(basePopupView:backgroundClicked:)]) {
         [self.delegate basePopupView:self backgroundClicked:sender];
@@ -175,7 +192,7 @@
     }
 }
 
-#pragma mark - getters and setters
+#pragma mark - LazyLoading
 - (UIButton *)backgroundButton {
     if (!_backgroundButton) {
         _backgroundButton = [UIButton buttonWithType:UIButtonTypeCustom];
