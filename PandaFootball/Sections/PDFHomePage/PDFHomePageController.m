@@ -16,6 +16,7 @@
     
     [self setNavigationTitleWhite:@"首页"];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {
