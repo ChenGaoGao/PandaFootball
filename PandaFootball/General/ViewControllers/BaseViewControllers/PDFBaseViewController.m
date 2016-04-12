@@ -31,7 +31,7 @@
     [self setStatusBarWhite];
     
     //设置导航栏
-    [self setNavigationBackgroundColor];
+    [self setNavigationBackgroundColorWithoutLine];
     
     //设置View背景
     self.view.backgroundColor = [UIColor whiteColor];

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
+		47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */; };
 		A76DF72E1CAAAC630086389D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF72D1CAAAC630086389D /* main.m */; };
 		A76DF73A1CAAAC630086389D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF7381CAAAC630086389D /* Main.storyboard */; };
 		A76DF73C1CAAAC630086389D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76DF73B1CAAAC630086389D /* Assets.xcassets */; };
@@ -44,7 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		479897E31CB3C4BD00A23E62 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		47CBDE381CBCCF800003F746 /* CYGLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGLocationManager.h; sourceTree = "<group>"; };
+		47CBDE391CBCCF800003F746 /* CYGLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGLocationManager.m; sourceTree = "<group>"; };
+		47CBDE3C1CBCD9BC0003F746 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		47CBDE401CBCDAA60003F746 /* CYGBasePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGBasePopupView.h; sourceTree = "<group>"; };
+		47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGBasePopupView.m; sourceTree = "<group>"; };
 		A76DF7291CAAAC630086389D /* PandaFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76DF72D1CAAAC630086389D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A76DF7391CAAAC630086389D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,8 +118,10 @@
 		479897DF1CB3C40300A23E62 /* CYGCommonAppLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				47CBDE3E1CBCD9BC0003F746 /* Views */,
+				47CBDE3D1CBCD9BC0003F746 /* ViewControllers */,
 				479897E01CB3C40300A23E62 /* Categories */,
-				479897E11CB3C40300A23E62 /* Macro */,
+				47CBDE3B1CBCD9BC0003F746 /* Macros */,
 				479897E21CB3C40300A23E62 /* Utils */,
 			);
 			path = CYGCommonAppLibrary;
@@ -128,19 +136,53 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		479897E11CB3C40300A23E62 /* Macro */ = {
-			isa = PBXGroup;
-			children = (
-				479897E31CB3C4BD00A23E62 /* DeviceInfo.h */,
-			);
-			path = Macro;
-			sourceTree = "<group>";
-		};
 		479897E21CB3C40300A23E62 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				47CBDE371CBCCF780003F746 /* CYGLocationManager */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		47CBDE371CBCCF780003F746 /* CYGLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				47CBDE381CBCCF800003F746 /* CYGLocationManager.h */,
+				47CBDE391CBCCF800003F746 /* CYGLocationManager.m */,
+			);
+			path = CYGLocationManager;
+			sourceTree = "<group>";
+		};
+		47CBDE3B1CBCD9BC0003F746 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				47CBDE3C1CBCD9BC0003F746 /* DeviceInfo.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		47CBDE3D1CBCD9BC0003F746 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		47CBDE3E1CBCD9BC0003F746 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47CBDE3F1CBCDA7F0003F746 /* CYGBasePopupView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47CBDE3F1CBCDA7F0003F746 /* CYGBasePopupView */ = {
+			isa = PBXGroup;
+			children = (
+				47CBDE401CBCDAA60003F746 /* CYGBasePopupView.h */,
+				47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */,
+			);
+			path = CYGBasePopupView;
 			sourceTree = "<group>";
 		};
 		A76DF7201CAAAC630086389D = {
@@ -515,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
@@ -522,6 +565,7 @@
 				A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */,
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
+				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
