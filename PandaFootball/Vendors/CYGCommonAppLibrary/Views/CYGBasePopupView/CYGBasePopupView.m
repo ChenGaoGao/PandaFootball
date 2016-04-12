@@ -40,8 +40,6 @@
 - (void)showInView:(UIView *)view animated:(BOOL)animated {
     _backgroundButton.userInteractionEnabled = YES;
     
-//    self.selectedIndex = _selectedIndex;
-    
     if (self.superview == nil) {
         [view addSubview:self];
         
@@ -49,10 +47,6 @@
     }
     
     if (animated) {
-//        if (_contentView) {
-//            <#statements#>
-//        }
-        
         //contentView动画
         [self showContentAnimationWithType:self.directionType];
         
@@ -69,23 +63,13 @@
     _backgroundButton.userInteractionEnabled = NO;
     
     if (animated) {
-//        animationTime = 0.3;
-//        
-//        CABasicAnimation *animation = [CABasicAnimation animation];
-//        animation.keyPath = @"position.y";
-//        animation.fromValue = @0;
-//        animation.toValue = @(-(_dataSourceArray.count * AUTO_HEIGHT_FROM4_7(kContentCellHeight) +
-//                                AUTO_HEIGHT_FROM4_7(kbottomButtonHeight)));
-//        animation.duration = animationTime;
-//        animation.additive = YES;
-//        animation.fillMode = kCAFillModeForwards;
-//        animation.removedOnCompletion = NO;
-//        [self.contentView.layer addAnimation:animation forKey:@"shake"];
-        
+        //congrentView动画
+        [self dismissContentAnimation:self.directionType];
         
         //背景动画
         [self dismissBackgroundAnimation];
-    } else {
+    }
+    if (!animated) {
         if ([self.delegate respondsToSelector:@selector(basePopupViewDismiss:)]) {
             [self.delegate basePopupViewDismiss:self];
         }
@@ -96,9 +80,9 @@
 
 #pragma mark - private methods
 - (void)showContentAnimationWithType:(PopupDirectionType)directionType {
-//    if () {
-//        
-//    }
+    if (!self.contentView) {
+        return;
+    }
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
     animation.keyPath = @"position.y";
@@ -132,7 +116,32 @@
 }
 
 - (void)dismissContentAnimation:(PopupDirectionType)directionType {
+    if (!self.contentView) {
+        return;
+    }
     
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.y";
+    animation.fromValue = @0;
+    animation.duration = self.animationTime;
+    animation.additive = YES;
+    animation.fillMode = kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
+    
+    switch (directionType) {
+        case PopupDirectionTypeTop: {
+            animation.toValue = @(-self.contentView.frame.size.height);
+            break;
+        } case PopupDirectionTypeBottom: {
+            break;
+        } case PopupDirectionTypeCenter: {
+            break;
+        }
+        default:
+            break;
+    }
+    
+    [self.contentView.layer addAnimation:animation forKey:@"shake"];
 }
 
 - (void)dismissBackgroundAnimation {
@@ -146,8 +155,6 @@
     animation.delegate = self;
     [self.backgroundButton.layer addAnimation:animation forKey:@"opacity"];
 }
-
-
 
 #pragma mark - event response
 - (void)backgroundButtonHandle:(UIButton *)sender {

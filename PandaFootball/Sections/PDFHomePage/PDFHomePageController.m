@@ -27,6 +27,7 @@
     
     CYGBasePopupView *popupView = [[CYGBasePopupView alloc] init];
     popupView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    popupView.directionType = PopupDirectionTypeBottom;
     popupView.contentView = contentView;
     
     [popupView showInView:self.view];
