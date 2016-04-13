@@ -12,6 +12,9 @@
 #import "CYGBasePopupView.h"
 #import "PDFPopupContentView.h"
 
+#import "PDFSiteReservationController.h"
+#import "PDFDatingFightingController.h"
+
 static const CGFloat kLeftButtonWidth       = 50.0f;
 
 @interface PDFHomePageController() <CYGBasePopupViewDelegate, PDFPopupContentViewDelegate>
@@ -38,7 +41,18 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     [self setRightBarButtonItem:self.rightButton offset:PDFSpaceDefault -
      (PDFNavagationBarWidth - _rightButton.imageView.image.size.width) / 2 ];
     
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    NSMutableArray *titleVcModels = [[NSMutableArray alloc] init];
+    
+    PDFSiteReservationController *siteReservationVC = [[PDFSiteReservationController alloc] init];
+    TitleVCModel *siteReservationModel = [TitleVCModel createTitleVcModleWithTitle:@"订场" withViewController:siteReservationVC];
+    [titleVcModels addObject:siteReservationModel];
+    
+    PDFDatingFightingController *datingFightingVC = [[PDFDatingFightingController alloc] init];
+    TitleVCModel *datingFightingModel = [TitleVCModel createTitleVcModleWithTitle:@"约战" withViewController:datingFightingVC];
+    [titleVcModels addObject:datingFightingModel];
+    
+    self.titleVcModelArray = titleVcModels;
+    [self initUI];
 }
 
 - (void)didReceiveMemoryWarning {

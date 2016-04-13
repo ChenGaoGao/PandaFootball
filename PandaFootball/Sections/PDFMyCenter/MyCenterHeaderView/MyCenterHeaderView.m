@@ -77,7 +77,6 @@ static const CGFloat kLoginButtonHeight         = 30.0f;
         _loginButton.layer.borderWidth = 0.5;
         _loginButton.layer.borderColor = PDFColorGreen.CGColor;
         _loginButton.layer.cornerRadius = 2;
-        
     }
     return _loginButton;
 }

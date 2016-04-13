@@ -123,7 +123,7 @@
                                               _topBackgroundViewHeight);
         
         _topBackgroundView.contentMode = UIViewContentModeScaleAspectFill;
-        _topBackgroundView.image = [[UIImage imageNamed:@"MyCenterBackground"]
+        _topBackgroundView.image = [[UIImage imageNamed:@"MyCenterBackground.png"]
                                     blurImageBlackAlpha:0.26];
     }
     return _topBackgroundView;

@@ -12,7 +12,7 @@
 #import "MyCenterHeaderView.h"
 #import "PDFSpaceView.h"
 
-static const CGFloat kTableviewCellHeight        = 55.0f;
+static const CGFloat kTableViewCellHeight        = 55.0f;
 
 @interface PDFMyCenterController() <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -77,7 +77,7 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dataDic=[(NSArray *)[self.dataSourceArray objectAtIndex:indexPath.section]
+    NSDictionary *dataDic = [(NSArray *)[self.dataSourceArray objectAtIndex:indexPath.section]
                            objectAtIndex:indexPath.row];
     
     static NSString *identify = @"identify";
@@ -100,7 +100,7 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kTableviewCellHeight;
+    return kTableViewCellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{

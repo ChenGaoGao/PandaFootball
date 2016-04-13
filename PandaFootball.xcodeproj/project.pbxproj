@@ -30,6 +30,13 @@
 		A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */; };
 		A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21671CBE76CA0058E5B0 /* PDFSpaceView.m */; };
 		A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC216B1CBE7C230058E5B0 /* MyCenterHeaderView.m */; };
+		A7BC21761CBE8F600058E5B0 /* BottomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC216F1CBE8F600058E5B0 /* BottomScrollView.m */; };
+		A7BC21771CBE8F600058E5B0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21711CBE8F600058E5B0 /* MainViewController.m */; };
+		A7BC21781CBE8F600058E5B0 /* TitleVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21731CBE8F600058E5B0 /* TitleVCModel.m */; };
+		A7BC21791CBE8F600058E5B0 /* TopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21751CBE8F600058E5B0 /* TopScrollView.m */; };
+		A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC217D1CBE92140058E5B0 /* PDFSiteReservationController.m */; };
+		A7BC21811CBE922A0058E5B0 /* PDFDatingFightingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21801CBE922A0058E5B0 /* PDFDatingFightingController.m */; };
+		A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21831CBE9BFB0058E5B0 /* PDFSiteReservationCell.m */; };
 		A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +108,20 @@
 		A7BC21671CBE76CA0058E5B0 /* PDFSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSpaceView.m; sourceTree = "<group>"; };
 		A7BC216A1CBE7C230058E5B0 /* MyCenterHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterHeaderView.h; sourceTree = "<group>"; };
 		A7BC216B1CBE7C230058E5B0 /* MyCenterHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterHeaderView.m; sourceTree = "<group>"; };
+		A7BC216E1CBE8F600058E5B0 /* BottomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomScrollView.h; sourceTree = "<group>"; };
+		A7BC216F1CBE8F600058E5B0 /* BottomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomScrollView.m; sourceTree = "<group>"; };
+		A7BC21701CBE8F600058E5B0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A7BC21711CBE8F600058E5B0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A7BC21721CBE8F600058E5B0 /* TitleVCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleVCModel.h; sourceTree = "<group>"; };
+		A7BC21731CBE8F600058E5B0 /* TitleVCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleVCModel.m; sourceTree = "<group>"; };
+		A7BC21741CBE8F600058E5B0 /* TopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopScrollView.h; sourceTree = "<group>"; };
+		A7BC21751CBE8F600058E5B0 /* TopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopScrollView.m; sourceTree = "<group>"; };
+		A7BC217C1CBE92140058E5B0 /* PDFSiteReservationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSiteReservationController.h; sourceTree = "<group>"; };
+		A7BC217D1CBE92140058E5B0 /* PDFSiteReservationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSiteReservationController.m; sourceTree = "<group>"; };
+		A7BC217F1CBE922A0058E5B0 /* PDFDatingFightingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDatingFightingController.h; sourceTree = "<group>"; };
+		A7BC21801CBE922A0058E5B0 /* PDFDatingFightingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingController.m; sourceTree = "<group>"; };
+		A7BC21821CBE9BFB0058E5B0 /* PDFSiteReservationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSiteReservationCell.h; sourceTree = "<group>"; };
+		A7BC21831CBE9BFB0058E5B0 /* PDFSiteReservationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSiteReservationCell.m; sourceTree = "<group>"; };
 		A7BDDDEF1CAAB138009D9B04 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -336,6 +357,8 @@
 		A7A80F471CBAB5E40034CE4B /* PDFHomePage */ = {
 			isa = PBXGroup;
 			children = (
+				A7BC217B1CBE91F90058E5B0 /* PDFSiteReservation */,
+				A7BC217A1CBE91F90058E5B0 /* PDFDatingFighting */,
 				A7A80F481CBAB6210034CE4B /* PDFHomePageController.h */,
 				A7A80F491CBAB6210034CE4B /* PDFHomePageController.m */,
 			);
@@ -358,6 +381,41 @@
 				A7BC216B1CBE7C230058E5B0 /* MyCenterHeaderView.m */,
 			);
 			path = MyCenterHeaderView;
+			sourceTree = "<group>";
+		};
+		A7BC216D1CBE8F4F0058E5B0 /* ViewPagerndicator */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC216E1CBE8F600058E5B0 /* BottomScrollView.h */,
+				A7BC216F1CBE8F600058E5B0 /* BottomScrollView.m */,
+				A7BC21701CBE8F600058E5B0 /* MainViewController.h */,
+				A7BC21711CBE8F600058E5B0 /* MainViewController.m */,
+				A7BC21721CBE8F600058E5B0 /* TitleVCModel.h */,
+				A7BC21731CBE8F600058E5B0 /* TitleVCModel.m */,
+				A7BC21741CBE8F600058E5B0 /* TopScrollView.h */,
+				A7BC21751CBE8F600058E5B0 /* TopScrollView.m */,
+			);
+			path = ViewPagerndicator;
+			sourceTree = "<group>";
+		};
+		A7BC217A1CBE91F90058E5B0 /* PDFDatingFighting */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC217F1CBE922A0058E5B0 /* PDFDatingFightingController.h */,
+				A7BC21801CBE922A0058E5B0 /* PDFDatingFightingController.m */,
+			);
+			path = PDFDatingFighting;
+			sourceTree = "<group>";
+		};
+		A7BC217B1CBE91F90058E5B0 /* PDFSiteReservation */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC217C1CBE92140058E5B0 /* PDFSiteReservationController.h */,
+				A7BC217D1CBE92140058E5B0 /* PDFSiteReservationController.m */,
+				A7BC21821CBE9BFB0058E5B0 /* PDFSiteReservationCell.h */,
+				A7BC21831CBE9BFB0058E5B0 /* PDFSiteReservationCell.m */,
+			);
+			path = PDFSiteReservation;
 			sourceTree = "<group>";
 		};
 		A7BDDDE81CAAB08B009D9B04 /* Sections */ = {
@@ -449,6 +507,7 @@
 		A7BDDDF71CAACCC1009D9B04 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A7BC216D1CBE8F4F0058E5B0 /* ViewPagerndicator */,
 				A7BDDDF91CAACDE5009D9B04 /* BaseViewControllers */,
 			);
 			path = ViewControllers;
@@ -606,9 +665,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BC21761CBE8F600058E5B0 /* BottomScrollView.m in Sources */,
+				A7BC21811CBE922A0058E5B0 /* PDFDatingFightingController.m in Sources */,
+				A7BC21781CBE8F600058E5B0 /* TitleVCModel.m in Sources */,
 				A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */,
 				47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
+				A7BC21771CBE8F600058E5B0 /* MainViewController.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
@@ -617,7 +680,10 @@
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
+				A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */,
+				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
+				A7BC21791CBE8F600058E5B0 /* TopScrollView.m in Sources */,
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
