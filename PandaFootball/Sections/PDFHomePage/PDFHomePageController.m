@@ -14,7 +14,7 @@
 
 static const CGFloat kLeftButtonWidth       = 50.0f;
 
-@interface PDFHomePageController()
+@interface PDFHomePageController() <CYGBasePopupViewDelegate, PDFPopupContentViewDelegate>
 
 @property (nonatomic, strong) UIButton *leftButton;
 @property (nonatomic, strong) UIButton *rightButton;
@@ -38,6 +38,7 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     [self setRightBarButtonItem:self.rightButton offset:PDFSpaceDefault -
      (PDFNavagationBarWidth - _rightButton.imageView.image.size.width) / 2 ];
     
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,6 +89,42 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     }
 }
 
+#pragma mark - CYGBasePopupViewDelegate
+- (void)basePopupView:(CYGBasePopupView *)popupView backgroundClicked:(UIButton *)background {
+    if (popupView.tag == 0) {
+        _leftButton.selected = NO;
+    }
+    
+    if (popupView.tag == 1) {
+        _rightButton.selected = NO;
+    }
+}
+
+#pragma mark - PDFPopupContentViewDelegate
+- (void)popupContentView:(PDFPopupContentView *)contentView didSelectAtIndex:(NSInteger)index {
+    if (contentView.tag == 0) {
+        _leftButton.selected = NO;
+        [self.areaPopupView dismissView];
+    }
+    
+    if (contentView.tag == 1) {
+        _rightButton.selected = NO;
+        [self.sitePopupView dismissView];
+    }
+}
+
+- (void)popupContentView:(PDFPopupContentView *)contentView bottomButtonDefaultClicked:(UIButton *)sender {
+    if (contentView.tag == 0) {
+        _leftButton.selected = NO;
+        [self.areaPopupView dismissView];
+    }
+    
+    if (contentView.tag == 1) {
+        _rightButton.selected = NO;
+        [self.sitePopupView dismissView];
+    }
+}
+
 #pragma mark - LazyLoading
 - (UIButton *)leftButton {
     if (!_leftButton) {
@@ -129,6 +166,9 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     if (!_areaPopupView) {
         _areaPopupView = [[CYGBasePopupView alloc] init];
         _areaPopupView.frame = CGRectMake(0, 0, VIEW_WIDTH(self.view), VIEW_HEIGHT(self.view));
+        
+        _areaPopupView.tag = 0;
+        _areaPopupView.delegate = self;
     }
     return _areaPopupView;
 }
@@ -137,6 +177,9 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     if (!_sitePopupView) {
         _sitePopupView = [[CYGBasePopupView alloc] init];
         _sitePopupView.frame = CGRectMake(0, 0, VIEW_WIDTH(self.view), VIEW_HEIGHT(self.view));
+        
+        _sitePopupView.tag = 1;
+        _sitePopupView.delegate = self;
     }
     return _sitePopupView;
 }
@@ -144,7 +187,11 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
 - (PDFPopupContentView *)areaContentView {
     if (!_areaContentView) {
         _areaContentView = [[PDFPopupContentView alloc] init];
-        _areaContentView.frame = CGRectMake(0, 0, MAIN_WIDTH, 300);
+        _areaContentView.frame = CGRectMake(0, 0, MAIN_WIDTH, kBottomButtonDefaultHeight);
+        
+        _areaContentView.tag = 0;
+        _areaContentView.delegate = self;
+        _areaContentView.dataSourceArray = (NSMutableArray *)@[@"全部", @"福田区", @"龙岗区", @"南山区", @"宝安区", @"盐田区", @"龙华新区", @"大鹏新区", @"坪山新区", @"光明新区"];
     }
     return _areaContentView;
 }
@@ -152,7 +199,11 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
 - (PDFPopupContentView *)siteContentView {
     if (!_siteContentView) {
         _siteContentView = [[PDFPopupContentView alloc] init];
-        _siteContentView.frame = CGRectMake(0, 0, MAIN_WIDTH, 200);
+        _siteContentView.frame = CGRectMake(0, 0, MAIN_WIDTH, kBottomButtonDefaultHeight);
+        
+        _siteContentView.tag = 1;
+        _siteContentView.delegate = self;
+        _siteContentView.dataSourceArray = (NSMutableArray *)@[@"全部", @"三人场", @"五人场", @"七人场", @"十一人场"];
     }
     return _siteContentView;
 }

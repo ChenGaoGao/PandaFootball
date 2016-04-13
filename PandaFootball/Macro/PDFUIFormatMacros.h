@@ -28,6 +28,7 @@
 #define PDFColorGreen               RGB( 76, 176,  80)
 #define PDFColorWhite               RGB(255, 255, 255)
 #define PDFColorBackground          RGB(245, 245, 245)
+#define PDFColorBorderLine          RGB(204, 204, 204)
 
 //文字颜色
 #define PDFColorTextBodyDefault     RGB( 36,  36,  36)      //body表示正文
@@ -82,11 +83,11 @@
  *  Space
  *  (间隙)
  */
-#define PDFSpaceDefault             (12.0f)
-#define PDFSpaceDiggest             (20.0f)
-#define PDFSpaceDigger              (16.0f)
-#define PDFSpaceSmaller             (10.0f)
-#define PDFSpaceSmallest            (8.0f)
+#define PDFSpaceDefault             (15.0f)
+#define PDFSpaceBiggest             (20.0f)
+#define PDFSpaceBigger              (17.0f)
+#define PDFSpaceSmaller             (12.0f)
+#define PDFSpaceSmallest            (10.0f)
 
 
 

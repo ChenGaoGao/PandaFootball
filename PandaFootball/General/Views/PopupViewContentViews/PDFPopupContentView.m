@@ -8,8 +8,9 @@
 
 #import "PDFPopupContentView.h"
 #import "PDFUIFormatMacros.h"
+#import "UIImage+PureColor.h"
 
-static const CGFloat kBottomButtonDefaultHeight         = 35.0f;
+static const CGFloat kButtonHeight                      = 36.0f;
 
 @interface PDFPopupContentView()
 
@@ -25,19 +26,51 @@ static const CGFloat kBottomButtonDefaultHeight         = 35.0f;
     if (self) {
         self.backgroundColor = PDFColorWhite;
         
-        self.selectedIndex = 0;
-        
-        [self addSubview:self.bottomButtonDefault];
-        [self addSubview:self.bottomLineView];
-        
+        self.bottomButton = self.bottomButtonDefault;
     }
     return self;
 }
 
+#pragma mark - 
+- (void)resetFrame {
+    self.frame = CGRectMake(VIEW_X(self), VIEW_Y(self), VIEW_WIDTH(self),
+                            PDFSpaceBiggest +
+                            (_dataSourceArray.count / 3 + 1) * (kButtonHeight + PDFSpaceDefault) +
+                            PDFSpaceBiggest - PDFSpaceDefault +
+                            VIEW_HEIGHT(self.bottomButton)
+                            );
+    
+    self.bottomButton.frame = CGRectMake(VIEW_X(self.bottomButton),
+                                         VIEW_HEIGHT(self) - VIEW_HEIGHT(self.bottomButton),
+                                         VIEW_WIDTH(self.bottomButton),
+                                         VIEW_HEIGHT(self.bottomButton));
+    
+    self.bottomLineView.frame = CGRectMake(VIEW_X(self.bottomLineView),
+                                           VIEW_HEIGHT(self) - VIEW_HEIGHT(self.bottomButton),
+                                           VIEW_WIDTH(self.bottomLineView),
+                                           VIEW_HEIGHT(self.bottomLineView));
+}
+
+#pragma mark - EventResponse
+- (void)buttonHandel:(UIButton *)sender {
+    self.selectedIndex = sender.tag;
+    
+    if ([self.delegate respondsToSelector:@selector(popupContentView:didSelectAtIndex:)]) {
+        [self.delegate popupContentView:self didSelectAtIndex:sender.tag];
+    }
+}
+
+- (void)buttonDefaultHandle:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(popupContentView:bottomButtonDefaultClicked:)]) {
+        [self.delegate popupContentView:self bottomButtonDefaultClicked:sender];
+    }
+}
+
 #pragma mark - Setters
-- (void)setDataSourceArray:(NSArray *)dataSourceArray {
+- (void)setDataSourceArray:(NSMutableArray *)dataSourceArray {
     _dataSourceArray = dataSourceArray;
     
+    [self resetFrame];
     
     for (int i = 0; i < _dataSourceArray.count; i++) {
         NSString *titleString = [_dataSourceArray objectAtIndex:i];
@@ -45,41 +78,43 @@ static const CGFloat kBottomButtonDefaultHeight         = 35.0f;
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         
+        button.frame = CGRectMake(PDFSpaceBigger + (i % 3) * (MAIN_WIDTH - PDFSpaceBigger) / 3,
+                                  PDFSpaceBiggest + (i / 3) * (kButtonHeight + PDFSpaceDefault),
+                                  (MAIN_WIDTH - PDFSpaceBigger) / 3 - PDFSpaceBigger,
+                                  kButtonHeight);
+        [button setTitle:titleString forState:UIControlStateNormal];
+        [button setTitleColor:PDFColorTextDetailMoreDeep forState:UIControlStateNormal];
+        [button.titleLabel setFont:PDFFontDetailDefault];
         
+        [button setBackgroundImage:[UIImage imageWithColor:PDFColorWhite
+                                                      size:CGSizeMake(1, kButtonHeight)]
+                          forState:UIControlStateNormal];
         
+        [button setBackgroundImage:[UIImage imageWithColor:PDFColorBackground
+                                                      size:CGSizeMake(1, kButtonHeight)]
+                          forState:UIControlStateSelected];
         
+        [button setTag:i];
+        [button addTarget:self action:@selector(buttonHandel:) forControlEvents:UIControlEventTouchUpInside];
         
+        button.clipsToBounds = YES;
+        button.layer.borderWidth = 0.5;
+        button.layer.borderColor = PDFColorBorderLine.CGColor;
+        button.layer.cornerRadius = kButtonHeight / 2;
         
-        
-        
-        
-//        TablePopupModel *model = [_dataSourceArray objectAtIndex:i];
-//        
-//        XQBTablePopupCell *cellView = [[XQBTablePopupCell alloc] init];
-//        cellView.iconImage = model.iconImage;
-//        cellView.titleString = model.title;
-//        cellView.bottomLineIsFacing = model.bottomLineIsFacing;
-//        cellView.tag = i;
-//        
-//        [cellView setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]
-//                                                        size:CGSizeMake(1, AUTO_HEIGHT_FROM4_7(kContentCellHeight))]
-//                            forState:UIControlStateNormal];
-//        
-//        [cellView setBackgroundImage:[UIImage imageWithColor:XQBColorBackground
-//                                                        size:CGSizeMake(1, AUTO_HEIGHT_FROM4_7(kContentCellHeight))]
-//                            forState:UIControlStateHighlighted];
-//        
-//        [cellView addTarget:self action:@selector(cellViewHandel:) forControlEvents:UIControlEventTouchUpInside];
-//        
-//        [_contentView addSubview:cellView];
-//        
-//        [cellView makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(@(i * AUTO_HEIGHT_FROM4_7(kContentCellHeight)));
-//            make.height.equalTo(@(AUTO_HEIGHT_FROM4_7(kContentCellHeight)));
-//            make.left.equalTo(@0);
-//            make.right.equalTo(@0);
-//        }];
+        [self addSubview:button];
     }
+    
+    //保证 bottomButton 是 self 的倒数第二个子view
+    //bottomLineView 是最后一个
+    //从而让上面的 button 的顺序与selectedIndex值一样
+    [_bottomButton removeFromSuperview];
+    [self.bottomLineView removeFromSuperview];
+    
+    [self addSubview:_bottomButton];
+    [self addSubview:self.bottomLineView];
+    
+    self.selectedIndex = 0;
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
@@ -87,20 +122,28 @@ static const CGFloat kBottomButtonDefaultHeight         = 35.0f;
     
     if (_selectedIndex < (int)self.subviews.count - 2) { //contentView 还有bottomButton子view
         for (int i = 0; i < (int)self.subviews.count - 2; i++) {
-//            XQBTablePopupCell *cellView = [self.subviews objectAtIndex:i + 1];
-//            
-//            if (i == _selectedIndex) {
-//                cellView.highlighted = YES;
-//            }
-//            else {
-//                cellView.highlighted = NO;
-//            }
+            UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
+            
+            if (i == _selectedIndex) {
+                button.selected = YES;
+            }
+            else {
+                button.selected = NO;
+            }
         }
     }
 }
 
 - (void)setBottomButton:(UIButton *)bottomButton {
+    [_bottomButton removeFromSuperview];
+    [self.bottomLineView removeFromSuperview];
+    
     _bottomButton = bottomButton;
+    
+    [self addSubview:_bottomButton];
+    [self addSubview:self.bottomLineView];
+    
+    [self resetFrame];
 }
 
 #pragma mark - LazyLoading
@@ -119,6 +162,10 @@ static const CGFloat kBottomButtonDefaultHeight         = 35.0f;
         _bottomButtonDefault = [UIButton buttonWithType:UIButtonTypeCustom];
         _bottomButtonDefault.frame = CGRectMake(0, 0, MAIN_WIDTH, kBottomButtonDefaultHeight);
         [_bottomButtonDefault setImage:[UIImage imageNamed:@"PopupViewSwitch.png"] forState:UIControlStateNormal];
+        
+        [_bottomButtonDefault addTarget:self
+                                 action:@selector(buttonDefaultHandle:)
+                       forControlEvents:UIControlEventTouchUpInside];
     }
     return _bottomButtonDefault;
 }

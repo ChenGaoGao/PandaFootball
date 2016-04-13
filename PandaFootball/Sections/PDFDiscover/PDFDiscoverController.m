@@ -8,6 +8,20 @@
 
 #import "PDFDiscoverController.h"
 
+@interface PDFDiscoverController ()
+
+@end
+
 @implementation PDFDiscoverController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end

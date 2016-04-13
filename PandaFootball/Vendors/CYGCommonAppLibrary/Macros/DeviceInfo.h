@@ -40,7 +40,6 @@
 #define IS_4_7Inches                ([[UIScreen mainScreen] bounds].size.height == SCREEN_HEIGHT_4_7)
 #define IS_5_5Inches                ([[UIScreen mainScreen] bounds].size.height == SCREEN_HEIGHT_5_5)
 
-
 /**
  *  Screen
  */
@@ -52,6 +51,14 @@
 #define STATUS_NAV_BAR_HEIGHT       (STATUS_BAR_HEIGHT + NAVIGATIONBAR_HEIGHT)
 #define MAIN_HEIGHT                 (SCREEN_HEIGHT - STATUS_NAV_BAR_HEIGHT)
 #define MAIN_WIDTH                  SCREEN_WIDTH
+
+/**
+ *  Screen scale
+ */
+//4.7寸为基准
+#define WIDTH_From_4_7(width)       ((IS_3_5Inches || IS_4_0Inches) ? (width) * SCREEN_WIDTH_4_0 / SCREEN_WIDTH_4_7 : \
+                                    ((IS_5_5Inches) ? (width) * SCREEN_WIDTH_5_5 / SCREEN_WIDTH_4_7 : (width)))
+#define HEIGHT_From_4_7(height)     WIDTH_From_4_7(height)
 
 /**
  *  Views
