@@ -146,7 +146,7 @@ static const CGFloat kButtonHeight                      = 36.0f;
     [self resetFrame];
 }
 
-#pragma mark - LazyLoading
+#pragma mark - LazyLoad
 - (UIView *)bottomLineView {
     if (!_bottomLineView) {
         _bottomLineView = [[UIView alloc] init];

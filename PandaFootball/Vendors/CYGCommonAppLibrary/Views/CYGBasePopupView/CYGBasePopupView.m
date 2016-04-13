@@ -192,7 +192,7 @@
     }
 }
 
-#pragma mark - LazyLoading
+#pragma mark - LazyLoad
 - (UIButton *)backgroundButton {
     if (!_backgroundButton) {
         _backgroundButton = [UIButton buttonWithType:UIButtonTypeCustom];

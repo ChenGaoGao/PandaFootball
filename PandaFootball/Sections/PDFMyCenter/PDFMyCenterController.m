@@ -9,11 +9,18 @@
 #import "PDFMyCenterController.h"
 #import "PDFPCHMacro.h"
 
+#import "MyCenterHeaderView.h"
+#import "PDFSpaceView.h"
+
 static const CGFloat kTableviewCellHeight        = 55.0f;
 
 @interface PDFMyCenterController() <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray *dataSourceArray;
+@property (nonatomic, strong) UILabel *navigationTitleLabel;
+@property (nonatomic, strong) MyCenterHeaderView *headerView;
+
+@property (nonatomic, strong) NSArray *dataSourceArray;
+
 
 @end
 
@@ -22,13 +29,15 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self setNavigationTitleWhite:@"熊猫主球"];
-    
     self.view.backgroundColor = PDFColorBackground;
     
+    [self.view addSubview:self.navigationTitleLabel];
+    
+    [self.tableViewHeader addSubview:self.headerView];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -120,7 +129,7 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *spaceView = [[UIView alloc] init];
+    PDFSpaceView *spaceView = [[PDFSpaceView alloc] init];
     spaceView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest);
     
     spaceView.backgroundColor = PDFColorBackground;
@@ -133,30 +142,57 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
 }
 
 #pragma mark - Getters
-- (NSMutableArray *)dataSourceArray {
-    _dataSourceArray = (NSMutableArray *)@[
-                                           @[
-                                               @{@"image":@"MyCenterCreate",
-                                                 @"title":@"创建球队"},
-                                               @{@"image":@"MyCenterInviteTeam",
-                                                 @"title":@"邀请球队"},
-                                               @{@"image":@"MyCenterInviteFriend",
-                                                 @"title":@"邀请好友"}
-                                                ],
-                                           @[
-                                               @{@"image":@"MyCenterMessage",
-                                                 @"title":@"我的消息"},
-                                               @{@"image":@"MyCenterSetting",
-                                                 @"title":@"账号设置"},
-                                               @{@"image":@"MyCenterOther",
-                                                 @"title":@"其他"}
-                                               ],
-                                           @[
-                                               @{@"image":@"MyCenterEvaluate",
-                                                 @"title":@"评价一下"}
-                                               ]
-                                           ];
+- (NSArray *)dataSourceArray {
+    _dataSourceArray = @[
+                         @[
+                             @{@"image":@"MyCenterCreate",
+                               @"title":@"创建球队"},
+                             
+                             @{@"image":@"MyCenterInviteTeam",
+                               @"title":@"邀请球队"},
+                             
+                             @{@"image":@"MyCenterInviteFriend",
+                               @"title":@"邀请好友"}
+                             ],
+                         @[
+                             @{@"image":@"MyCenterMessage",
+                               @"title":@"我的消息"},
+                             
+                             @{@"image":@"MyCenterSetting",
+                               @"title":@"账号设置"},
+                             
+                             @{@"image":@"MyCenterOther",
+                               @"title":@"其他"}
+                             ],
+                         @[
+                             @{@"image":@"MyCenterEvaluate",
+                               @"title":@"评价一下"}
+                             ]
+                         ];
     return _dataSourceArray;
+}
+
+#pragma mark - LazyLoad
+- (UILabel *)navigationTitleLabel {
+    if (!_navigationTitleLabel) {
+        _navigationTitleLabel = [[UILabel alloc] init];
+        _navigationTitleLabel.frame = CGRectMake(0, STATUS_BAR_HEIGHT, MAIN_WIDTH, NAVIGATIONBAR_HEIGHT);
+        
+        _navigationTitleLabel.backgroundColor = [UIColor clearColor];
+        _navigationTitleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+        _navigationTitleLabel.text = @"熊猫足球";
+        _navigationTitleLabel.textColor = PDFColorWhite;
+        _navigationTitleLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _navigationTitleLabel;
+}
+
+- (MyCenterHeaderView *)headerView {
+    if (!_headerView) {
+        _headerView = [[MyCenterHeaderView alloc] init];
+        _headerView.frame = CGRectMake(0, 0, MAIN_WIDTH, HEIGHT_From_4_7(180) - STATUS_NAV_BAR_HEIGHT);
+    }
+    return _headerView;
 }
 
 @end

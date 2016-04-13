@@ -28,6 +28,8 @@
 		A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F4C1CBAB6350034CE4B /* PDFDiscoverController.m */; };
 		A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F4F1CBAB6470034CE4B /* PDFFootballTeamController.m */; };
 		A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */; };
+		A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21671CBE76CA0058E5B0 /* PDFSpaceView.m */; };
+		A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC216B1CBE7C230058E5B0 /* MyCenterHeaderView.m */; };
 		A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,10 @@
 		A7A80F511CBAB6560034CE4B /* PDFMyCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFMyCenterController.h; sourceTree = "<group>"; };
 		A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFMyCenterController.m; sourceTree = "<group>"; };
 		A7A80F551CBACB380034CE4B /* PDFPCHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFPCHMacro.h; sourceTree = "<group>"; };
+		A7BC21661CBE76CA0058E5B0 /* PDFSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSpaceView.h; sourceTree = "<group>"; };
+		A7BC21671CBE76CA0058E5B0 /* PDFSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSpaceView.m; sourceTree = "<group>"; };
+		A7BC216A1CBE7C230058E5B0 /* MyCenterHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterHeaderView.h; sourceTree = "<group>"; };
+		A7BC216B1CBE7C230058E5B0 /* MyCenterHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterHeaderView.m; sourceTree = "<group>"; };
 		A7BDDDEF1CAAB138009D9B04 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,6 +308,7 @@
 		A7A80F431CBAB5A90034CE4B /* PDFMyCenter */ = {
 			isa = PBXGroup;
 			children = (
+				A7BC21691CBE7C190058E5B0 /* MyCenterHeaderView */,
 				A7A80F511CBAB6560034CE4B /* PDFMyCenterController.h */,
 				A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */,
 			);
@@ -335,13 +342,31 @@
 			path = PDFHomePage;
 			sourceTree = "<group>";
 		};
+		A7BC21651CBE76B90058E5B0 /* PDFSpaceView */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC21661CBE76CA0058E5B0 /* PDFSpaceView.h */,
+				A7BC21671CBE76CA0058E5B0 /* PDFSpaceView.m */,
+			);
+			path = PDFSpaceView;
+			sourceTree = "<group>";
+		};
+		A7BC21691CBE7C190058E5B0 /* MyCenterHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC216A1CBE7C230058E5B0 /* MyCenterHeaderView.h */,
+				A7BC216B1CBE7C230058E5B0 /* MyCenterHeaderView.m */,
+			);
+			path = MyCenterHeaderView;
+			sourceTree = "<group>";
+		};
 		A7BDDDE81CAAB08B009D9B04 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
 				A7A80F3F1CBAB3ED0034CE4B /* PDFTabBar */,
 				A7A80F471CBAB5E40034CE4B /* PDFHomePage */,
-				A7A80F451CBAB5B60034CE4B /* PDFDiscover */,
 				A7A80F441CBAB5B00034CE4B /* PDFFootballTeam */,
+				A7A80F451CBAB5B60034CE4B /* PDFDiscover */,
 				A7A80F431CBAB5A90034CE4B /* PDFMyCenter */,
 			);
 			path = Sections;
@@ -432,6 +457,7 @@
 		A7BDDDF81CAACCC8009D9B04 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7BC21651CBE76B90058E5B0 /* PDFSpaceView */,
 				A75F5A191CBD365500EF1CD3 /* PopupViewContentViews */,
 			);
 			path = Views;
@@ -580,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */,
 				47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
@@ -596,6 +623,7 @@
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
+				A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */,
 				47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

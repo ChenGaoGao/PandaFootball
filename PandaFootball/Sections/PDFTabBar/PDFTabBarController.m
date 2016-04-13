@@ -42,6 +42,19 @@
     
     [viewControllerArray addObject:homePageNavigationController];
     
+    //球队
+    PDFFootballTeamController *teamViewController = [[PDFFootballTeamController alloc] initWithNibName:nil bundle:nil];
+    teamViewController.title = @"球队";
+    teamViewController.tabBarItem.image =
+    [[UIImage imageNamed:@"TBFootballTeamGray.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    teamViewController.tabBarItem.selectedImage =
+    [[UIImage imageNamed:@"TBFootballTeamGreen.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    PDFBaseNavigationController *teamNavigationController =
+    [[PDFBaseNavigationController alloc] initWithRootViewController:teamViewController];
+    
+    [viewControllerArray addObject:teamNavigationController];
+    
     //发现
     PDFDiscoverController *discoverViewController = [[PDFDiscoverController alloc] initWithNibName:nil bundle:nil];
     discoverViewController.title = @"发现";
@@ -54,19 +67,7 @@
     [[PDFBaseNavigationController alloc] initWithRootViewController:discoverViewController];
     
     [viewControllerArray addObject:discoverNavigationController];
-    
-    //球队
-    PDFFootballTeamController *teamViewController = [[PDFFootballTeamController alloc] initWithNibName:nil bundle:nil];
-    teamViewController.title = @"球队";
-    teamViewController.tabBarItem.image =
-    [[UIImage imageNamed:@"TBFootballTeamGray.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    discoverViewController.tabBarItem.selectedImage =
-    [[UIImage imageNamed:@"TBFootballTeamGreen.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    PDFBaseNavigationController *teamNavigationController =
-    [[PDFBaseNavigationController alloc] initWithRootViewController:teamViewController];
-    
-    [viewControllerArray addObject:teamNavigationController];
+
     
     //个人中心（我）
     PDFMyCenterController *myCenterViewController = [[PDFMyCenterController alloc] initWithNibName:nil bundle:nil];

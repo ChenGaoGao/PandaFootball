@@ -125,7 +125,7 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     }
 }
 
-#pragma mark - LazyLoading
+#pragma mark - LazyLoad
 - (UIButton *)leftButton {
     if (!_leftButton) {
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
