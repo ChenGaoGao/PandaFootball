@@ -13,12 +13,16 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
 
 @interface PDFMyCenterController() <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) NSMutableArray *dataSourceArray;
+
 @end
 
 @implementation PDFMyCenterController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [self setNavigationTitleWhite:@"熊猫主球"];
     
     self.view.backgroundColor = PDFColorBackground;
     
@@ -40,7 +44,6 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
     // Dispose of any resources that can be recreated.
 }
 
-
 #pragma mark - UIScrollViewDelegate
 // 去掉UItableview headerview黏性(sticky)
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -57,27 +60,17 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return self.dataSourceArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 3;
-    }
-    
-    if (section == 1) {
-        return 3;
-    }
-    
-    if (section == 2) {
-        return 1;
-    }
-    return 0;
+    return ((NSArray *)[self.dataSourceArray objectAtIndex:section]).count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    XQBTopicInfoModel *topicInfoModel = self.topicArray.count > indexPath.section ? [self.topicArray objectAtIndex:indexPath.section] : nil;
-//    
+    NSDictionary *dataDic=[(NSArray *)[self.dataSourceArray objectAtIndex:indexPath.section]
+                           objectAtIndex:indexPath.row];
+    
     static NSString *identify = @"identify";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
@@ -85,7 +78,13 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
+    cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
     
+    cell.textLabel.text = [dataDic objectForKey:@"title"];
+    cell.textLabel.font = PDFFontDetailDefault;
+    cell.textLabel.textColor = PDFColorTextDetailDefault;
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -120,21 +119,44 @@ static const CGFloat kTableviewCellHeight        = 55.0f;
     }
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    if (section == 0) {
-//        XQBModuleHead *topicModuleHead = [[XQBModuleHead alloc] initWithFrame:CGRectMake(0, 0, MainWidth, kModuleHeadHeight)];
-//        topicModuleHead.icon = [UIImage imageNamed:@"xqb_module_hot_topic"];
-//        topicModuleHead.title = @"话题热贴";
-//        return topicModuleHead;
-//    }
-//    else {
-//        XQBSpaceView *spaceView = [[XQBSpaceView alloc] initWithFrame:CGRectMake(0, 0, MainWidth, XQBSpaceSmallSmall)];
-//        return spaceView;
-//    }
-//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *spaceView = [[UIView alloc] init];
+    spaceView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest);
+    
+    spaceView.backgroundColor = PDFColorBackground;
+    
+    return spaceView;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+}
+
+#pragma mark - Getters
+- (NSMutableArray *)dataSourceArray {
+    _dataSourceArray = (NSMutableArray *)@[
+                                           @[
+                                               @{@"image":@"MyCenterCreate",
+                                                 @"title":@"创建球队"},
+                                               @{@"image":@"MyCenterInviteTeam",
+                                                 @"title":@"邀请球队"},
+                                               @{@"image":@"MyCenterInviteFriend",
+                                                 @"title":@"邀请好友"}
+                                                ],
+                                           @[
+                                               @{@"image":@"MyCenterMessage",
+                                                 @"title":@"我的消息"},
+                                               @{@"image":@"MyCenterSetting",
+                                                 @"title":@"账号设置"},
+                                               @{@"image":@"MyCenterOther",
+                                                 @"title":@"其他"}
+                                               ],
+                                           @[
+                                               @{@"image":@"MyCenterEvaluate",
+                                                 @"title":@"评价一下"}
+                                               ]
+                                           ];
+    return _dataSourceArray;
 }
 
 @end
