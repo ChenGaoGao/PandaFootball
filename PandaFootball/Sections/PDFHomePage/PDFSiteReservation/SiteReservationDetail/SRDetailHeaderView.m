@@ -38,6 +38,7 @@ static const CGFloat kAddressLabelHeight    = 41.0f;
         _siteImageView = [[UIImageView alloc] init];
         _siteImageView.frame = CGRectMake(0, 0, MAIN_WIDTH, HEIGHT_From_4_7(kImageViewHeight));
         
+        _siteImageView.clipsToBounds = YES;
         _siteImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _siteImageView;

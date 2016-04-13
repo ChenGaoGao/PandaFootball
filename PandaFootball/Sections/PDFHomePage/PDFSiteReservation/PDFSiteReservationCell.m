@@ -30,6 +30,7 @@ static const CGFloat kSiteImageViewHeight       = 65.0f;
         _siteImageView = [[UIImageView alloc] init];
         _siteImageView.frame = CGRectMake(PDFSpaceSmaller, PDFSpaceSmaller, kSiteImageViewWidth, kSiteImageViewHeight);
         
+        _siteImageView.clipsToBounds = YES;
         _siteImageView.contentMode = UIViewContentModeScaleAspectFill;
         
         _siteImageView.clipsToBounds = YES;

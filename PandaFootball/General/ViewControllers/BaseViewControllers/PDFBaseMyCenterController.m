@@ -122,6 +122,7 @@
                                               VIEW_WIDTH(self.view),
                                               _topBackgroundViewHeight);
         
+        _topBackgroundView.clipsToBounds = YES;
         _topBackgroundView.contentMode = UIViewContentModeScaleAspectFill;
         _topBackgroundView.image = [[UIImage imageNamed:@"MyCenterBackground.png"]
                                     blurImageBlackAlpha:0.26];
