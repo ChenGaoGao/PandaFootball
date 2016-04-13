@@ -37,6 +37,8 @@
 		A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC217D1CBE92140058E5B0 /* PDFSiteReservationController.m */; };
 		A7BC21811CBE922A0058E5B0 /* PDFDatingFightingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21801CBE922A0058E5B0 /* PDFDatingFightingController.m */; };
 		A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21831CBE9BFB0058E5B0 /* PDFSiteReservationCell.m */; };
+		A7BC21881CBEA1E80058E5B0 /* SiteReservationDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21871CBEA1E80058E5B0 /* SiteReservationDetailController.m */; };
+		A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC218A1CBEA41C0058E5B0 /* SRDetailHeaderView.m */; };
 		A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +124,10 @@
 		A7BC21801CBE922A0058E5B0 /* PDFDatingFightingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingController.m; sourceTree = "<group>"; };
 		A7BC21821CBE9BFB0058E5B0 /* PDFSiteReservationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSiteReservationCell.h; sourceTree = "<group>"; };
 		A7BC21831CBE9BFB0058E5B0 /* PDFSiteReservationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSiteReservationCell.m; sourceTree = "<group>"; };
+		A7BC21861CBEA1E80058E5B0 /* SiteReservationDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteReservationDetailController.h; sourceTree = "<group>"; };
+		A7BC21871CBEA1E80058E5B0 /* SiteReservationDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteReservationDetailController.m; sourceTree = "<group>"; };
+		A7BC21891CBEA41C0058E5B0 /* SRDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDetailHeaderView.h; sourceTree = "<group>"; };
+		A7BC218A1CBEA41C0058E5B0 /* SRDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDetailHeaderView.m; sourceTree = "<group>"; };
 		A7BDDDEF1CAAB138009D9B04 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7BDDDF01CAAB138009D9B04 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -410,12 +416,24 @@
 		A7BC217B1CBE91F90058E5B0 /* PDFSiteReservation */ = {
 			isa = PBXGroup;
 			children = (
+				A7BC21851CBEA1D00058E5B0 /* SiteReservationDetail */,
 				A7BC217C1CBE92140058E5B0 /* PDFSiteReservationController.h */,
 				A7BC217D1CBE92140058E5B0 /* PDFSiteReservationController.m */,
 				A7BC21821CBE9BFB0058E5B0 /* PDFSiteReservationCell.h */,
 				A7BC21831CBE9BFB0058E5B0 /* PDFSiteReservationCell.m */,
 			);
 			path = PDFSiteReservation;
+			sourceTree = "<group>";
+		};
+		A7BC21851CBEA1D00058E5B0 /* SiteReservationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC21861CBEA1E80058E5B0 /* SiteReservationDetailController.h */,
+				A7BC21871CBEA1E80058E5B0 /* SiteReservationDetailController.m */,
+				A7BC21891CBEA41C0058E5B0 /* SRDetailHeaderView.h */,
+				A7BC218A1CBEA41C0058E5B0 /* SRDetailHeaderView.m */,
+			);
+			path = SiteReservationDetail;
 			sourceTree = "<group>";
 		};
 		A7BDDDE81CAAB08B009D9B04 /* Sections */ = {
@@ -677,8 +695,10 @@
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
 				A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */,
 				47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */,
+				A7BC21881CBEA1E80058E5B0 /* SiteReservationDetailController.m in Sources */,
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
+				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
 				A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */,
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,

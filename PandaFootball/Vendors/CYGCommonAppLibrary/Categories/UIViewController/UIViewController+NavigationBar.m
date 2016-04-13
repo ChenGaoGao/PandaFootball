@@ -143,7 +143,6 @@
 #pragma mark - private methods
 - (UIButton *)setBackBarButton {
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
-    backButton.backgroundColor = [UIColor redColor];
     [backButton setImage:[UIImage imageNamed:NAV_LEFT_BAR_BUTTON_IMAGE] forState:UIControlStateNormal];
     [backButton setExclusiveTouch:YES];
     [backButton addTarget:self action:@selector(backHandle:) forControlEvents:UIControlEventTouchUpInside];

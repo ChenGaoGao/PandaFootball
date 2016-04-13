@@ -90,8 +90,8 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
     
     cell.textLabel.text = [dataDic objectForKey:@"title"];
-    cell.textLabel.font = PDFFontDetailDefault;
-    cell.textLabel.textColor = PDFColorTextDetailDefault;
+    cell.textLabel.font = PDFFontDetailBigger;
+    cell.textLabel.textColor = PDFColorTextDetailMoreDeep;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     

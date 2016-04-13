@@ -10,6 +10,7 @@
 #import "PDFPCHMacro.h"
 
 #import "PDFSiteReservationCell.h"
+#import "SiteReservationDetailController.h"
 
 static const CGFloat kTableViewCellHeight        = 89.0f;
 
@@ -44,7 +45,7 @@ static const CGFloat kTableViewCellHeight        = 89.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dataDic = [self.dataSourceArray objectAtIndex:indexPath.row] ;
+    NSDictionary *dataDic = [self.dataSourceArray objectAtIndex:indexPath.row];
     
     static NSString *identify = @"identify";
     PDFSiteReservationCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
@@ -84,16 +85,13 @@ static const CGFloat kTableViewCellHeight        = 89.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return 0;
-    }
-    else {
-        return PDFSpaceSmallest;
-    }
+    return 0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    SiteReservationDetailController *viewController = [[SiteReservationDetailController alloc] init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - LazyLoad
@@ -110,7 +108,7 @@ static const CGFloat kTableViewCellHeight        = 89.0f;
     return _tableView;
 }
 
-- (NSArray *)dataSourceArray {
+- (NSMutableArray *)dataSourceArray {
     _dataSourceArray = (NSMutableArray *)@[ @{@"image":@"MyCenterBackground.png",
                                               @"title":@"香蜜湖度假村足球场",
                                               @"detail":@"深圳市福田区深南大道6038号深圳市福田区深南大道6038号"},
