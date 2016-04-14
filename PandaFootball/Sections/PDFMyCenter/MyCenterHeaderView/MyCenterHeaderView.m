@@ -36,7 +36,7 @@ static const CGFloat kLoginButtonHeight         = 30.0f;
     [super setFrame:frame];
     
     self.loginButton.frame = CGRectMake((MAIN_WIDTH - WIDTH_From_4_7(kLoginButtonWidth))/ 2,
-                                        VIEW_HEIGHT(self) - PDFSpaceBiggest - kLoginButtonHeight,
+                                        VIEW_HEIGHT(self) - PDFSpaceBigger - kLoginButtonHeight,
                                         WIDTH_From_4_7(kLoginButtonWidth),
                                         kLoginButtonHeight);
     

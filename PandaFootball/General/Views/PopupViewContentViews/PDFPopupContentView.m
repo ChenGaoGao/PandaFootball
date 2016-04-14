@@ -34,9 +34,9 @@ static const CGFloat kButtonHeight                      = 36.0f;
 #pragma mark - 
 - (void)resetFrame {
     self.frame = CGRectMake(VIEW_X(self), VIEW_Y(self), VIEW_WIDTH(self),
-                            PDFSpaceBiggest +
+                            PDFSpaceBigger +
                             (_dataSourceArray.count / 3 + 1) * (kButtonHeight + PDFSpaceDefault) +
-                            PDFSpaceBiggest - PDFSpaceDefault +
+                            PDFSpaceBigger - PDFSpaceDefault +
                             VIEW_HEIGHT(self.bottomButton)
                             );
     
@@ -78,9 +78,9 @@ static const CGFloat kButtonHeight                      = 36.0f;
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        button.frame = CGRectMake(PDFSpaceBigger + (i % 3) * (MAIN_WIDTH - PDFSpaceBigger) / 3,
-                                  PDFSpaceBiggest + (i / 3) * (kButtonHeight + PDFSpaceDefault),
-                                  (MAIN_WIDTH - PDFSpaceBigger) / 3 - PDFSpaceBigger,
+        button.frame = CGRectMake(PDFSpaceBiggish + (i % 3) * (MAIN_WIDTH - PDFSpaceBiggish) / 3,
+                                  PDFSpaceBigger + (i / 3) * (kButtonHeight + PDFSpaceDefault),
+                                  (MAIN_WIDTH - PDFSpaceBiggish) / 3 - PDFSpaceBiggish,
                                   kButtonHeight);
         [button setTitle:titleString forState:UIControlStateNormal];
         [button setTitleColor:PDFColorTextDetailMoreDeep forState:UIControlStateNormal];

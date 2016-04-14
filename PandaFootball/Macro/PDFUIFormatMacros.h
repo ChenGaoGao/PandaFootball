@@ -86,8 +86,10 @@
  *  (间隙)
  */
 #define PDFSpaceDefault             (15.0f)
-#define PDFSpaceBiggest             (20.0f)
-#define PDFSpaceBigger              (17.0f)
+#define PDFSpaceBiggest             (25.0f)
+#define PDFSpaceBigger              (20.0f)
+#define PDFSpaceBiggish             (17.0f)
+#define PDFSpaceSmallish            (14.0f)
 #define PDFSpaceSmaller             (12.0f)
 #define PDFSpaceSmallest            (10.0f)
 

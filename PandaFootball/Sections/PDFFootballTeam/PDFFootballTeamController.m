@@ -12,13 +12,14 @@
 #import "FootballTeamHeaderView.h"
 #import "FootballTeamCell.h"
 
-static const CGFloat kBackgroundViewHeight      = 210.0f;
+static const CGFloat kHeaderViewHeight      = 210.0f;
 
 @interface PDFFootballTeamController() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIButton *rightButton;
-
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, strong) NSMutableArray *dataSourceArray;
 
 @end
 
@@ -33,16 +34,7 @@ static const CGFloat kBackgroundViewHeight      = 210.0f;
     [self setRightBarButtonItem:self.rightButton offset:PDFSpaceDefault -
      (PDFNavagationBarWidth - _rightButton.imageView.image.size.width) / 2 ];
     
-//    [self.view addSubview:self.collectionView];
-    
-    FootballTeamHeaderView *headerView = [[FootballTeamHeaderView alloc] init];
-    headerView.frame = CGRectMake(0, 0, MAIN_WIDTH, HEIGHT_From_4_7(kBackgroundViewHeight));
-    
-    headerView.backgroundView.image = [UIImage imageNamed:@"MyCenterBackground"];
-    headerView.playersLabel.text = @"11人";
-    headerView.sitesLabel.text = @"22场";
-    
-    [self.view addSubview:headerView];
+    [self.view addSubview:self.collectionView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +47,113 @@ static const CGFloat kBackgroundViewHeight      = 210.0f;
 
 }
 
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section {
+    return self.dataSourceArray.count;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath {
+    
+    FootballTeamHeaderView *reusableView =
+    [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                       withReuseIdentifier:@"DailyGoodsReusableViewIdertifier"
+                                              forIndexPath:indexPath];
+    
+    reusableView.backgroundView.image = [UIImage imageNamed:@"MyCenterBackground"];
+    reusableView.playersLabel.text = @"11人";
+    reusableView.sitesLabel.text = @"22场";
+    
+    return reusableView;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    FootballTeamCell *cell =
+    [collectionView dequeueReusableCellWithReuseIdentifier:@"DailyGoodsCellIdentifier"
+                                              forIndexPath:indexPath];
+    
+    NSDictionary *dataDic = [self.dataSourceArray objectAtIndex:indexPath.row];
+    
+    cell.iconView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
+    cell.titleLabel.text = [dataDic objectForKey:@"title"];
+    
+    if (indexPath.row % 3 == 0) {
+        cell.lineType = FBTeamCellLineTypeBottom;
+    } else {
+        cell.lineType = FBTeamCellLineTypeLeftBottom;
+    }
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+referenceSizeForHeaderInSection:(NSInteger)section {
+    
+    return CGSizeMake(MAIN_WIDTH, HEIGHT_From_4_7(kHeaderViewHeight));
+
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake(MAIN_WIDTH / 3,
+                      HEIGHT_From_4_7(PDFSpaceBigger) * 2 + kIconViewHeight + PDFSpaceSmaller +PDFLabelHeightDetailSmaller);
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+                       layout:(UICollectionViewLayout *)collectionViewLayout
+       insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - Getters
+- (NSMutableArray *)dataSourceArray {
+    _dataSourceArray = (NSMutableArray *) @[ @{@"image":@"FootballTeamAlbum",
+                                               @"title":@"球队相册"},
+                                             
+                                             @{@"image":@"FootballTeamPosted",
+                                               @"title":@"发帖招人"},
+                                             
+                                             @{@"image":@"FootballTeamSchedule",
+                                               @"title":@"球队赛程"},
+                                             
+                                             @{@"image":@"FootballTeamPlayer",
+                                               @"title":@"球员列表"},
+                                             
+                                             @{@"image":@"FootballTeamEvent",
+                                               @"title":@"球队活动"},
+                                             
+                                             @{@"image":@"FootballTeamCost",
+                                               @"title":@"球队费用"},
+                                             
+                                             @{@"image":@"FootballTeamStandings",
+                                               @"title":@"球队战绩"},
+                                             
+                                             @{@"image":@"FootballTeamStatistics",
+                                               @"title":@"出勤统计"},
+                                             
+                                             @{@"image":@"FootballTeamManage",
+                                               @"title":@"球队管理"} ];
+                         
+    return _dataSourceArray;
+}
 
 #pragma mark - LazyLoad
 - (UIButton *)rightButton {
@@ -85,12 +184,12 @@ static const CGFloat kBackgroundViewHeight      = 210.0f;
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.showsVerticalScrollIndicator = NO;
         
-//        [_collectionView registerClass:[DailyGoodsReusableView class]
-//            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-//                   withReuseIdentifier:@"DailyGoodsReusableViewIdertifier"];
-//        
-//        [_collectionView registerClass:[DailyGoodsCell class]
-//            forCellWithReuseIdentifier:@"DailyGoodsCellIdentifier"];
+        [_collectionView registerClass:[FootballTeamHeaderView class]
+            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                   withReuseIdentifier:@"DailyGoodsReusableViewIdertifier"];
+        
+        [_collectionView registerClass:[FootballTeamCell class]
+            forCellWithReuseIdentifier:@"DailyGoodsCellIdentifier"];
     }
     return _collectionView;
 }
