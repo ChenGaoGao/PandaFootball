@@ -50,7 +50,7 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 3;
+        return 2;
     }
     
     if (section == 1) {
@@ -180,15 +180,8 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
                                                @{@"image":@"MyCenterMessage",
                                                  @"title":@"我的消息"},
                                                
-                                               @{@"image":@"MyCenterSetting",
-                                                 @"title":@"账号设置"},
-                                               
                                                @{@"image":@"MyCenterOther",
                                                  @"title":@"其他"}
-                                               ],
-                                           @[
-                                               @{@"image":@"MyCenterEvaluate",
-                                                 @"title":@"评价一下"}
                                                ]
                                            ];
     

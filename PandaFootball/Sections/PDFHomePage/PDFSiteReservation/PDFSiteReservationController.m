@@ -59,6 +59,13 @@ static const CGFloat kTableViewCellHeight        = 89.0f;
     cell.siteNameLabel.text = [dataDic objectForKey:@"title"];
    
     cell.siteAddressLabel.text = [dataDic objectForKey:@"detail"];
+    
+    if (indexPath.row == 0) {
+        cell.reservationType = SRCellReservationTypeUnable;
+    }
+    
+//    cell.siteNameLabel.backgroundColor = PDFColorGreen;
+//    cell.siteAddressLabel.backgroundColor = PDFColorGreen;
 
     return cell;
 }
@@ -111,19 +118,19 @@ static const CGFloat kTableViewCellHeight        = 89.0f;
 - (NSMutableArray *)dataSourceArray {
     _dataSourceArray = (NSMutableArray *)@[ @{@"image":@"MyCenterBackground.png",
                                               @"title":@"香蜜湖度假村足球场",
-                                              @"detail":@"深圳市福田区深南大道6038号深圳市福田区深南大道6038号"},
+                                              @"detail":@"深圳市福田区"},
                                             
                                             @{@"image":@"MyCenterBackground.png",
                                               @"title":@"香蜜湖度假村足球场",
-                                              @"detail":@"深圳市福田区深南大道6038号"},
+                                              @"detail":@"深圳市福田区"},
                                             
                                             @{@"image":@"MyCenterBackground.png",
                                               @"title":@"香蜜湖度假村足球场",
-                                              @"detail":@"深圳市福田区深南大道6038号"},
+                                              @"detail":@"深圳市福田区"},
                                             
                                             @{@"image":@"MyCenterBackground.png",
                                               @"title":@"香蜜湖度假村足球场",
-                                              @"detail":@"深圳市福田区深南大道6038号深圳市福田区深南大道6038号"}
+                                              @"detail":@"深圳市福田区"}
                                             ];
     
     return _dataSourceArray;

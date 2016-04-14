@@ -99,7 +99,7 @@ static const CGFloat kButtonHeight                      = 36.0f;
         
         button.clipsToBounds = YES;
         button.layer.borderWidth = 0.5;
-        button.layer.borderColor = PDFColorBorderLine.CGColor;
+        button.layer.borderColor = PDFColorLineBorder.CGColor;
         button.layer.cornerRadius = kButtonHeight / 2;
         
         [self addSubview:button];

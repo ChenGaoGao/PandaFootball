@@ -26,10 +26,10 @@
 
 //通用颜色
 #define PDFColorGreen               RGB( 76, 176,  80)
+#define PDFColorRed                 [UIColor redColor]
 #define PDFColorWhite               RGB(255, 255, 255)
 #define PDFColorBlank               RGB(  0,   0,   0)
 #define PDFColorBackground          RGB(245, 245, 245)
-#define PDFColorBorderLine          RGB(204, 204, 204)
 
 //文字颜色
 #define PDFColorTextBodyDefault     RGB( 36,  36,  36)      //body表示正文
@@ -44,9 +44,12 @@
 #define PDFColorTextTabBarDefault   RGB(184, 184, 184)
 #define PDFColorTextTabBarGreen     PDFColorGreen
 
+//线颜色
 //分割线颜色
 #define PDFColorLineSplit           RGB(224, 224, 224)
 #define PDFColorLineTabBar          RGB(178, 178, 178)
+//边框颜色
+#define PDFColorLineBorder          RGB(204, 204, 204)
 
 
 /**

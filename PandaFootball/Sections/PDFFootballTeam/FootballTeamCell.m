@@ -31,21 +31,21 @@ static const CGFloat kIconViewWidth         = 25.0f;
         [self addSubview:self.leftLineView];
         [self addSubview:self.bottomLineView];
         
-        self.lineType = FBTeamCellLineTypeLeftBottom;
+        self.lineType = FBTCellLineTypeLeftBottom;
     }
     return self;
 }
 
 #pragma mark - Setters
-- (void)setLineType:(FBTeamCellLineType)lineType {
+- (void)setLineType:(FBTCellLineType)lineType {
     _lineType = lineType;
     
-    if (lineType == FBTeamCellLineTypeLeftBottom) {
+    if (lineType == FBTCellLineTypeLeftBottom) {
         self.leftLineView.hidden = NO;
         self.bottomLineView.hidden = NO;
     }
     
-    if (lineType == FBTeamCellLineTypeBottom) {
+    if (lineType == FBTCellLineTypeBottom) {
         self.leftLineView.hidden = YES;
         self.bottomLineView.hidden = NO;
     }

@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, FBTeamCellLineType) {
-    FBTeamCellLineTypeLeftBottom = 0,
-    FBTeamCellLineTypeBottom
+typedef NS_ENUM(NSInteger, FBTCellLineType) {
+    FBTCellLineTypeLeftBottom = 0,
+    FBTCellLineTypeBottom
 };
 
 static const CGFloat kIconViewHeight        = 25.0f;
 
 @interface FootballTeamCell : UICollectionViewCell
 
-@property (nonatomic, assign) FBTeamCellLineType lineType;
+@property (nonatomic, assign) FBTCellLineType lineType;
 @property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UILabel *titleLabel;
 

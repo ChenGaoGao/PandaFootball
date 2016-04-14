@@ -86,9 +86,9 @@ static const CGFloat kHeaderViewHeight      = 210.0f;
     cell.titleLabel.text = [dataDic objectForKey:@"title"];
     
     if (indexPath.row % 3 == 0) {
-        cell.lineType = FBTeamCellLineTypeBottom;
+        cell.lineType = FBTCellLineTypeBottom;
     } else {
-        cell.lineType = FBTeamCellLineTypeLeftBottom;
+        cell.lineType = FBTCellLineTypeLeftBottom;
     }
     
     return cell;
