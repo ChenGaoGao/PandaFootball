@@ -12,7 +12,8 @@
 #import "FootballTeamHeaderView.h"
 #import "FootballTeamCell.h"
 
-static const CGFloat kHeaderViewHeight      = 210.0f;
+
+static const CGFloat kHeaderViewHeight          = 157.0f;
 
 @interface PDFFootballTeamController() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -66,9 +67,16 @@ static const CGFloat kHeaderViewHeight      = 210.0f;
                                        withReuseIdentifier:@"DailyGoodsReusableViewIdertifier"
                                               forIndexPath:indexPath];
     
-    reusableView.backgroundView.image = [UIImage imageNamed:@"MyCenterBackground"];
+    reusableView.headIconView.image = [UIImage imageNamed:@"MyCenterBackground"];
+    reusableView.nameLabel.text = @"呜啦啦啦";
+    reusableView.sloganLabel.text = @"口号：我擦咧1我擦咧我擦咧我擦咧我擦咧我擦咧我擦咧454我擦咧我擦咧";
+    
+//    reusableView.nameLabel.backgroundColor = PDFColorGreen;
+//    reusableView.sloganLabel.backgroundColor = PDFColorGreen;
+    
     reusableView.playersLabel.text = @"11人";
     reusableView.sitesLabel.text = @"22场";
+    reusableView.resultLabel.text = @"16/10/6";
     
     return reusableView;
 }
@@ -99,7 +107,7 @@ static const CGFloat kHeaderViewHeight      = 210.0f;
                   layout:(UICollectionViewLayout *)collectionViewLayout
 referenceSizeForHeaderInSection:(NSInteger)section {
     
-    return CGSizeMake(MAIN_WIDTH, HEIGHT_From_4_7(kHeaderViewHeight));
+    return CGSizeMake(MAIN_WIDTH, kHeaderViewHeight);
 
 }
 

@@ -65,7 +65,6 @@ static const CGFloat kReservationButtonHeight   = 18.0f;
         _siteImageView.clipsToBounds = YES;
         _siteImageView.contentMode = UIViewContentModeScaleAspectFill;
         
-        _siteImageView.clipsToBounds = YES;
         _siteImageView.layer.borderWidth = 0.5;
         _siteImageView.layer.borderColor = PDFColorLineBorder.CGColor;
         _siteImageView.layer.cornerRadius = 3;
@@ -131,7 +130,7 @@ static const CGFloat kReservationButtonHeight   = 18.0f;
         [_reservationButton setTitleColor:PDFColorGreen forState:UIControlStateNormal];
         [_reservationButton setTitleColor:PDFColorTextDetailDefault forState:UIControlStateSelected];
         
-        [_reservationButton.titleLabel setFont:PDFFontDetailDefault];
+        [_reservationButton.titleLabel setFont:PDFFontTabBarDefault];
         
         _reservationButton.clipsToBounds = YES;
         _reservationButton.layer.borderWidth = 0.5;
