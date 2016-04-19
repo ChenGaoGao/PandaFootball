@@ -12,6 +12,7 @@
 #import "FootballTeamHeaderView.h"
 #import "FootballTeamCell.h"
 
+#import "FootballTeamManageController.h"
 
 static const CGFloat kHeaderViewHeight          = 157.0f;
 
@@ -70,9 +71,6 @@ static const CGFloat kHeaderViewHeight          = 157.0f;
     reusableView.headIconView.image = [UIImage imageNamed:@"MyCenterBackground"];
     reusableView.nameLabel.text = @"呜啦啦啦";
     reusableView.sloganLabel.text = @"口号：我擦咧1我擦咧我擦咧我擦咧我擦咧我擦咧我擦咧454我擦咧我擦咧";
-    
-//    reusableView.nameLabel.backgroundColor = PDFColorGreen;
-//    reusableView.sloganLabel.backgroundColor = PDFColorGreen;
     
     reusableView.playersLabel.text = @"11人";
     reusableView.sitesLabel.text = @"22场";
@@ -133,32 +131,41 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 
 #pragma mark - Getters
 - (NSMutableArray *)dataSourceArray {
-    _dataSourceArray = (NSMutableArray *) @[ @{@"image":@"FootballTeamAlbum",
-                                               @"title":@"球队相册"},
+    _dataSourceArray = (NSMutableArray *) @[ @{@"image" : @"FootballTeamAlbum",
+                                               @"title" : @"球队相册",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamPosted",
-                                               @"title":@"发帖招人"},
+                                             @{@"image" : @"FootballTeamPosted",
+                                               @"title" : @"发帖招人",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamSchedule",
-                                               @"title":@"球队赛程"},
+                                             @{@"image" : @"FootballTeamSchedule",
+                                               @"title" : @"球队赛程",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamPlayer",
-                                               @"title":@"球员列表"},
+                                             @{@"image" : @"FootballTeamPlayer",
+                                               @"title" : @"球员列表",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamEvent",
-                                               @"title":@"球队活动"},
+                                             @{@"image" : @"FootballTeamEvent",
+                                               @"title" : @"球队活动",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamCost",
-                                               @"title":@"球队费用"},
+                                             @{@"image" : @"FootballTeamCost",
+                                               @"title" : @"球队费用",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamStandings",
-                                               @"title":@"球队战绩"},
+                                             @{@"image" : @"FootballTeamStandings",
+                                               @"title" : @"球队战绩",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamStatistics",
-                                               @"title":@"出勤统计"},
+                                             @{@"image" : @"FootballTeamStatistics",
+                                               @"title" : @"出勤统计",
+                                               @"controller" : @""},
                                              
-                                             @{@"image":@"FootballTeamManage",
-                                               @"title":@"球队管理"} ];
+                                             @{@"image" : @"FootballTeamManage",
+                                               @"title" : @"球队管理",
+                                               @"controller" : @""} ];
                          
     return _dataSourceArray;
 }
