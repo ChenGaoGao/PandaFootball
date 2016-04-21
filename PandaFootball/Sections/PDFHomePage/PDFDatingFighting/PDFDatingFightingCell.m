@@ -70,7 +70,7 @@ static const CGFloat kFightingButtonHeight  = 30.0f;
 - (UIImageView *)iconView {
     if (!_iconView) {
         _iconView = [[UIImageView alloc] init];
-        _iconView.frame = CGRectMake(PDFSpaceBiggest, PDFSpaceSmallish, kIconViewWidth, kIconViewHeight);
+        _iconView.frame = CGRectMake(PDFSpaceBiggest, PDFSpaceBigger, kIconViewWidth, kIconViewHeight);
         
         _iconView.clipsToBounds = YES;
         _iconView.contentMode = UIViewContentModeScaleAspectFill;
@@ -115,7 +115,7 @@ static const CGFloat kFightingButtonHeight  = 30.0f;
     if (!_lineView) {
         _lineView = [[UILabel alloc] init];
         _lineView.frame = CGRectMake(PDFSpaceSmaller,
-                                     VIEW_BOTTOM(_iconView) + PDFSpaceBiggish - 0.5,
+                                     VIEW_BOTTOM(_iconView) + PDFSpaceSmallest - 0.5,
                                      MAIN_WIDTH - PDFSpaceSmaller * 2,
                                      0.5);
         

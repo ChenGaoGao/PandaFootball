@@ -126,7 +126,11 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (indexPath.row == 8) {
+        FootballTeamManageController *viewController = [[FootballTeamManageController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 #pragma mark - Getters

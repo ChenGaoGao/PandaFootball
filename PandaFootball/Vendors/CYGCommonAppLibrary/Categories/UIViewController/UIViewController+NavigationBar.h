@@ -162,4 +162,7 @@
  */
 - (void)setRightBarButtonItems:(NSArray *)views offset:(CGFloat)offset;
 
+
+#pragma mark - popViewController pushViewController
+- (void)popViewController;
 @end

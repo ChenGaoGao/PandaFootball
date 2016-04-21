@@ -139,6 +139,10 @@
     self.navigationItem.rightBarButtonItems = barButtonItems;
 }
 
+#pragma mark - popViewController pushViewController
+- (void)popViewController {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 #pragma mark - private methods
 - (UIButton *)setBackBarButton {
@@ -155,7 +159,7 @@
 }
 
 - (void)backHandle:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self popViewController];
 }
 
 - (UIBarButtonItem *)spacer:(CGFloat)margin {

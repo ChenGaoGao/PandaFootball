@@ -27,6 +27,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self setLeftBarButton];
     [self setNavigationTitleWhite:@"球队管理"];
     
     self.view.backgroundColor = PDFColorBackground;
@@ -154,12 +155,13 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 #pragma mark - LazyLoad
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT - TABBAR_HEIGHT)];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT)];
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        _tableView.backgroundColor = PDFColorBackground;
     }
     
     return _tableView;

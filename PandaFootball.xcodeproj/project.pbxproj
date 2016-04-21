@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */; };
+		47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */; };
+		47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */; };
 		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
 		47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */; };
 		47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DEB7561CC6304C0007BD2B /* FootballTeamManageController.m */; };
@@ -68,6 +70,10 @@
 		1A9C4C920C85CE8EE7F30BB0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4749238E1CBF9AA5000E26A2 /* PDFDatingFightingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDatingFightingCell.h; sourceTree = "<group>"; };
 		4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingCell.m; sourceTree = "<group>"; };
+		47BE6E7F1CC861BA009EC803 /* FootballTeamScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamScheduleController.h; sourceTree = "<group>"; };
+		47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamScheduleController.m; sourceTree = "<group>"; };
+		47BE6E821CC862E9009EC803 /* FootballTeamScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamScheduleCell.h; sourceTree = "<group>"; };
+		47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamScheduleCell.m; sourceTree = "<group>"; };
 		47CBDE381CBCCF800003F746 /* CYGLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGLocationManager.h; sourceTree = "<group>"; };
 		47CBDE391CBCCF800003F746 /* CYGLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGLocationManager.m; sourceTree = "<group>"; };
 		47CBDE3C1CBCD9BC0003F746 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
@@ -201,6 +207,17 @@
 				47CBDE371CBCCF780003F746 /* CYGLocationManager */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		47BE6E7E1CC8619E009EC803 /* FootballTeamSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				47BE6E7F1CC861BA009EC803 /* FootballTeamScheduleController.h */,
+				47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */,
+				47BE6E821CC862E9009EC803 /* FootballTeamScheduleCell.h */,
+				47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */,
+			);
+			path = FootballTeamSchedule;
 			sourceTree = "<group>";
 		};
 		47CBDE371CBCCF780003F746 /* CYGLocationManager */ = {
@@ -390,6 +407,7 @@
 		A7A80F441CBAB5B00034CE4B /* PDFFootballTeam */ = {
 			isa = PBXGroup;
 			children = (
+				47BE6E7E1CC8619E009EC803 /* FootballTeamSchedule */,
 				47DEB7541CC630380007BD2B /* FootballTeamManage */,
 				A7A80F4E1CBAB6470034CE4B /* PDFFootballTeamController.h */,
 				A7A80F4F1CBAB6470034CE4B /* PDFFootballTeamController.m */,
@@ -800,6 +818,7 @@
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
 				A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */,
+				47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */,
 				47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */,
 				A7BC21911CBEB0370058E5B0 /* FootballTeamCell.m in Sources */,
 				A7BC21881CBEA1E80058E5B0 /* SiteReservationDetailController.m in Sources */,
@@ -815,6 +834,7 @@
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
+				47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
 				A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */,
 				47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */,
@@ -961,10 +981,34 @@
 			baseConfigurationReference = 1A9C4C920C85CE8EE7F30BB0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PandaFootball/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -973,10 +1017,34 @@
 			baseConfigurationReference = C0D7133DE510CFA5E2E0C150 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PandaFootball/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myjoy.PandaFootball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

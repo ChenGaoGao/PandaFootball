@@ -154,6 +154,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        _tableView.backgroundColor = PDFColorBackground;
     }
     
     return _tableView;
