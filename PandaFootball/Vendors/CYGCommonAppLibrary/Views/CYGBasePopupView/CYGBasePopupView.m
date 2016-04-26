@@ -103,7 +103,8 @@
             animation.values = @[ @(-self.contentView.frame.size.height), @10, @0 ];
             
             break;
-        } case PopupDirectionTypeBottom: {
+        }
+        case PopupDirectionTypeBottom: {
             self.contentView.frame = CGRectMake(0,
                                                 self.frame.size.height - self.contentView.frame.size.height,
                                                 self.contentView.frame.size.width,
@@ -112,11 +113,10 @@
             animation.values = @[ @(self.contentView.frame.size.height), @0, @0 ];
             
             break;
-        } case PopupDirectionTypeCenter: {
+        }
+        case PopupDirectionTypeCenter: {
             break;
         }
-        default:
-            break;
     }
     
     [self.contentView.layer addAnimation:animation forKey:@"shake"];
