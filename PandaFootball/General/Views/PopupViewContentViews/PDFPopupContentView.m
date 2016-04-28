@@ -120,8 +120,8 @@ static const CGFloat kButtonHeight                      = 36.0f;
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
     
-    if (_selectedIndex < (int)self.subviews.count - 2) { //contentView 还有bottomButton子view
-        for (int i = 0; i < (int)self.subviews.count - 2; i++) {
+    if (_selectedIndex < (int)self.dataSourceArray.count) {
+        for (int i = 0; i < (int)self.dataSourceArray.count; i++) {
             UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
             
             if (i == _selectedIndex) {

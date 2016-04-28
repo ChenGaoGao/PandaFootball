@@ -13,8 +13,11 @@
 		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
 		47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */; };
 		47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DEB7561CC6304C0007BD2B /* FootballTeamManageController.m */; };
+		47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE5F1CD1F11D005AF586 /* PDFSegmentModel.m */; };
 		47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */; };
 		47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */; };
+		47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */; };
+		47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEE1CD1AD16009C7414 /* PDFSegmentControl.m */; };
 		A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */; };
 		A76DF72E1CAAAC630086389D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF72D1CAAAC630086389D /* main.m */; };
 		A76DF73A1CAAAC630086389D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF7381CAAAC630086389D /* Main.storyboard */; };
@@ -81,10 +84,16 @@
 		47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGBasePopupView.m; sourceTree = "<group>"; };
 		47DEB7551CC6304C0007BD2B /* FootballTeamManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamManageController.h; sourceTree = "<group>"; };
 		47DEB7561CC6304C0007BD2B /* FootballTeamManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamManageController.m; sourceTree = "<group>"; };
+		47E0DE5E1CD1F11D005AF586 /* PDFSegmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentModel.h; sourceTree = "<group>"; };
+		47E0DE5F1CD1F11D005AF586 /* PDFSegmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentModel.m; sourceTree = "<group>"; };
 		47E3E4131CBE438D00674F64 /* PDFBaseMyCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFBaseMyCenterController.h; sourceTree = "<group>"; };
 		47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFBaseMyCenterController.m; sourceTree = "<group>"; };
 		47E3E4161CBE473600674F64 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		47F43FEA1CD1AC57009C7414 /* PDFSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentViewController.h; sourceTree = "<group>"; };
+		47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentViewController.m; sourceTree = "<group>"; };
+		47F43FED1CD1AD16009C7414 /* PDFSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentControl.h; sourceTree = "<group>"; };
+		47F43FEE1CD1AD16009C7414 /* PDFSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentControl.m; sourceTree = "<group>"; };
 		86A4363722270C0B13F51029 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F5A1A1CBD370F00EF1CD3 /* PDFPopupContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFPopupContentView.h; sourceTree = "<group>"; };
 		A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFPopupContentView.m; sourceTree = "<group>"; };
@@ -268,6 +277,19 @@
 				47DEB7561CC6304C0007BD2B /* FootballTeamManageController.m */,
 			);
 			path = FootballTeamManage;
+			sourceTree = "<group>";
+		};
+		47F43FE91CD1AC33009C7414 /* PDFSegmentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				47F43FEA1CD1AC57009C7414 /* PDFSegmentViewController.h */,
+				47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */,
+				47F43FED1CD1AD16009C7414 /* PDFSegmentControl.h */,
+				47F43FEE1CD1AD16009C7414 /* PDFSegmentControl.m */,
+				47E0DE5E1CD1F11D005AF586 /* PDFSegmentModel.h */,
+				47E0DE5F1CD1F11D005AF586 /* PDFSegmentModel.m */,
+			);
+			path = PDFSegmentViewController;
 			sourceTree = "<group>";
 		};
 		6206D4BD6FBFBF0AAE1EE509 /* Pods */ = {
@@ -595,6 +617,7 @@
 		A7BDDDF71CAACCC1009D9B04 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				47F43FE91CD1AC33009C7414 /* PDFSegmentViewController */,
 				A7BC216D1CBE8F4F0058E5B0 /* ViewPagerndicator */,
 				A7BDDDF91CAACDE5009D9B04 /* BaseViewControllers */,
 			);
@@ -805,7 +828,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */,
+				47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */,
 				A7BC21761CBE8F600058E5B0 /* BottomScrollView.m in Sources */,
+				47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */,
 				A7BC21811CBE922A0058E5B0 /* PDFDatingFightingController.m in Sources */,
 				A7BC21781CBE8F600058E5B0 /* TitleVCModel.m in Sources */,
 				474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */,
@@ -823,6 +848,7 @@
 				A7BC21911CBEB0370058E5B0 /* FootballTeamCell.m in Sources */,
 				A7BC21881CBEA1E80058E5B0 /* SiteReservationDetailController.m in Sources */,
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
+				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
 				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
