@@ -25,6 +25,8 @@
 		A76DF73F1CAAAC630086389D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF73D1CAAAC630086389D /* LaunchScreen.storyboard */; };
 		A76DF74A1CAAAC630086389D /* PandaFootballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7491CAAAC630086389D /* PandaFootballTests.m */; };
 		A76DF7551CAAAC630086389D /* PandaFootballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7541CAAAC630086389D /* PandaFootballUITests.m */; };
+		A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79263831CD23CE50054991D /* FootballTeamPostedController.m */; };
+		A79263871CD23CE50054991D /* FTPHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A79263851CD23CE50054991D /* FTPHeaderView.m */; };
 		A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */; };
 		A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F311CBA96D30034CE4B /* UIViewController+NavigationBar.m */; };
 		A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F331CBA96D30034CE4B /* UIViewController+StatusBar.m */; };
@@ -109,6 +111,10 @@
 		A76DF7501CAAAC630086389D /* PandaFootballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaFootballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76DF7541CAAAC630086389D /* PandaFootballUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaFootballUITests.m; sourceTree = "<group>"; };
 		A76DF7561CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79263821CD23CE50054991D /* FootballTeamPostedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamPostedController.h; sourceTree = "<group>"; };
+		A79263831CD23CE50054991D /* FootballTeamPostedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamPostedController.m; sourceTree = "<group>"; };
+		A79263841CD23CE50054991D /* FTPHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPHeaderView.h; sourceTree = "<group>"; };
+		A79263851CD23CE50054991D /* FTPHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPHeaderView.m; sourceTree = "<group>"; };
 		A7A80F2D1CBA96D30034CE4B /* UIImage+PureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColor.h"; sourceTree = "<group>"; };
 		A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColor.m"; sourceTree = "<group>"; };
 		A7A80F301CBA96D30034CE4B /* UIViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBar.h"; sourceTree = "<group>"; };
@@ -385,6 +391,17 @@
 			path = PandaFootballUITests;
 			sourceTree = "<group>";
 		};
+		A79263811CD23CE50054991D /* FootballTeamPosted */ = {
+			isa = PBXGroup;
+			children = (
+				A79263821CD23CE50054991D /* FootballTeamPostedController.h */,
+				A79263831CD23CE50054991D /* FootballTeamPostedController.m */,
+				A79263841CD23CE50054991D /* FTPHeaderView.h */,
+				A79263851CD23CE50054991D /* FTPHeaderView.m */,
+			);
+			path = FootballTeamPosted;
+			sourceTree = "<group>";
+		};
 		A7A80F2C1CBA96D30034CE4B /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +446,7 @@
 		A7A80F441CBAB5B00034CE4B /* PDFFootballTeam */ = {
 			isa = PBXGroup;
 			children = (
+				A79263811CD23CE50054991D /* FootballTeamPosted */,
 				47BE6E7E1CC8619E009EC803 /* FootballTeamSchedule */,
 				47DEB7541CC630380007BD2B /* FootballTeamManage */,
 				A7A80F4E1CBAB6470034CE4B /* PDFFootballTeamController.h */,
@@ -851,8 +869,10 @@
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
 				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
+				A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
 				A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */,
+				A79263871CD23CE50054991D /* FTPHeaderView.m in Sources */,
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
 				A7BC21791CBE8F600058E5B0 /* TopScrollView.m in Sources */,
