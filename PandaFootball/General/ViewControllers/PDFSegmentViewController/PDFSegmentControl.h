@@ -9,6 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "PDFSegmentModel.h"
 
+
+
+@class PDFSegmentControl;
+
+@protocol PDFSegmentControlDelegate <NSObject>
+
+@optional
+
+- (void)segmentControl:(PDFSegmentControl *)contentView didSelectAtIndex:(NSInteger)index;
+
+@end
+
+
 @interface PDFSegmentControl : UIScrollView
 
 @property (nonatomic, copy) NSArray<PDFSegmentModel *> *titleArray;

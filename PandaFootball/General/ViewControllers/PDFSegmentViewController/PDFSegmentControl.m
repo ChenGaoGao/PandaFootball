@@ -123,25 +123,25 @@
     [self createTitleButtonsWithTitleArray:_titleArray];
 }
 
-- (void)setTitleButtonWidth:(CGFloat)titleButtonWidth {
-    
-}
-
-- (void)setTitleFont:(UIFont *)titleFont {
-    
-}
-
-- (void)setTitleColor:(UIColor *)titleColor {
-    
-}
-
-- (void)setTitlehighlightedColor:(UIColor *)titlehighlightedColor {
-    
-}
-
-- (void)setMarkColor:(UIColor *)markColor {
-    
-}
+//- (void)setTitleButtonWidth:(CGFloat)titleButtonWidth {
+//    
+//}
+//
+//- (void)setTitleFont:(UIFont *)titleFont {
+//    
+//}
+//
+//- (void)setTitleColor:(UIColor *)titleColor {
+//    
+//}
+//
+//- (void)setTitlehighlightedColor:(UIColor *)titlehighlightedColor {
+//    
+//}
+//
+//- (void)setMarkColor:(UIColor *)markColor {
+//    
+//}
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
@@ -162,9 +162,9 @@
     }
 }
 
-- (void)setHadSeparatorLine:(BOOL)hadSeparatorLine {
-    
-}
+//- (void)setHadSeparatorLine:(BOOL)hadSeparatorLine {
+//    
+//}
 
 #pragma mark - LazyLoad
 - (UIView *)markView {
