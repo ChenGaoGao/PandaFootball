@@ -92,6 +92,56 @@
     self.selectedIndex = sender.tag;
 }
 
+#pragma mark - Animation
+- (void)markViewAnimationFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+    NSLog(@"%f  %f", VIEW_WIDTH(self.markView) * fromIndex, VIEW_WIDTH(self.markView) * toIndex);
+    
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.x";
+    animation.fromValue = @(VIEW_WIDTH(self.markView) * fromIndex + VIEW_WIDTH(self.markView) /2);
+    animation.toValue = @(VIEW_WIDTH(self.markView) * toIndex + VIEW_WIDTH(self.markView) / 2);
+    animation.duration = 0.3;
+    
+    [self.markView.layer addAnimation:animation forKey:@"abc"];
+    
+    self.markView.frame = CGRectMake(VIEW_WIDTH(self.markView) * toIndex, VIEW_HEIGHT(self) - 2, VIEW_WIDTH(self.markView), 2);
+    
+}
+
+//- (void)segmentButtonFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+//    if (_selectedIndex < (int)self.titleArray.count) {
+//        for (int i = 0; i < (int)self.titleArray.count; i++) {
+//            if (i == fromIndex) {
+//                CABasicAnimation *animation = [CABasicAnimation animation];
+//                animation.keyPath = @"backgroundcolor";
+//                animation.fromValue = self.titleColor;
+//                animation.toValue = self.titlehighlightedColor;
+//                animation.duration = 0.3;
+//                animation.additive = YES;
+//                animation.fillMode = kCAFillModeForwards;
+//                animation.removedOnCompletion = NO;
+//                
+//                UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
+//                [button.titleLabel.textColor layer addAnimation:animation forKey:@"backgroundcolor"];
+//            }
+//            
+////            if (i == toIndex) {
+////                UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
+////                [button setTitleColor:self.titlehighlightedColor forState:UIControlStateNormal];
+////            }
+//        }
+//    }
+//}
+
+#pragma mark - CAAnimationDelegate
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    if (flag) {
+        NSLog(@"%f", VIEW_WIDTH(self.markView) * self.selectedIndex);
+        
+        self.markView.frame = CGRectMake(VIEW_WIDTH(self.markView) * self.selectedIndex, VIEW_HEIGHT(self) - 2, VIEW_WIDTH(self.markView), 2);
+    }
+}
+
 #pragma mark - Setters
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
@@ -144,8 +194,10 @@
 //}
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
-    _selectedIndex = selectedIndex;
+    [self markViewAnimationFromIndex:_selectedIndex toIndex:selectedIndex];
     
+    _selectedIndex = selectedIndex;
+
     if (_selectedIndex < (int)self.titleArray.count) {
         for (int i = 0; i < (int)self.titleArray.count; i++) {
             UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];

@@ -50,6 +50,9 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     [array addObject:model];
     [array addObject:model];
     [array addObject:model];
+    [array addObject:model];
+    [array addObject:model];
+    [array addObject:model];
     
     
     PDFSegmentControl *control = [[PDFSegmentControl alloc] init];
