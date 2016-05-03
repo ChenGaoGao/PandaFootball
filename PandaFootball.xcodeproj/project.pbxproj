@@ -12,6 +12,13 @@
 		47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */; };
 		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
 		47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */; };
+		47DBBCC11CD8C56C00C8B630 /* FootballTeamAttendanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC01CD8C56C00C8B630 /* FootballTeamAttendanceController.m */; };
+		47DBBCC41CD8C58300C8B630 /* FootballTeamStandingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC31CD8C58300C8B630 /* FootballTeamStandingsController.m */; };
+		47DBBCC71CD8C59800C8B630 /* FootballTeamCostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC61CD8C59800C8B630 /* FootballTeamCostController.m */; };
+		47DBBCCA1CD8C5AB00C8B630 /* FootballTeamEventController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC91CD8C5AB00C8B630 /* FootballTeamEventController.m */; };
+		47DBBCCD1CD8C5B700C8B630 /* FootballTeamPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCCC1CD8C5B700C8B630 /* FootballTeamPlayerController.m */; };
+		47DBBCD01CD8C5CD00C8B630 /* FootballTeamAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCCF1CD8C5CD00C8B630 /* FootballTeamAlbumController.m */; };
+		47DBBCD31CD8C80E00C8B630 /* FootballTeamAttendanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCD21CD8C80E00C8B630 /* FootballTeamAttendanceCell.m */; };
 		47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DEB7561CC6304C0007BD2B /* FootballTeamManageController.m */; };
 		47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE5F1CD1F11D005AF586 /* PDFSegmentModel.m */; };
 		47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */; };
@@ -84,6 +91,20 @@
 		47CBDE3C1CBCD9BC0003F746 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		47CBDE401CBCDAA60003F746 /* CYGBasePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGBasePopupView.h; sourceTree = "<group>"; };
 		47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGBasePopupView.m; sourceTree = "<group>"; };
+		47DBBCBF1CD8C56C00C8B630 /* FootballTeamAttendanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamAttendanceController.h; sourceTree = "<group>"; };
+		47DBBCC01CD8C56C00C8B630 /* FootballTeamAttendanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamAttendanceController.m; sourceTree = "<group>"; };
+		47DBBCC21CD8C58300C8B630 /* FootballTeamStandingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamStandingsController.h; sourceTree = "<group>"; };
+		47DBBCC31CD8C58300C8B630 /* FootballTeamStandingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamStandingsController.m; sourceTree = "<group>"; };
+		47DBBCC51CD8C59800C8B630 /* FootballTeamCostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamCostController.h; sourceTree = "<group>"; };
+		47DBBCC61CD8C59800C8B630 /* FootballTeamCostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamCostController.m; sourceTree = "<group>"; };
+		47DBBCC81CD8C5AB00C8B630 /* FootballTeamEventController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamEventController.h; sourceTree = "<group>"; };
+		47DBBCC91CD8C5AB00C8B630 /* FootballTeamEventController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamEventController.m; sourceTree = "<group>"; };
+		47DBBCCB1CD8C5B700C8B630 /* FootballTeamPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamPlayerController.h; sourceTree = "<group>"; };
+		47DBBCCC1CD8C5B700C8B630 /* FootballTeamPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamPlayerController.m; sourceTree = "<group>"; };
+		47DBBCCE1CD8C5CD00C8B630 /* FootballTeamAlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamAlbumController.h; sourceTree = "<group>"; };
+		47DBBCCF1CD8C5CD00C8B630 /* FootballTeamAlbumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamAlbumController.m; sourceTree = "<group>"; };
+		47DBBCD11CD8C80E00C8B630 /* FootballTeamAttendanceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamAttendanceCell.h; sourceTree = "<group>"; };
+		47DBBCD21CD8C80E00C8B630 /* FootballTeamAttendanceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamAttendanceCell.m; sourceTree = "<group>"; };
 		47DEB7551CC6304C0007BD2B /* FootballTeamManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamManageController.h; sourceTree = "<group>"; };
 		47DEB7561CC6304C0007BD2B /* FootballTeamManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamManageController.m; sourceTree = "<group>"; };
 		47E0DE5E1CD1F11D005AF586 /* PDFSegmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentModel.h; sourceTree = "<group>"; };
@@ -276,6 +297,62 @@
 			path = CYGBasePopupView;
 			sourceTree = "<group>";
 		};
+		47DBBCB91CD8C40100C8B630 /* FootballTeamAttendance */ = {
+			isa = PBXGroup;
+			children = (
+				47DBBCBF1CD8C56C00C8B630 /* FootballTeamAttendanceController.h */,
+				47DBBCC01CD8C56C00C8B630 /* FootballTeamAttendanceController.m */,
+				47DBBCD11CD8C80E00C8B630 /* FootballTeamAttendanceCell.h */,
+				47DBBCD21CD8C80E00C8B630 /* FootballTeamAttendanceCell.m */,
+			);
+			path = FootballTeamAttendance;
+			sourceTree = "<group>";
+		};
+		47DBBCBA1CD8C4AA00C8B630 /* FootballTeamStandings */ = {
+			isa = PBXGroup;
+			children = (
+				47DBBCC21CD8C58300C8B630 /* FootballTeamStandingsController.h */,
+				47DBBCC31CD8C58300C8B630 /* FootballTeamStandingsController.m */,
+			);
+			path = FootballTeamStandings;
+			sourceTree = "<group>";
+		};
+		47DBBCBB1CD8C4D000C8B630 /* FootballTeamCost */ = {
+			isa = PBXGroup;
+			children = (
+				47DBBCC51CD8C59800C8B630 /* FootballTeamCostController.h */,
+				47DBBCC61CD8C59800C8B630 /* FootballTeamCostController.m */,
+			);
+			path = FootballTeamCost;
+			sourceTree = "<group>";
+		};
+		47DBBCBC1CD8C4E900C8B630 /* FootballTeamEvent */ = {
+			isa = PBXGroup;
+			children = (
+				47DBBCC81CD8C5AB00C8B630 /* FootballTeamEventController.h */,
+				47DBBCC91CD8C5AB00C8B630 /* FootballTeamEventController.m */,
+			);
+			path = FootballTeamEvent;
+			sourceTree = "<group>";
+		};
+		47DBBCBD1CD8C50800C8B630 /* FootballTeamPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				47DBBCCB1CD8C5B700C8B630 /* FootballTeamPlayerController.h */,
+				47DBBCCC1CD8C5B700C8B630 /* FootballTeamPlayerController.m */,
+			);
+			path = FootballTeamPlayer;
+			sourceTree = "<group>";
+		};
+		47DBBCBE1CD8C51D00C8B630 /* FootballTeamAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				47DBBCCE1CD8C5CD00C8B630 /* FootballTeamAlbumController.h */,
+				47DBBCCF1CD8C5CD00C8B630 /* FootballTeamAlbumController.m */,
+			);
+			path = FootballTeamAlbum;
+			sourceTree = "<group>";
+		};
 		47DEB7541CC630380007BD2B /* FootballTeamManage */ = {
 			isa = PBXGroup;
 			children = (
@@ -446,8 +523,14 @@
 		A7A80F441CBAB5B00034CE4B /* PDFFootballTeam */ = {
 			isa = PBXGroup;
 			children = (
+				47DBBCBE1CD8C51D00C8B630 /* FootballTeamAlbum */,
 				A79263811CD23CE50054991D /* FootballTeamPosted */,
 				47BE6E7E1CC8619E009EC803 /* FootballTeamSchedule */,
+				47DBBCBD1CD8C50800C8B630 /* FootballTeamPlayer */,
+				47DBBCBC1CD8C4E900C8B630 /* FootballTeamEvent */,
+				47DBBCBB1CD8C4D000C8B630 /* FootballTeamCost */,
+				47DBBCBA1CD8C4AA00C8B630 /* FootballTeamStandings */,
+				47DBBCB91CD8C40100C8B630 /* FootballTeamAttendance */,
 				47DEB7541CC630380007BD2B /* FootballTeamManage */,
 				A7A80F4E1CBAB6470034CE4B /* PDFFootballTeamController.h */,
 				A7A80F4F1CBAB6470034CE4B /* PDFFootballTeamController.m */,
@@ -847,14 +930,18 @@
 			files = (
 				47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */,
 				47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */,
+				47DBBCC41CD8C58300C8B630 /* FootballTeamStandingsController.m in Sources */,
 				A7BC21761CBE8F600058E5B0 /* BottomScrollView.m in Sources */,
 				47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */,
 				A7BC21811CBE922A0058E5B0 /* PDFDatingFightingController.m in Sources */,
 				A7BC21781CBE8F600058E5B0 /* TitleVCModel.m in Sources */,
 				474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */,
+				47DBBCCD1CD8C5B700C8B630 /* FootballTeamPlayerController.m in Sources */,
 				A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */,
 				47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */,
 				A7BC218E1CBEB00B0058E5B0 /* FootballTeamHeaderView.m in Sources */,
+				47DBBCC11CD8C56C00C8B630 /* FootballTeamAttendanceController.m in Sources */,
+				47DBBCC71CD8C59800C8B630 /* FootballTeamCostController.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
 				A7BC21771CBE8F600058E5B0 /* MainViewController.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
@@ -876,12 +963,15 @@
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
 				A7BC21791CBE8F600058E5B0 /* TopScrollView.m in Sources */,
+				47DBBCCA1CD8C5AB00C8B630 /* FootballTeamEventController.m in Sources */,
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
 				47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
+				47DBBCD31CD8C80E00C8B630 /* FootballTeamAttendanceCell.m in Sources */,
+				47DBBCD01CD8C5CD00C8B630 /* FootballTeamAlbumController.m in Sources */,
 				A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */,
 				47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */,
 			);

@@ -27,6 +27,7 @@
 //通用颜色
 #define PDFColorGreen               RGB( 76, 176,  80)
 #define PDFColorRed                 [UIColor redColor]
+#define PDFColorOrange              [UIColor orangeColor]
 #define PDFColorWhite               RGB(255, 255, 255)
 #define PDFColorBlank               RGB(  0,   0,   0)
 #define PDFColorBackground          RGB(245, 245, 245)

@@ -1,34 +1,34 @@
 //
-//  FootballTeamManageController.m
+//  FootballTeamAttendanceController.m
 //  PandaFootball
 //
-//  Created by Oliver Chen on 16/4/19.
+//  Created by Oliver Chen on 16/5/3.
 //  Copyright © 2016年 myjoy. All rights reserved.
 //
 
-#import "FootballTeamManageController.h"
+#import "FootballTeamAttendanceController.h"
 #import "PDFPCHMacro.h"
 
 #import "PDFSpaceView.h"
 
 
-static const CGFloat kTableViewCellHeight        = 55.0f;
+static const CGFloat kTableViewCellHeight        = 44.0f;
 
-@interface FootballTeamManageController () <UITableViewDelegate, UITableViewDataSource>
+@interface FootballTeamAttendanceController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
 
 @end
 
-@implementation FootballTeamManageController
+@implementation FootballTeamAttendanceController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     [self setLeftBarButton];
-    [self setNavigationTitleWhite:@"球队管理"];
+    [self setNavigationTitleWhite:@"出勤排行"];
     
     self.view.backgroundColor = PDFColorBackground;
     

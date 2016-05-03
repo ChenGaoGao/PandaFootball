@@ -12,6 +12,7 @@
 #import "FootballTeamHeaderView.h"
 #import "FootballTeamCell.h"
 
+#import "FootballTeamScheduleController.h"
 #import "FootballTeamManageController.h"
 
 static const CGFloat kHeaderViewHeight          = 157.0f;
@@ -126,6 +127,12 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 2) {
+        FootballTeamScheduleController *viewController = [[FootballTeamScheduleController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
     if (indexPath.row == 8) {
         FootballTeamManageController *viewController = [[FootballTeamManageController alloc] init];
         viewController.hidesBottomBarWhenPushed = YES;
@@ -163,7 +170,7 @@ referenceSizeForHeaderInSection:(NSInteger)section {
                                                @"title" : @"球队战绩",
                                                @"controller" : @""},
                                              
-                                             @{@"image" : @"FootballTeamStatistics",
+                                             @{@"image" : @"FootballTeamAttendance",
                                                @"title" : @"出勤统计",
                                                @"controller" : @""},
                                              

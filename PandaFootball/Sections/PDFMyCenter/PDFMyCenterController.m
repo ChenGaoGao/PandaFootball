@@ -63,7 +63,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     
     control.titleColor = PDFColorRed;
     
-    [self.view addSubview:control];
+//    [self.view addSubview:control];
 }
 
 - (void)didReceiveMemoryWarning {
