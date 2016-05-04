@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */; };
+		47B92CD81CD992D600EBECCD /* FBTAttendanceTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */; };
 		47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */; };
 		47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */; };
 		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
@@ -82,6 +83,8 @@
 		1A9C4C920C85CE8EE7F30BB0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4749238E1CBF9AA5000E26A2 /* PDFDatingFightingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDatingFightingCell.h; sourceTree = "<group>"; };
 		4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingCell.m; sourceTree = "<group>"; };
+		47B92CD61CD992D600EBECCD /* FBTAttendanceTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTAttendanceTableHeaderView.h; sourceTree = "<group>"; };
+		47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTAttendanceTableHeaderView.m; sourceTree = "<group>"; };
 		47BE6E7F1CC861BA009EC803 /* FootballTeamScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamScheduleController.h; sourceTree = "<group>"; };
 		47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamScheduleController.m; sourceTree = "<group>"; };
 		47BE6E821CC862E9009EC803 /* FootballTeamScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamScheduleCell.h; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				47DBBCC01CD8C56C00C8B630 /* FootballTeamAttendanceController.m */,
 				47DBBCD11CD8C80E00C8B630 /* FootballTeamAttendanceCell.h */,
 				47DBBCD21CD8C80E00C8B630 /* FootballTeamAttendanceCell.m */,
+				47B92CD61CD992D600EBECCD /* FBTAttendanceTableHeaderView.h */,
+				47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */,
 			);
 			path = FootballTeamAttendance;
 			sourceTree = "<group>";
@@ -936,6 +941,7 @@
 				A7BC21811CBE922A0058E5B0 /* PDFDatingFightingController.m in Sources */,
 				A7BC21781CBE8F600058E5B0 /* TitleVCModel.m in Sources */,
 				474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */,
+				47B92CD81CD992D600EBECCD /* FBTAttendanceTableHeaderView.m in Sources */,
 				47DBBCCD1CD8C5B700C8B630 /* FootballTeamPlayerController.m in Sources */,
 				A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */,
 				47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */,

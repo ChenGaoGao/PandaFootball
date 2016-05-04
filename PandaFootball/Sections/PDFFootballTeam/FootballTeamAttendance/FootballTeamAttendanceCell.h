@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) UILabel *identifyLabel;
 @property (nonatomic, strong) UILabel *playerNameLabel;
-@property (nonatomic, strong) UILabel *attendanceTimeLabel;
+@property (nonatomic, strong) UILabel *attendanceCountLabel;
 
 @end

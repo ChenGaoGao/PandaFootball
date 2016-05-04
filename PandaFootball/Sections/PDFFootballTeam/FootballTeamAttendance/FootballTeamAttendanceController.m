@@ -10,13 +10,17 @@
 #import "PDFPCHMacro.h"
 
 #import "PDFSpaceView.h"
+#import "FBTAttendanceTableHeaderView.h"
+#import "FootballTeamAttendanceCell.h"
 
 
-static const CGFloat kTableViewCellHeight        = 44.0f;
+static const CGFloat kTableHeaderViewHeight         = 110.0f;
+static const CGFloat kTableViewCellHeight           = 44.0f;
 
 @interface FootballTeamAttendanceController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) FBTAttendanceTableHeaderView *tableHeaderView;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
 
 @end
@@ -33,6 +37,7 @@ static const CGFloat kTableViewCellHeight        = 44.0f;
     self.view.backgroundColor = PDFColorBackground;
     
     [self.view addSubview:self.tableView];
+    [self.tableView setTableHeaderView:self.tableHeaderView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,31 +59,24 @@ static const CGFloat kTableViewCellHeight        = 44.0f;
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataSourceArray.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return ((NSArray *)[self.dataSourceArray objectAtIndex:section]).count;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dataDic = [(NSArray *)[self.dataSourceArray objectAtIndex:indexPath.section]
-                             objectAtIndex:indexPath.row];
-    
     static NSString *identify = @"identify";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    FootballTeamAttendanceCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell = [[FootballTeamAttendanceCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
-    cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
-    
-    cell.textLabel.text = [dataDic objectForKey:@"title"];
-    cell.textLabel.font = PDFFontDetailBigger;
-    cell.textLabel.textColor = PDFColorTextDetailMoreDeep;
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.identifyLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
+    cell.playerNameLabel.text = @"张三";
+    cell.attendanceCountLabel.text = @"88";
     
     return cell;
 }
@@ -88,11 +86,7 @@ static const CGFloat kTableViewCellHeight        = 44.0f;
     return kTableViewCellHeight;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section < self.dataSourceArray.count - 1) {
-        return;
-    }
-    
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{    
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
     }
@@ -109,12 +103,12 @@ static const CGFloat kTableViewCellHeight        = 44.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return PDFSpaceSmallest;
+    return 0.5;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     PDFSpaceView *spaceView = [[PDFSpaceView alloc] init];
-    spaceView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest);
+    spaceView.frame = CGRectMake(0, 0, MAIN_WIDTH, 0.5);
     
     spaceView.backgroundColor = PDFColorBackground;
     
@@ -166,6 +160,19 @@ static const CGFloat kTableViewCellHeight        = 44.0f;
     }
     
     return _tableView;
+}
+
+- (FBTAttendanceTableHeaderView *)tableHeaderView {
+    if (!_tableHeaderView) {
+        _tableHeaderView = [[FBTAttendanceTableHeaderView alloc] init];
+        _tableHeaderView.frame = CGRectMake(0, 0, MAIN_WIDTH, kTableHeaderViewHeight);
+        
+        _tableHeaderView.headerIconView.image = [UIImage imageNamed:@"MyCenterBackground"];
+        _tableHeaderView.nameLabel.text = @"奔跑的汉子";
+        _tableHeaderView.rankingLabel.text = @"第3名";
+        _tableHeaderView.attendanceCountLabel.text = @"17";
+    }
+    return _tableHeaderView;
 }
 
 @end

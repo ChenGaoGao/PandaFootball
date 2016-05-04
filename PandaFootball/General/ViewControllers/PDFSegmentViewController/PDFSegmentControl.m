@@ -8,6 +8,7 @@
 
 #import "PDFSegmentControl.h"
 #import "PDFUIFormatMacros.h"
+#import <libkern/OSAtomic.h>
 
 @interface PDFSegmentControl()
 
@@ -21,6 +22,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = PDFColorWhite;
+        self.showsHorizontalScrollIndicator = NO;
+        self.showsVerticalScrollIndicator = NO;
         
         self.titleFont = PDFFontBodySmaller;
         self.titleColor = PDFColorTextDetailDefault;
@@ -81,7 +84,10 @@
     
     self.markView.frame = CGRectMake(0, VIEW_HEIGHT(self) - 2, segmentButtonWidth, 2);
     
-    self.bottomLineView.frame = CGRectMake(0, VIEW_HEIGHT(self) - 0.5, VIEW_WIDTH(self), 0.5);
+    self.bottomLineView.frame = CGRectMake(0, VIEW_HEIGHT(self) - 0.5,
+                                           MAX(VIEW_WIDTH(self), titleArray.count * segmentButtonWidth), 0.5);
+    
+    self.contentSize = CGSizeMake(titleArray.count * segmentButtonWidth, VIEW_HEIGHT(self));
     
     [self addSubview:self.bottomLineView];
     [self addSubview:self.markView];
@@ -94,8 +100,6 @@
 
 #pragma mark - Animation
 - (void)markViewAnimationFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
-    NSLog(@"%f  %f", VIEW_WIDTH(self.markView) * fromIndex, VIEW_WIDTH(self.markView) * toIndex);
-    
     CABasicAnimation *animation = [CABasicAnimation animation];
     animation.keyPath = @"position.x";
     animation.fromValue = @(VIEW_WIDTH(self.markView) * fromIndex + VIEW_WIDTH(self.markView) /2);
@@ -105,7 +109,45 @@
     [self.markView.layer addAnimation:animation forKey:@"abc"];
     
     self.markView.frame = CGRectMake(VIEW_WIDTH(self.markView) * toIndex, VIEW_HEIGHT(self) - 2, VIEW_WIDTH(self.markView), 2);
+}
+
+- (void)contentOffsetAnimationFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+    if (self.contentSize.width <= VIEW_WIDTH(self)) {
+        return;
+    }
     
+    CGFloat animtionWidth = (self.contentSize.width - VIEW_WIDTH(self)) / (self.titleArray.count - 1);
+//    self.contentOffset = CGPointMake(animtionWidth / (self.titleArray.count - 1) * toIndex, 0);
+
+    
+    
+    __block CGFloat sourceOffsetX = self.contentOffset.x;
+    __block CGFloat currentOffsetx = sourceOffsetX;
+    
+    NSTimeInterval period = 0.3; //设置时间间隔
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, period * NSEC_PER_MSEC, 0); //每秒执行
+    dispatch_source_set_event_handler(timer, ^{
+        currentOffsetx = currentOffsetx + animtionWidth * (toIndex - fromIndex) / 0.3;
+        
+        NSLog(@"ssss%f     ssss%f", self.contentOffset.x, animtionWidth);
+        if (fabs(currentOffsetx - sourceOffsetX) >= fabs(animtionWidth * (toIndex - fromIndex))) {
+            //必须要有退出方法，不然eventHandler是不会执行的
+            dispatch_source_cancel(timer);
+        }
+        
+        //通知主线程刷新
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.contentOffset = CGPointMake(currentOffsetx, 0);
+        });
+    });
+    
+//    dispatch_source_set_cancel_handler(timer, ^{
+//        NSLog(@"timersource cancel handle block");
+//    });
+    
+    dispatch_resume(timer);
 }
 
 //- (void)segmentButtonFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
@@ -133,14 +175,7 @@
 //    }
 //}
 
-#pragma mark - CAAnimationDelegate
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    if (flag) {
-        NSLog(@"%f", VIEW_WIDTH(self.markView) * self.selectedIndex);
-        
-        self.markView.frame = CGRectMake(VIEW_WIDTH(self.markView) * self.selectedIndex, VIEW_HEIGHT(self) - 2, VIEW_WIDTH(self.markView), 2);
-    }
-}
+
 
 #pragma mark - Setters
 - (void)setFrame:(CGRect)frame {
@@ -195,14 +230,13 @@
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     [self markViewAnimationFromIndex:_selectedIndex toIndex:selectedIndex];
+    [self contentOffsetAnimationFromIndex:_selectedIndex toIndex:selectedIndex];
     
     _selectedIndex = selectedIndex;
 
     if (_selectedIndex < (int)self.titleArray.count) {
         for (int i = 0; i < (int)self.titleArray.count; i++) {
             UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
-            
-            NSLog(@"%d", i);
             
             if (i == _selectedIndex) {
                 button.selected = YES;
