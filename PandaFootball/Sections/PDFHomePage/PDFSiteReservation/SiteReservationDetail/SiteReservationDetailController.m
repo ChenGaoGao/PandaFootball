@@ -11,8 +11,12 @@
 
 #import "SRDetailHeaderView.h"
 #import "PDFSpaceView.h"
+#import "PDFSegmentControl.h"
+#import "SRDetailCell.h"
 
 static const CGFloat kTableViewCellHeight       = 38.0f;
+static const CGFloat kSegmentControlHeight      = 40.0f;
+static const CGFloat kSegmentCellHeight         = 77.0f;
 
 static const CGFloat kImageViewHeight           = 125.0f;
 static const CGFloat kAddressLabelHeight        = 41.0f;
@@ -61,38 +65,50 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        SRDetailCell *detailCell = [tableView dequeueReusableCellWithIdentifier:@"detailCell"
+                                                                   forIndexPath:indexPath];
+        
+        detailCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        detailCell.startTimeLabel.text = @"08:30";
+        detailCell.endTimeLabel.text = @"至 10:30";
+        detailCell.siteNumberLabel.text = @"1号场";
+        detailCell.headCountLabel.text = @"5人";
+        detailCell.costLabel.text = @"¥450";
+        
+        return detailCell;
+    }
+    
+    
     NSDictionary *dataDic = [(NSArray *)[self.dataSourceArray objectAtIndex:indexPath.section]
                              objectAtIndex:indexPath.row];
     
-    static NSString *identify = @"identify";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identify"
+                                                            forIndexPath:indexPath];
     
-    if (indexPath.section == 0) {
-        cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
-        
-        cell.textLabel.text = [dataDic objectForKey:@"title"];
-        cell.textLabel.font = PDFFontDetailBigger;
-        cell.textLabel.textColor = PDFColorTextDetailMoreDeep;
-        
-        if (indexPath.row < 2) {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
-    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    if (indexPath.section == 1) {
-        
-    }
     
+    cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
+    
+    cell.textLabel.text = [dataDic objectForKey:@"title"];
+    cell.textLabel.font = PDFFontDetailBigger;
+    cell.textLabel.textColor = PDFColorTextDetailMoreDeep;
+    
+    if (indexPath.row < 2) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        return kSegmentCellHeight;
+    }
     return kTableViewCellHeight;
 }
 
@@ -101,30 +117,27 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
         return;
     }
     
-    if (indexPath.section == 1) {
-        if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-            [cell setSeparatorInset:UIEdgeInsetsZero];
-        }
-        
-#ifdef __IPHONE_8_0
-        if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-            [cell setLayoutMargins:UIEdgeInsetsZero];
-        }
-        
-        if([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]){
-            [cell setPreservesSuperviewLayoutMargins:NO];
-        }
-#endif
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
     }
+    
+#ifdef __IPHONE_8_0
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
+    if([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]){
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
+#endif
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return PDFSpaceSmallest;
+    if (section == 1) {
+        return PDFSpaceSmallest + kSegmentControlHeight;
     }
-    else {
-        return PDFSpaceSmallest + 40;
-    }
+    
+    return PDFSpaceSmallest;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -132,6 +145,33 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
     spaceView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest);
     
     spaceView.backgroundColor = PDFColorBackground;
+    
+    
+    if (section == 1) {
+        UIView *headerView = [[UIView alloc] init];
+        headerView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest + kSegmentControlHeight);
+        
+        [headerView addSubview:spaceView];
+        
+        NSMutableArray *controlArray = [[NSMutableArray alloc] init];
+        for (int i = 0; i < 7; i++) {
+            PDFSegmentModel *model = [[PDFSegmentModel alloc] init];
+            model.title = [NSString stringWithFormat:@"2-%d", 17 + i];
+            
+            [controlArray addObject:model];
+        }
+        
+        PDFSegmentControl *segmentControl = [[PDFSegmentControl alloc] init];
+        segmentControl.frame = CGRectMake(0, PDFSpaceSmallest, MAIN_WIDTH, kSegmentControlHeight);
+        
+        segmentControl.titleArray = controlArray;
+        segmentControl.hadSeparatorLine = YES;
+        
+        [headerView addSubview:segmentControl];
+        
+        return headerView;
+    }
+
     
     return spaceView;
 }
@@ -150,6 +190,9 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"identify"];
+        [_tableView registerClass:[SRDetailCell class] forCellReuseIdentifier:@"detailCell"];
     }
     return _tableView;
 }

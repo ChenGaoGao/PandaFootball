@@ -72,6 +72,10 @@
             [segmentButton setImage:segmentModel.highlightedIcon forState:UIControlStateSelected];
         }
         
+        [segmentButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+        [segmentButton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, PDFSpaceSmaller / 2)];
+        [segmentButton setTitleEdgeInsets:UIEdgeInsetsMake(0, PDFSpaceSmaller / 2, 0, 0)];
+        
         [segmentButton setTag:i];
         [segmentButton addTarget:self
                           action:@selector(segmentButtonHandle:)
@@ -145,7 +149,7 @@
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, period * NSEC_PER_SEC, 0); //每秒执行
     dispatch_source_set_event_handler(timer, ^{
-        if (currentOffsetx == toOffsetX) {
+        if (fabs(currentOffsetx - sourceOffsetX) >= fabs(toOffsetX - sourceOffsetX)) {
             //必须要有退出方法，不然eventHandler是不会执行的
             dispatch_source_cancel(timer);
         }

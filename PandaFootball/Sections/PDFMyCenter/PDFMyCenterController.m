@@ -12,8 +12,6 @@
 #import "MyCenterHeaderView.h"
 #import "PDFSpaceView.h"
 
-#import "PDFSegmentControl.h"
-
 
 static const CGFloat kTableViewCellHeight        = 55.0f;
 
@@ -40,32 +38,6 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    PDFSegmentModel *model = [[PDFSegmentModel alloc] init];
-    model.title = @"aa";
-    model.icon = [UIImage imageNamed:@"FootballTeamCost"];
-    model.highlightedIcon = [UIImage imageNamed:@"FootballTeamAlbum"];
-    
-    [array addObject:model];
-    [array addObject:model];
-    [array addObject:model];
-    [array addObject:model];
-    [array addObject:model];
-    [array addObject:model];
-    
-    
-    PDFSegmentControl *control = [[PDFSegmentControl alloc] init];
-    control.frame = CGRectMake(0, 0, MAIN_WIDTH, 100);
-    
-    control.titleArray = array;
-    
-    
-    control.titleColor = PDFColorRed;
-    control.hadSeparatorLine = YES;
-    
-    [self.view addSubview:control];
 }
 
 - (void)didReceiveMemoryWarning {

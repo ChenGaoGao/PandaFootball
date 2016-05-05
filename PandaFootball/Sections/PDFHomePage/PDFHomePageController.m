@@ -47,6 +47,8 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     //订场
     PDFSegmentModel *siteSegmentModel = [[PDFSegmentModel alloc] init];
     siteSegmentModel.title = @"订场";
+    siteSegmentModel.icon = [UIImage imageNamed:@"SiteReservationGray"];
+    siteSegmentModel.highlightedIcon = [UIImage imageNamed:@"SiteReservationGreen"];
     
     PDFSiteReservationController *siteReservationVC = [[PDFSiteReservationController alloc] init];
     
@@ -60,6 +62,8 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     //约战
     PDFSegmentModel *datingSegmentModel = [[PDFSegmentModel alloc] init];
     datingSegmentModel.title = @"约战";
+    datingSegmentModel.icon = [UIImage imageNamed:@"DatingFightingGray"];
+    datingSegmentModel.highlightedIcon = [UIImage imageNamed:@"DatingFightingGreen"];
     
     PDFDatingFightingController *datingFightingVC = [[PDFDatingFightingController alloc] init];
     
