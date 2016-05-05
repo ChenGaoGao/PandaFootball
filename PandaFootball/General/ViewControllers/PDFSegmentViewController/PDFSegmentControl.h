@@ -16,7 +16,6 @@
 @protocol PDFSegmentControlDelegate <NSObject>
 
 @optional
-
 - (void)segmentControl:(PDFSegmentControl *)contentView didSelectAtIndex:(NSInteger)index;
 
 @end
@@ -26,6 +25,8 @@
 
 @property (nonatomic, copy) NSArray<PDFSegmentModel *> *titleArray;
 @property (nonatomic, strong) UIView *markView;
+
+@property (nonatomic, weak) id <PDFSegmentControlDelegate> m_delegate;
 
 //titleButton的宽度（默认值: titleArray.count > 4 ? 屏幕宽度／titleArray.count : 屏幕宽度/4）
 @property (nonatomic, assign) CGFloat titleButtonWidth;

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 myjoy. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "PDFSegmentViewController.h"
 
-@interface PDFHomePageController : MainViewController
+@interface PDFHomePageController : PDFSegmentViewController
 
 @end

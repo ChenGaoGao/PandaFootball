@@ -7,7 +7,10 @@
 //
 
 #import "PDFBaseViewController.h"
+#import "PDFSegmentVCModel.h"
 
 @interface PDFSegmentViewController : PDFBaseViewController
+
+@property (nonatomic, copy) NSArray<PDFSegmentVCModel *> *segmentVCArray;
 
 @end

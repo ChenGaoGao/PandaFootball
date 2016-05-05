@@ -41,18 +41,36 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     [self setRightBarButtonItem:self.rightButton offset:PDFSpaceDefault -
      (PDFNavagationBarWidth - _rightButton.imageView.image.size.width) / 2 ];
     
-    NSMutableArray *titleVcModels = [[NSMutableArray alloc] init];
+
+    NSMutableArray *titleVCModelArray = [[NSMutableArray alloc] init];
+    
+    //订场
+    PDFSegmentModel *siteSegmentModel = [[PDFSegmentModel alloc] init];
+    siteSegmentModel.title = @"订场";
     
     PDFSiteReservationController *siteReservationVC = [[PDFSiteReservationController alloc] init];
-    TitleVCModel *siteReservationModel = [TitleVCModel createTitleVcModleWithTitle:@"订场" withViewController:siteReservationVC];
-    [titleVcModels addObject:siteReservationModel];
+    
+    PDFSegmentVCModel *siteVCModel = [[PDFSegmentVCModel alloc] init];
+    siteVCModel.titleModel = siteSegmentModel;
+    siteVCModel.viewController = siteReservationVC;
+    
+    [titleVCModelArray addObject:siteVCModel];
+    
+    
+    //约战
+    PDFSegmentModel *datingSegmentModel = [[PDFSegmentModel alloc] init];
+    datingSegmentModel.title = @"约战";
     
     PDFDatingFightingController *datingFightingVC = [[PDFDatingFightingController alloc] init];
-    TitleVCModel *datingFightingModel = [TitleVCModel createTitleVcModleWithTitle:@"约战" withViewController:datingFightingVC];
-    [titleVcModels addObject:datingFightingModel];
     
-    self.titleVcModelArray = titleVcModels;
-    [self initUI];
+    PDFSegmentVCModel *datingVCModel = [[PDFSegmentVCModel alloc] init];
+    datingVCModel.titleModel = datingSegmentModel;
+    datingVCModel.viewController = datingFightingVC;
+    
+    [titleVCModelArray addObject:datingVCModel];
+    
+    
+    self.segmentVCArray = titleVCModelArray;
 }
 
 - (void)didReceiveMemoryWarning {

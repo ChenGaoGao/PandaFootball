@@ -57,18 +57,15 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     
     
     PDFSegmentControl *control = [[PDFSegmentControl alloc] init];
-    
-    
-    control.titleArray = array;
     control.frame = CGRectMake(0, 0, MAIN_WIDTH, 100);
     
+    control.titleArray = array;
+    
+    
     control.titleColor = PDFColorRed;
+    control.hadSeparatorLine = YES;
     
     [self.view addSubview:control];
-    
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

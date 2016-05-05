@@ -80,6 +80,16 @@
         [self addSubview:segmentButton];
     }
     
+    for (int i = 0; i < titleArray.count - 1; i++) {
+        UIView *splitLineView = [[UIView alloc] init];
+        splitLineView.frame = CGRectMake(segmentButtonWidth * i + segmentButtonWidth - 0.5, 0, 0.5, VIEW_HEIGHT(self));
+        
+        splitLineView.backgroundColor = PDFColorLineSplit;
+        splitLineView.hidden = YES;
+        
+        [self addSubview:splitLineView];
+    }
+    
     self.selectedIndex = 0;
     
     self.markView.frame = CGRectMake(0, VIEW_HEIGHT(self) - 2, segmentButtonWidth, 2);
@@ -95,7 +105,14 @@
 
 #pragma mark - Event
 - (void)segmentButtonHandle:(UIButton *)sender {
+    [self markViewAnimationFromIndex:self.selectedIndex toIndex:sender.tag];
+    [self contentOffsetAnimationFromIndex:self.selectedIndex toIndex:sender.tag];
+    
     self.selectedIndex = sender.tag;
+    
+    if ([self.m_delegate respondsToSelector:@selector(segmentControl:didSelectAtIndex:)]) {
+        [self.m_delegate segmentControl:self didSelectAtIndex:self.selectedIndex];
+    }
 }
 
 #pragma mark - Animation
@@ -117,24 +134,28 @@
     }
     
     CGFloat animtionWidth = (self.contentSize.width - VIEW_WIDTH(self)) / (self.titleArray.count - 1);
-//    self.contentOffset = CGPointMake(animtionWidth / (self.titleArray.count - 1) * toIndex, 0);
-
     
+    CGFloat toOffsetX = animtionWidth * toIndex;
     
     __block CGFloat sourceOffsetX = self.contentOffset.x;
     __block CGFloat currentOffsetx = sourceOffsetX;
     
-    NSTimeInterval period = 0.3; //设置时间间隔
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    NSTimeInterval period = 0.15 / fabs(toOffsetX - sourceOffsetX); //设置时间间隔
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, period * NSEC_PER_MSEC, 0); //每秒执行
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, period * NSEC_PER_SEC, 0); //每秒执行
     dispatch_source_set_event_handler(timer, ^{
-        currentOffsetx = currentOffsetx + animtionWidth * (toIndex - fromIndex) / 0.3;
-        
-        NSLog(@"ssss%f     ssss%f", self.contentOffset.x, animtionWidth);
-        if (fabs(currentOffsetx - sourceOffsetX) >= fabs(animtionWidth * (toIndex - fromIndex))) {
+        if (currentOffsetx == toOffsetX) {
             //必须要有退出方法，不然eventHandler是不会执行的
             dispatch_source_cancel(timer);
+        }
+        else {
+            if (toOffsetX > sourceOffsetX) {
+                currentOffsetx = currentOffsetx + 0.5;
+            }
+            if (toOffsetX < sourceOffsetX) {
+                currentOffsetx = currentOffsetx - 0.5;
+            }
         }
         
         //通知主线程刷新
@@ -143,39 +164,8 @@
         });
     });
     
-//    dispatch_source_set_cancel_handler(timer, ^{
-//        NSLog(@"timersource cancel handle block");
-//    });
-    
     dispatch_resume(timer);
 }
-
-//- (void)segmentButtonFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
-//    if (_selectedIndex < (int)self.titleArray.count) {
-//        for (int i = 0; i < (int)self.titleArray.count; i++) {
-//            if (i == fromIndex) {
-//                CABasicAnimation *animation = [CABasicAnimation animation];
-//                animation.keyPath = @"backgroundcolor";
-//                animation.fromValue = self.titleColor;
-//                animation.toValue = self.titlehighlightedColor;
-//                animation.duration = 0.3;
-//                animation.additive = YES;
-//                animation.fillMode = kCAFillModeForwards;
-//                animation.removedOnCompletion = NO;
-//                
-//                UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
-//                [button.titleLabel.textColor layer addAnimation:animation forKey:@"backgroundcolor"];
-//            }
-//            
-////            if (i == toIndex) {
-////                UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
-////                [button setTitleColor:self.titlehighlightedColor forState:UIControlStateNormal];
-////            }
-//        }
-//    }
-//}
-
-
 
 #pragma mark - Setters
 - (void)setFrame:(CGRect)frame {
@@ -208,30 +198,7 @@
     [self createTitleButtonsWithTitleArray:_titleArray];
 }
 
-//- (void)setTitleButtonWidth:(CGFloat)titleButtonWidth {
-//    
-//}
-//
-//- (void)setTitleFont:(UIFont *)titleFont {
-//    
-//}
-//
-//- (void)setTitleColor:(UIColor *)titleColor {
-//    
-//}
-//
-//- (void)setTitlehighlightedColor:(UIColor *)titlehighlightedColor {
-//    
-//}
-//
-//- (void)setMarkColor:(UIColor *)markColor {
-//    
-//}
-
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
-    [self markViewAnimationFromIndex:_selectedIndex toIndex:selectedIndex];
-    [self contentOffsetAnimationFromIndex:_selectedIndex toIndex:selectedIndex];
-    
     _selectedIndex = selectedIndex;
 
     if (_selectedIndex < (int)self.titleArray.count) {
@@ -248,9 +215,13 @@
     }
 }
 
-//- (void)setHadSeparatorLine:(BOOL)hadSeparatorLine {
-//    
-//}
+- (void)setHadSeparatorLine:(BOOL)hadSeparatorLine {
+    for (int i = (int)self.titleArray.count; i < (int)self.titleArray.count * 2 - 1; i++) {
+        UIView *lineView = (UIView *)[self.subviews objectAtIndex:i];
+        
+        lineView.hidden = !hadSeparatorLine;
+    }
+}
 
 #pragma mark - LazyLoad
 - (UIView *)markView {
