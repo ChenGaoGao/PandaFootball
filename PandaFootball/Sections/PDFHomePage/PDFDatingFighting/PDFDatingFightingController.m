@@ -11,10 +11,11 @@
 
 #import "PDFDatingFightingCell.h"
 #import "PDFSpaceView.h"
+#import "DatingFightingOrderController.h"
 
 static const CGFloat kTableViewCellHeight        = 182.0f;
 
-@interface PDFDatingFightingController() <UITableViewDelegate, UITableViewDataSource>
+@interface PDFDatingFightingController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -32,6 +33,13 @@ static const CGFloat kTableViewCellHeight        = 182.0f;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - EventResponse
+- (void)fightingButtonHandle:(UIButton *)sender {
+    DatingFightingOrderController *viewController = [[DatingFightingOrderController alloc] init];
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - UITableViewDataSource
@@ -62,13 +70,9 @@ static const CGFloat kTableViewCellHeight        = 182.0f;
     cell.siteLabel.text = @"七人场";
     cell.addressLabel.text = @"详细地址详细地址详细地址详细地址详细地址详细地址详细地址";
     
-//    cell.nameLabel.backgroundColor = PDFColorRed;
-//    cell.costLabel.backgroundColor = PDFColorGreen;
-//    
-//    cell.timeLabel.backgroundColor = PDFColorGreen;
-//    cell.phoneLabel.backgroundColor = PDFColorGreen;
-//    cell.siteLabel.backgroundColor = PDFColorGreen;
-//    cell.addressLabel.backgroundColor = PDFColorGreen;
+    [cell.fightingButton addTarget:self
+                            action:@selector(fightingButtonHandle:)
+                  forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -113,9 +117,7 @@ static const CGFloat kTableViewCellHeight        = 182.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    SiteReservationDetailController *viewController = [[SiteReservationDetailController alloc] init];
-//    viewController.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:viewController animated:YES];
+
 }
 
 #pragma mark - LazyLoad

@@ -9,7 +9,7 @@
 #import "CYGBasePopupView.h"
 
 
-@interface CYGBasePopupView()
+@interface CYGBasePopupView ()
 
 @property (nonatomic, strong) UIButton *backgroundButton;
 

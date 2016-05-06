@@ -17,7 +17,7 @@
 #import "PDFMyCenterController.h"
 
 
-@interface PDFTabBarController()
+@interface PDFTabBarController ()
 
 @end
 

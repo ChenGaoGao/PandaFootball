@@ -8,8 +8,9 @@
 
 #import "PDFSegmentControl.h"
 #import "PDFUIFormatMacros.h"
+#import <libkern/OSAtomic.h>
 
-@interface PDFSegmentControl()
+@interface PDFSegmentControl ()
 
 @property (nonatomic, strong) UIView *bottomLineView;
 
@@ -21,6 +22,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = PDFColorWhite;
+        self.showsHorizontalScrollIndicator = NO;
+        self.showsVerticalScrollIndicator = NO;
         
         self.titleFont = PDFFontBodySmaller;
         self.titleColor = PDFColorTextDetailDefault;
@@ -69,6 +72,10 @@
             [segmentButton setImage:segmentModel.highlightedIcon forState:UIControlStateSelected];
         }
         
+        [segmentButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+        [segmentButton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, PDFSpaceSmaller / 2)];
+        [segmentButton setTitleEdgeInsets:UIEdgeInsetsMake(0, PDFSpaceSmaller / 2, 0, 0)];
+        
         [segmentButton setTag:i];
         [segmentButton addTarget:self
                           action:@selector(segmentButtonHandle:)
@@ -77,11 +84,24 @@
         [self addSubview:segmentButton];
     }
     
+    for (int i = 0; i < titleArray.count - 1; i++) {
+        UIView *splitLineView = [[UIView alloc] init];
+        splitLineView.frame = CGRectMake(segmentButtonWidth * i + segmentButtonWidth - 0.5, 0, 0.5, VIEW_HEIGHT(self));
+        
+        splitLineView.backgroundColor = PDFColorLineSplit;
+        splitLineView.hidden = YES;
+        
+        [self addSubview:splitLineView];
+    }
+    
     self.selectedIndex = 0;
     
     self.markView.frame = CGRectMake(0, VIEW_HEIGHT(self) - 2, segmentButtonWidth, 2);
     
-    self.bottomLineView.frame = CGRectMake(0, VIEW_HEIGHT(self) - 0.5, VIEW_WIDTH(self), 0.5);
+    self.bottomLineView.frame = CGRectMake(0, VIEW_HEIGHT(self) - 0.5,
+                                           MAX(VIEW_WIDTH(self), titleArray.count * segmentButtonWidth), 0.5);
+    
+    self.contentSize = CGSizeMake(titleArray.count * segmentButtonWidth, VIEW_HEIGHT(self));
     
     [self addSubview:self.bottomLineView];
     [self addSubview:self.markView];
@@ -89,7 +109,66 @@
 
 #pragma mark - Event
 - (void)segmentButtonHandle:(UIButton *)sender {
+    [self markViewAnimationFromIndex:self.selectedIndex toIndex:sender.tag];
+    [self contentOffsetAnimationFromIndex:self.selectedIndex toIndex:sender.tag];
+    
     self.selectedIndex = sender.tag;
+    
+    if ([self.m_delegate respondsToSelector:@selector(segmentControl:didSelectAtIndex:)]) {
+        [self.m_delegate segmentControl:self didSelectAtIndex:self.selectedIndex];
+    }
+}
+
+#pragma mark - Animation
+- (void)markViewAnimationFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+    CABasicAnimation *animation = [CABasicAnimation animation];
+    animation.keyPath = @"position.x";
+    animation.fromValue = @(VIEW_WIDTH(self.markView) * fromIndex + VIEW_WIDTH(self.markView) /2);
+    animation.toValue = @(VIEW_WIDTH(self.markView) * toIndex + VIEW_WIDTH(self.markView) / 2);
+    animation.duration = 0.3;
+    
+    [self.markView.layer addAnimation:animation forKey:@"abc"];
+    
+    self.markView.frame = CGRectMake(VIEW_WIDTH(self.markView) * toIndex, VIEW_HEIGHT(self) - 2, VIEW_WIDTH(self.markView), 2);
+}
+
+- (void)contentOffsetAnimationFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+    if (self.contentSize.width <= VIEW_WIDTH(self)) {
+        return;
+    }
+    
+    CGFloat animtionWidth = (self.contentSize.width - VIEW_WIDTH(self)) / (self.titleArray.count - 1);
+    
+    CGFloat toOffsetX = animtionWidth * toIndex;
+    
+    __block CGFloat sourceOffsetX = self.contentOffset.x;
+    __block CGFloat currentOffsetx = sourceOffsetX;
+    
+    NSTimeInterval period = 0.15 / fabs(toOffsetX - sourceOffsetX); //设置时间间隔
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, period * NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(timer, ^{
+        if (fabs(currentOffsetx - sourceOffsetX) >= fabs(toOffsetX - sourceOffsetX)) {
+            //必须要有退出方法，不然eventHandler是不会执行的
+            dispatch_source_cancel(timer);
+        }
+        else {
+            if (toOffsetX > sourceOffsetX) {
+                currentOffsetx = currentOffsetx + 0.5;
+            }
+            if (toOffsetX < sourceOffsetX) {
+                currentOffsetx = currentOffsetx - 0.5;
+            }
+        }
+        
+        //通知主线程刷新
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.contentOffset = CGPointMake(currentOffsetx, 0);
+        });
+    });
+    
+    dispatch_resume(timer);
 }
 
 #pragma mark - Setters
@@ -123,34 +202,12 @@
     [self createTitleButtonsWithTitleArray:_titleArray];
 }
 
-- (void)setTitleButtonWidth:(CGFloat)titleButtonWidth {
-    
-}
-
-- (void)setTitleFont:(UIFont *)titleFont {
-    
-}
-
-- (void)setTitleColor:(UIColor *)titleColor {
-    
-}
-
-- (void)setTitlehighlightedColor:(UIColor *)titlehighlightedColor {
-    
-}
-
-- (void)setMarkColor:(UIColor *)markColor {
-    
-}
-
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
-    
+
     if (_selectedIndex < (int)self.titleArray.count) {
         for (int i = 0; i < (int)self.titleArray.count; i++) {
             UIButton *button = (UIButton *)[self.subviews objectAtIndex:i];
-            
-            NSLog(@"%d", i);
             
             if (i == _selectedIndex) {
                 button.selected = YES;
@@ -163,7 +220,11 @@
 }
 
 - (void)setHadSeparatorLine:(BOOL)hadSeparatorLine {
-    
+    for (int i = (int)self.titleArray.count; i < (int)self.titleArray.count * 2 - 1; i++) {
+        UIView *lineView = (UIView *)[self.subviews objectAtIndex:i];
+        
+        lineView.hidden = !hadSeparatorLine;
+    }
 }
 
 #pragma mark - LazyLoad

@@ -168,5 +168,4 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     return _tableView;
 }
 
-
 @end

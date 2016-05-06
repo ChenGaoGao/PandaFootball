@@ -8,7 +8,7 @@
 
 #import "PDFBaseViewController.h"
 
-@interface PDFBaseViewController()
+@interface PDFBaseViewController ()
 
 @end
 

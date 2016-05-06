@@ -18,7 +18,7 @@ static const CGFloat kFightingButtonWidth   = 80.0f;
 static const CGFloat kFightingButtonHeight  = 30.0f;
 
 
-@interface PDFDatingFightingCell()
+@interface PDFDatingFightingCell ()
 
 @property (nonatomic, strong) UIView *lineView;
 

@@ -13,7 +13,7 @@
 static const CGFloat kLoginButtonWidth          = 80.0f;
 static const CGFloat kLoginButtonHeight         = 30.0f;
 
-@interface MyCenterHeaderView()
+@interface MyCenterHeaderView ()
 
 @property (nonatomic, strong) UILabel *describedLabel;
 

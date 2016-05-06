@@ -12,7 +12,7 @@
 static const CGFloat kImageViewHeight       = 125.0f;
 static const CGFloat kAddressLabelHeight    = 41.0f;
 
-@interface SRDetailHeaderView()
+@interface SRDetailHeaderView ()
 
 @property (nonatomic, strong) UIView *addressBackgroundView;
 

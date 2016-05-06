@@ -12,11 +12,10 @@
 #import "MyCenterHeaderView.h"
 #import "PDFSpaceView.h"
 
-#import "PDFSegmentControl.h"
 
 static const CGFloat kTableViewCellHeight        = 55.0f;
 
-@interface PDFMyCenterController() <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface PDFMyCenterController () <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UILabel *navigationTitleLabel;
 @property (nonatomic, strong) MyCenterHeaderView *headerView;
@@ -39,28 +38,6 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    PDFSegmentModel *model = [[PDFSegmentModel alloc] init];
-    model.title = @"aa";
-    model.icon = [UIImage imageNamed:@"FootballTeamCost"];
-    model.highlightedIcon = [UIImage imageNamed:@"FootballTeamAlbum"];
-    
-    [array addObject:model];
-    [array addObject:model];
-    [array addObject:model];
-    
-    
-    PDFSegmentControl *control = [[PDFSegmentControl alloc] init];
-    
-    
-    control.titleArray = array;
-    control.frame = CGRectMake(0, 0, MAIN_WIDTH, 100);
-    
-    control.titleColor = PDFColorRed;
-    
-    [self.view addSubview:control];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -138,15 +115,13 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     if (section == 0) {
         return 0;
     }
-    else {
-        return PDFSpaceSmallest;
-    }
+    
+    return PDFSpaceSmallest;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     PDFSpaceView *spaceView = [[PDFSpaceView alloc] init];
     spaceView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest);
-//    UILabel *label;
     
     spaceView.backgroundColor = PDFColorBackground;
     

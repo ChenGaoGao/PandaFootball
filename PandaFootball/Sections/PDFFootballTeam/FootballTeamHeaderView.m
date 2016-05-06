@@ -21,7 +21,7 @@ static const CGFloat kSwitchTeamButtonHeight    = 24.0f;
 
 static const CGFloat kLineViewBottomSpace       = 58.0f;
 
-@interface FootballTeamHeaderView()
+@interface FootballTeamHeaderView ()
 
 @property (nonatomic, strong) UIView *lineView;
 @property (nonatomic, strong) UILabel *bottomPlayersLabel;

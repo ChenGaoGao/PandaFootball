@@ -11,7 +11,7 @@
 
 static const CGFloat kIconViewWidth         = 25.0f;
 
-@interface FootballTeamCell()
+@interface FootballTeamCell ()
 
 @property (nonatomic, strong) UIView *leftLineView;
 @property (nonatomic, strong) UIView *bottomLineView;
