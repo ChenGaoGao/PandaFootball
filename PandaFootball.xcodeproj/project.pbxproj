@@ -29,6 +29,7 @@
 		47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */; };
 		47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FA1CDC7541002F9099 /* SROFootballTeamCell.m */; };
 		47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FD1CDC7E2E002F9099 /* SROConfirmView.m */; };
+		47ED39021CDC89D6002F9099 /* DatingFightingOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED39011CDC89D6002F9099 /* DatingFightingOrderController.m */; };
 		47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */; };
 		47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEE1CD1AD16009C7414 /* PDFSegmentControl.m */; };
 		A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */; };
@@ -127,6 +128,8 @@
 		47ED38FA1CDC7541002F9099 /* SROFootballTeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SROFootballTeamCell.m; sourceTree = "<group>"; };
 		47ED38FC1CDC7E2E002F9099 /* SROConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SROConfirmView.h; sourceTree = "<group>"; };
 		47ED38FD1CDC7E2E002F9099 /* SROConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SROConfirmView.m; sourceTree = "<group>"; };
+		47ED39001CDC89D6002F9099 /* DatingFightingOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatingFightingOrderController.h; sourceTree = "<group>"; };
+		47ED39011CDC89D6002F9099 /* DatingFightingOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatingFightingOrderController.m; sourceTree = "<group>"; };
 		47F43FEA1CD1AC57009C7414 /* PDFSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentViewController.h; sourceTree = "<group>"; };
 		47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentViewController.m; sourceTree = "<group>"; };
 		47F43FED1CD1AD16009C7414 /* PDFSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentControl.h; sourceTree = "<group>"; };
@@ -383,6 +386,15 @@
 			path = SiteReservationOrder;
 			sourceTree = "<group>";
 		};
+		47ED38FF1CDC89B5002F9099 /* DatingFightingOrder */ = {
+			isa = PBXGroup;
+			children = (
+				47ED39001CDC89D6002F9099 /* DatingFightingOrderController.h */,
+				47ED39011CDC89D6002F9099 /* DatingFightingOrderController.m */,
+			);
+			path = DatingFightingOrder;
+			sourceTree = "<group>";
+		};
 		47F43FE91CD1AC33009C7414 /* PDFSegmentViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +618,7 @@
 		A7BC217A1CBE91F90058E5B0 /* PDFDatingFighting */ = {
 			isa = PBXGroup;
 			children = (
+				47ED38FF1CDC89B5002F9099 /* DatingFightingOrder */,
 				A7BC217F1CBE922A0058E5B0 /* PDFDatingFightingController.h */,
 				A7BC21801CBE922A0058E5B0 /* PDFDatingFightingController.m */,
 				4749238E1CBF9AA5000E26A2 /* PDFDatingFightingCell.h */,
@@ -980,6 +993,7 @@
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
 				47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */,
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
+				47ED39021CDC89D6002F9099 /* DatingFightingOrderController.m in Sources */,
 				47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
 				47DBBCD31CD8C80E00C8B630 /* FootballTeamAttendanceCell.m in Sources */,
