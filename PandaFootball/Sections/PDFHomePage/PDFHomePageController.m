@@ -17,7 +17,7 @@
 
 static const CGFloat kLeftButtonWidth       = 50.0f;
 
-@interface PDFHomePageController() <CYGBasePopupViewDelegate, PDFPopupContentViewDelegate>
+@interface PDFHomePageController () <CYGBasePopupViewDelegate, PDFPopupContentViewDelegate>
 
 @property (nonatomic, strong) UIButton *leftButton;
 @property (nonatomic, strong) UIButton *rightButton;

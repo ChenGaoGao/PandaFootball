@@ -9,7 +9,7 @@
 #import "PDFSpaceView.h"
 #import "PDFUIFormatMacros.h"
 
-@interface PDFSpaceView()
+@interface PDFSpaceView ()
 
 @property (nonatomic, strong) UIView *topLineView;
 @property (nonatomic, strong) UIView *bottomLineView;

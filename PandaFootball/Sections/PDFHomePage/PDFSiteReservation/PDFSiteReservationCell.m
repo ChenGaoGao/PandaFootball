@@ -18,7 +18,7 @@ static const CGFloat kAddressIconViewHeight     = 13.0f;
 static const CGFloat kReservationButtonWidth    = 50.0f;
 static const CGFloat kReservationButtonHeight   = 18.0f;
 
-@interface PDFSiteReservationCell()
+@interface PDFSiteReservationCell ()
 
 @property (nonatomic, strong) UIImageView *addressIconView;
 

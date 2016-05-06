@@ -8,7 +8,7 @@
 
 #import "FTPHeaderView.h"
 
-@interface FTPHeaderView()
+@interface FTPHeaderView ()
 
 @end
 

@@ -15,7 +15,7 @@ static const CGFloat kHeaderViewHeight              = 80.0f;
 
 
 
-@interface FootballTeamPostedController()
+@interface FootballTeamPostedController ()
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIView *headerView;

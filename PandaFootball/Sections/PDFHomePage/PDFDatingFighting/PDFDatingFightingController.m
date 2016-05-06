@@ -14,7 +14,7 @@
 
 static const CGFloat kTableViewCellHeight        = 182.0f;
 
-@interface PDFDatingFightingController() <UITableViewDelegate, UITableViewDataSource>
+@interface PDFDatingFightingController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 

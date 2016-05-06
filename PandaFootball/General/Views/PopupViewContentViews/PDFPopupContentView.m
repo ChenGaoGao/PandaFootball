@@ -12,7 +12,7 @@
 
 static const CGFloat kButtonHeight                      = 36.0f;
 
-@interface PDFPopupContentView()
+@interface PDFPopupContentView ()
 
 @property (nonatomic, strong) UIView *bottomLineView;
 @property (nonatomic, strong) UIButton *bottomButtonDefault;

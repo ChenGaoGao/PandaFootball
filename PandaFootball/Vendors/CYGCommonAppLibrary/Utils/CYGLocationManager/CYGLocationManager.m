@@ -14,7 +14,7 @@ static NSString *const kLocationLatitude  = @"cyg_location_latitude";  /**< 纬�
 static NSString *const kLocationLongitude = @"cyg_location_longitude"; /**< 经度 */
 
 
-@interface CYGLocationManager() <CLLocationManagerDelegate>
+@interface CYGLocationManager () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, assign) BOOL locationIsArrived;

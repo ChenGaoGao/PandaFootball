@@ -10,7 +10,7 @@
 #import "PDFUIFormatMacros.h"
 #import <libkern/OSAtomic.h>
 
-@interface PDFSegmentControl()
+@interface PDFSegmentControl ()
 
 @property (nonatomic, strong) UIView *bottomLineView;
 

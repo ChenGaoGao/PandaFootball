@@ -18,7 +18,7 @@
 
 static const CGFloat kHeaderViewHeight          = 157.0f;
 
-@interface PDFFootballTeamController() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface PDFFootballTeamController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIButton *rightButton;
 @property (nonatomic, strong) UICollectionView *collectionView;

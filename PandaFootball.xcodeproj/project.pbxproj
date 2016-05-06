@@ -26,6 +26,9 @@
 		47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE5F1CD1F11D005AF586 /* PDFSegmentModel.m */; };
 		47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */; };
 		47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */; };
+		47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */; };
+		47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FA1CDC7541002F9099 /* SROFootballTeamCell.m */; };
+		47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FD1CDC7E2E002F9099 /* SROConfirmView.m */; };
 		47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */; };
 		47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEE1CD1AD16009C7414 /* PDFSegmentControl.m */; };
 		A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */; };
@@ -118,6 +121,12 @@
 		47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFBaseMyCenterController.m; sourceTree = "<group>"; };
 		47E3E4161CBE473600674F64 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		47ED38F61CDC2F2E002F9099 /* SiteReservationOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteReservationOrderController.h; sourceTree = "<group>"; };
+		47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteReservationOrderController.m; sourceTree = "<group>"; };
+		47ED38F91CDC7541002F9099 /* SROFootballTeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SROFootballTeamCell.h; sourceTree = "<group>"; };
+		47ED38FA1CDC7541002F9099 /* SROFootballTeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SROFootballTeamCell.m; sourceTree = "<group>"; };
+		47ED38FC1CDC7E2E002F9099 /* SROConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SROConfirmView.h; sourceTree = "<group>"; };
+		47ED38FD1CDC7E2E002F9099 /* SROConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SROConfirmView.m; sourceTree = "<group>"; };
 		47F43FEA1CD1AC57009C7414 /* PDFSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentViewController.h; sourceTree = "<group>"; };
 		47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentViewController.m; sourceTree = "<group>"; };
 		47F43FED1CD1AD16009C7414 /* PDFSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentControl.h; sourceTree = "<group>"; };
@@ -361,6 +370,19 @@
 			path = FootballTeamManage;
 			sourceTree = "<group>";
 		};
+		47ED38F51CDC2F11002F9099 /* SiteReservationOrder */ = {
+			isa = PBXGroup;
+			children = (
+				47ED38F61CDC2F2E002F9099 /* SiteReservationOrderController.h */,
+				47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */,
+				47ED38F91CDC7541002F9099 /* SROFootballTeamCell.h */,
+				47ED38FA1CDC7541002F9099 /* SROFootballTeamCell.m */,
+				47ED38FC1CDC7E2E002F9099 /* SROConfirmView.h */,
+				47ED38FD1CDC7E2E002F9099 /* SROConfirmView.m */,
+			);
+			path = SiteReservationOrder;
+			sourceTree = "<group>";
+		};
 		47F43FE91CD1AC33009C7414 /* PDFSegmentViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +617,7 @@
 		A7BC217B1CBE91F90058E5B0 /* PDFSiteReservation */ = {
 			isa = PBXGroup;
 			children = (
+				47ED38F51CDC2F11002F9099 /* SiteReservationOrder */,
 				A7BC21851CBEA1D00058E5B0 /* SiteReservationDetail */,
 				A7BC217C1CBE92140058E5B0 /* PDFSiteReservationController.h */,
 				A7BC217D1CBE92140058E5B0 /* PDFSiteReservationController.m */,
@@ -937,6 +960,7 @@
 				47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */,
 				47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */,
 				A7BC21911CBEB0370058E5B0 /* FootballTeamCell.m in Sources */,
+				47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */,
 				A7BC21881CBEA1E80058E5B0 /* SiteReservationDetailController.m in Sources */,
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
@@ -952,7 +976,9 @@
 				47DBBCCA1CD8C5AB00C8B630 /* FootballTeamEventController.m in Sources */,
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
+				47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */,
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
+				47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */,
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
 				47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,

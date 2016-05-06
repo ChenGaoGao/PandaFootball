@@ -13,7 +13,7 @@ static const CGFloat kIconViewWidth         = 32.0f;
 static const CGFloat kIconViewHeight        = 32.0f;
 
 
-@interface FootballTeamScheduleCell()
+@interface FootballTeamScheduleCell ()
 
 @end
 

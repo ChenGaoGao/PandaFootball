@@ -11,7 +11,7 @@
 
 static const CGFloat kTableViewCellHeight        = 44.0f;
 
-@interface FootballTeamAttendanceCell()
+@interface FootballTeamAttendanceCell ()
 
 @end
 

@@ -14,7 +14,7 @@
 
 static const CGFloat kTableViewCellHeight        = 89.0f;
 
-@interface PDFSiteReservationController() <UITableViewDelegate, UITableViewDataSource>
+@interface PDFSiteReservationController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
@@ -63,9 +63,6 @@ static const CGFloat kTableViewCellHeight        = 89.0f;
     if (indexPath.row == 0) {
         cell.reservationType = SRCellReservationTypeUnable;
     }
-    
-//    cell.siteNameLabel.backgroundColor = PDFColorGreen;
-//    cell.siteAddressLabel.backgroundColor = PDFColorGreen;
 
     return cell;
 }

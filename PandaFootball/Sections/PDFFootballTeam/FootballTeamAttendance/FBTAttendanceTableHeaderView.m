@@ -15,7 +15,7 @@ static const CGFloat kIconViewHeight            = 40.0f;
 static const CGFloat kPerLabelHeight            = 32.0f;
 
 
-@interface FBTAttendanceTableHeaderView()
+@interface FBTAttendanceTableHeaderView ()
 
 @property (nonatomic, strong) PDFSpaceView *spaceView;
 @property (nonatomic, strong) UILabel *perRankingLabel;

@@ -8,6 +8,7 @@
 
 #import "SiteReservationDetailController.h"
 #import "PDFPCHMacro.h"
+#import "SiteReservationOrderController.h"
 
 #import "SRDetailHeaderView.h"
 #import "PDFSpaceView.h"
@@ -47,6 +48,12 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - EventResponse
+- (void)reservationBUttonHandle:(UIButton *)sender {
+    SiteReservationOrderController *viewController = [[SiteReservationOrderController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -71,12 +78,15 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
         
         detailCell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        
         detailCell.startTimeLabel.text = @"08:30";
         detailCell.endTimeLabel.text = @"至 10:30";
         detailCell.siteNumberLabel.text = @"1号场";
         detailCell.headCountLabel.text = @"5人";
         detailCell.costLabel.text = @"¥450";
+        detailCell.reservationButton.tag = indexPath.row;
+        [detailCell.reservationButton addTarget:self
+                                         action:@selector(reservationBUttonHandle:)
+                               forControlEvents:UIControlEventTouchUpInside];
         
         return detailCell;
     }
@@ -90,16 +100,10 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    
     cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
-    
     cell.textLabel.text = [dataDic objectForKey:@"title"];
     cell.textLabel.font = PDFFontDetailBigger;
     cell.textLabel.textColor = PDFColorTextDetailMoreDeep;
-    
-    if (indexPath.row < 2) {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
     
     return cell;
 }
