@@ -26,6 +26,9 @@
 		47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE5F1CD1F11D005AF586 /* PDFSegmentModel.m */; };
 		47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */; };
 		47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */; };
+		47EA2D221CDDC0D400A4545D /* DiscoverRecruitMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2D211CDDC0D400A4545D /* DiscoverRecruitMainController.m */; };
+		47EA2D251CDDC12100A4545D /* DiscoverRecruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2D241CDDC12100A4545D /* DiscoverRecruitViewController.m */; };
+		47EA2D281CDDC33C00A4545D /* RecruitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2D271CDDC33C00A4545D /* RecruitTableViewCell.m */; };
 		47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */; };
 		47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FA1CDC7541002F9099 /* SROFootballTeamCell.m */; };
 		47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FD1CDC7E2E002F9099 /* SROConfirmView.m */; };
@@ -122,6 +125,12 @@
 		47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFBaseMyCenterController.m; sourceTree = "<group>"; };
 		47E3E4161CBE473600674F64 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		47EA2D201CDDC0D400A4545D /* DiscoverRecruitMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverRecruitMainController.h; sourceTree = "<group>"; };
+		47EA2D211CDDC0D400A4545D /* DiscoverRecruitMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverRecruitMainController.m; sourceTree = "<group>"; };
+		47EA2D231CDDC12100A4545D /* DiscoverRecruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverRecruitViewController.h; sourceTree = "<group>"; };
+		47EA2D241CDDC12100A4545D /* DiscoverRecruitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverRecruitViewController.m; sourceTree = "<group>"; };
+		47EA2D261CDDC33C00A4545D /* RecruitTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitTableViewCell.h; sourceTree = "<group>"; };
+		47EA2D271CDDC33C00A4545D /* RecruitTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitTableViewCell.m; sourceTree = "<group>"; };
 		47ED38F61CDC2F2E002F9099 /* SiteReservationOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteReservationOrderController.h; sourceTree = "<group>"; };
 		47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteReservationOrderController.m; sourceTree = "<group>"; };
 		47ED38F91CDC7541002F9099 /* SROFootballTeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SROFootballTeamCell.h; sourceTree = "<group>"; };
@@ -373,6 +382,19 @@
 			path = FootballTeamManage;
 			sourceTree = "<group>";
 		};
+		47EA2D1C1CDDBE0C00A4545D /* DiscoverRecruit */ = {
+			isa = PBXGroup;
+			children = (
+				47EA2D201CDDC0D400A4545D /* DiscoverRecruitMainController.h */,
+				47EA2D211CDDC0D400A4545D /* DiscoverRecruitMainController.m */,
+				47EA2D231CDDC12100A4545D /* DiscoverRecruitViewController.h */,
+				47EA2D241CDDC12100A4545D /* DiscoverRecruitViewController.m */,
+				47EA2D261CDDC33C00A4545D /* RecruitTableViewCell.h */,
+				47EA2D271CDDC33C00A4545D /* RecruitTableViewCell.m */,
+			);
+			path = DiscoverRecruit;
+			sourceTree = "<group>";
+		};
 		47ED38F51CDC2F11002F9099 /* SiteReservationOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,6 +602,7 @@
 		A7A80F451CBAB5B60034CE4B /* PDFDiscover */ = {
 			isa = PBXGroup;
 			children = (
+				47EA2D1C1CDDBE0C00A4545D /* DiscoverRecruit */,
 				A7A80F4B1CBAB6350034CE4B /* PDFDiscoverController.h */,
 				A7A80F4C1CBAB6350034CE4B /* PDFDiscoverController.m */,
 			);
@@ -952,6 +975,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */,
+				47EA2D221CDDC0D400A4545D /* DiscoverRecruitMainController.m in Sources */,
 				47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */,
 				47DBBCC41CD8C58300C8B630 /* FootballTeamStandingsController.m in Sources */,
 				47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */,
@@ -967,10 +991,12 @@
 				47DBBCC71CD8C59800C8B630 /* FootballTeamCostController.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
+				47EA2D251CDDC12100A4545D /* DiscoverRecruitViewController.m in Sources */,
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
 				A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */,
 				47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */,
+				47EA2D281CDDC33C00A4545D /* RecruitTableViewCell.m in Sources */,
 				47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */,
 				A7BC21911CBEB0370058E5B0 /* FootballTeamCell.m in Sources */,
 				47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */,

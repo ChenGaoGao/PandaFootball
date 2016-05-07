@@ -27,7 +27,6 @@ static const CGFloat kTableViewCellHeight        = 44.0f;
         [self addSubview:self.attendanceCountLabel];
     }
     return self;
-    
 }
 
 - (void)awakeFromNib {

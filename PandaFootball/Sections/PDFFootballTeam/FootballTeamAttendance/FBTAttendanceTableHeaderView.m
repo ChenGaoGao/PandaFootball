@@ -64,7 +64,7 @@ static const CGFloat kPerLabelHeight            = 32.0f;
     if (!_nameLabel) {
         _nameLabel = [[UILabel alloc] init];
         _nameLabel.frame = CGRectMake(VIEW_RIGHT(_headerIconView) + PDFSpaceSmallest,
-                                      VIEW_TOP(_headerIconView) + PDFSpaceSmallish / 2,
+                                      VIEW_TOP(_headerIconView) + PDFSpaceSmaller / 2,
                                       MAIN_WIDTH - VIEW_RIGHT(_headerIconView) - PDFSpaceSmallest - (PDFSpaceDefault * 2 * 2 + PDFSpaceBigger),
                                       PDFLabelHeightDetailBigger);
         

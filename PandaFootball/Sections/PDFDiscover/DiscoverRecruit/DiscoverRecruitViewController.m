@@ -1,35 +1,32 @@
 //
-//  PDFDiscoverController.m
+//  DiscoverRecruitViewController.m
 //  PandaFootball
 //
-//  Created by Oliver Chen on 16/4/11.
+//  Created by Oliver Chen on 16/5/7.
 //  Copyright © 2016年 myjoy. All rights reserved.
 //
 
-#import "PDFDiscoverController.h"
+#import "DiscoverRecruitViewController.h"
 #import "PDFPCHMacro.h"
 
 #import "PDFSpaceView.h"
-#import "DiscoverRecruitMainController.h"
+#import "RecruitTableViewCell.h"
 
-static const CGFloat kTableViewCellHeight        = 55.0f;
 
-@interface PDFDiscoverController () <UITableViewDelegate, UITableViewDataSource>
+
+static const CGFloat kTableViewCellHeight           = 68.0f;
+
+@interface DiscoverRecruitViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataSourceArray;
 
 @end
 
-@implementation PDFDiscoverController
+@implementation DiscoverRecruitViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self setNavigationTitleWhite:@"发现"];
-    
-    self.view.backgroundColor = PDFColorBackground;
     
     [self.view addSubview:self.tableView];
 }
@@ -53,31 +50,24 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataSourceArray.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return ((NSArray *)[self.dataSourceArray objectAtIndex:section]).count;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dataDic = [(NSArray *)[self.dataSourceArray objectAtIndex:indexPath.section]
-                             objectAtIndex:indexPath.row];
+    RecruitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recruitTableViewCell"
+                                                                 forIndexPath:indexPath];
     
-    static NSString *identify = @"identify";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
     
-    cell.textLabel.text = [dataDic objectForKey:@"title"];
-    cell.textLabel.font = PDFFontDetailBigger;
-    cell.textLabel.textColor = PDFColorTextDetailMoreDeep;
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.nameLabel.text = @"招募：后卫一名";
+    cell.teamLabel.text = @"星月球队";
+    cell.timeLabel.text = @"04-01";
+    cell.addressLabel.text = @"深圳-南山";
     
     return cell;
 }
@@ -88,9 +78,6 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section < self.dataSourceArray.count - 1) {
-        return;
-    }
     
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
@@ -108,6 +95,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
     return PDFSpaceSmallest;
 }
 
@@ -121,48 +109,22 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
-        DiscoverRecruitMainController *viewController = [[DiscoverRecruitMainController alloc] init];
-        viewController.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
-}
-
-#pragma mark - Getters
-- (NSMutableArray *)dataSourceArray {
-    _dataSourceArray = (NSMutableArray *)@[
-                         @[
-                             @{@"image":@"MyCenterSetting",
-                               @"title":@"球员招募"}
-                             ],
-                         @[
-                             @{@"image":@"MyCenterInviteTeam",
-                               @"title":@"扫一扫"},
-                             
-                             @{@"image":@"MyCenterInviteFriend",
-                               @"title":@"优惠活动"}
-                             ],
-                         @[
-                             @{@"image":@"MyCenterMessage",
-                               @"title":@"购物中心"}
-                             ]
-                         ];
-    return _dataSourceArray;
+    
 }
 
 #pragma mark - LazyLoad
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT - TABBAR_HEIGHT)
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT - 49)
                                                   style:UITableViewStylePlain];
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        _tableView.backgroundColor = PDFColorBackground;
+        
+        [_tableView registerClass:[RecruitTableViewCell class] forCellReuseIdentifier:@"recruitTableViewCell"];
     }
-    
     return _tableView;
 }
 

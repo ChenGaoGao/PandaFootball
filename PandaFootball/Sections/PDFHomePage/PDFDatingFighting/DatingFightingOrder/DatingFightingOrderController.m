@@ -60,6 +60,8 @@ static const CGFloat kIconViewWidth                 = 70.0f;
     [self.view addSubview:self.phoneLabel];
     [self.view addSubview:self.siteLabe];
     
+    [self.view addSubview:self.lineView];
+    
     [self.view addSubview:self.confirmView];
     
     [self refreshUI];
@@ -72,11 +74,15 @@ static const CGFloat kIconViewWidth                 = 70.0f;
 
 #pragma mark - Refresh
 - (void)refreshUI {
-    _hostIconView.image = [UIImage imageNamed:@"MyCenterBackground"];
-    _hostNameLabel.text = @"星月队";
-    _guestIconView.image = [UIImage imageNamed:@"MyCenterBackground"];
-    _guestNameLabel.text = @"铠甲勇士";
+    self.hostIconView.image = [UIImage imageNamed:@"MyCenterBackground"];
+    self.hostNameLabel.text = @"星月队";
+    self.guestIconView.image = [UIImage imageNamed:@"MyCenterBackground"];
+    self.guestNameLabel.text = @"铠甲勇士";
     
+    self.typeLabel.text = @"类型：  七人场";
+    self.timeLabel.text = @"时间：  2016-02-18 09:00";
+    self.phoneLabel.text = @"电话：  13912345678";
+    self.siteLabe.text = @"场地：  香蜜湖球场｜深圳市河滨大道与福强路交汇处";
 }
 
 #pragma mark - LazyLoad
@@ -96,9 +102,9 @@ static const CGFloat kIconViewWidth                 = 70.0f;
 - (UILabel *)hostNameLabel {
     if (!_hostNameLabel) {
         _hostNameLabel = [[UILabel alloc] init];
-        _hostNameLabel.frame = CGRectMake(VIEW_LEFT(_hostNameLabel) - PDFSpaceBigger,
-                                          VIEW_BOTTOM(_hostNameLabel) + PDFSpaceSmallest,
-                                          VIEW_WIDTH(_hostNameLabel) + PDFSpaceBigger * 2,
+        _hostNameLabel.frame = CGRectMake(VIEW_LEFT(_hostIconView) - PDFSpaceBigger,
+                                          VIEW_BOTTOM(_hostIconView) + PDFSpaceSmallest,
+                                          VIEW_WIDTH(_hostIconView) + PDFSpaceBigger * 2,
                                           PDFLabelHeightDetailBigger);
         
         _hostNameLabel.font = PDFFontDetailDefault;
@@ -162,9 +168,71 @@ static const CGFloat kIconViewWidth                 = 70.0f;
     return _spaceView;
 }
 
+- (UILabel *)typeLabel {
+    if (!_typeLabel) {
+        _typeLabel = [[UILabel alloc] init];
+        _typeLabel.frame = CGRectMake(PDFSpaceDefault,
+                                      VIEW_BOTTOM(_spaceView) + PDFSpaceDefault,
+                                      MAIN_WIDTH - PDFSpaceDefault * 2,
+                                      PDFLabelHeightDetailDefault);
+        
+        _typeLabel.font = PDFFontDetailDefault;
+        _typeLabel.textColor = PDFColorTextBodyLight;
+    }
+    return _typeLabel;
+}
 
+- (UILabel *)timeLabel {
+    if (!_timeLabel) {
+        _timeLabel = [[UILabel alloc] init];
+        _timeLabel.frame = CGRectMake(PDFSpaceDefault,
+                                      VIEW_BOTTOM(_typeLabel) + PDFSpaceDefault,
+                                      MAIN_WIDTH - PDFSpaceDefault * 2,
+                                      PDFLabelHeightDetailDefault);
+        
+        _timeLabel.font = PDFFontDetailDefault;
+        _timeLabel.textColor = PDFColorTextBodyLight;
+    }
+    return _timeLabel;
+}
 
+- (UILabel *)phoneLabel {
+    if (!_phoneLabel) {
+        _phoneLabel = [[UILabel alloc] init];
+        _phoneLabel.frame = CGRectMake(PDFSpaceDefault,
+                                       VIEW_BOTTOM(_timeLabel) + PDFSpaceDefault,
+                                       MAIN_WIDTH - PDFSpaceDefault * 2,
+                                       PDFLabelHeightDetailDefault);
+        
+        _phoneLabel.font = PDFFontDetailDefault;
+        _phoneLabel.textColor = PDFColorTextBodyLight;
+    }
+    return _phoneLabel;
+}
 
+- (UILabel *)siteLabe {
+    if (!_siteLabe) {
+        _siteLabe = [[UILabel alloc] init];
+        _siteLabe.frame = CGRectMake(PDFSpaceDefault,
+                                     VIEW_BOTTOM(_phoneLabel) + PDFSpaceDefault,
+                                     MAIN_WIDTH - PDFSpaceDefault * 2,
+                                     PDFLabelHeightDetailDefault);
+        
+        _siteLabe.font = PDFFontDetailDefault;
+        _siteLabe.textColor = PDFColorTextBodyLight;
+    }
+    return _siteLabe;
+}
+
+- (UIView *)lineView {
+    if (!_lineView) {
+        _lineView = [[UIView alloc] init];
+        _lineView.frame = CGRectMake(0, VIEW_BOTTOM(_siteLabe) + PDFSpaceDefault, MAIN_WIDTH, 0.5);
+        
+        _lineView.backgroundColor = PDFColorLineSplit;
+    }
+    return _lineView;
+}
 
 - (SROConfirmView *)confirmView {
     if (!_confirmView) {
