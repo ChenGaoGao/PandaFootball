@@ -206,6 +206,7 @@ static const CGFloat kAddressLabelHeight        = 41.0f;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        _tableView.separatorColor = PDFColorLineSplit;
         
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"identify"];
         [_tableView registerClass:[SRDetailCell class] forCellReuseIdentifier:@"detailCell"];

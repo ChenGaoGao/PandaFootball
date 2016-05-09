@@ -11,14 +11,17 @@
 
 #import "PDFSpaceView.h"
 #import "RecruitTableViewCell.h"
-
+#import "RecruitHeaderView.h"
+#import "RecruitDetailViewController.h"
 
 
 static const CGFloat kTableViewCellHeight           = 68.0f;
+static const CGFloat kTableViewHeaderHeight         = 59.0f;
 
 @interface DiscoverRecruitViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) RecruitHeaderView *headerView;
 
 @end
 
@@ -78,7 +81,7 @@ static const CGFloat kTableViewCellHeight           = 68.0f;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+     
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
     }
@@ -109,7 +112,8 @@ static const CGFloat kTableViewCellHeight           = 68.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    RecruitDetailViewController *viewController = [[RecruitDetailViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - LazyLoad
@@ -121,11 +125,24 @@ static const CGFloat kTableViewCellHeight           = 68.0f;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableHeaderView = self.headerView;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        _tableView.separatorColor = PDFColorLineSplit;
         
         [_tableView registerClass:[RecruitTableViewCell class] forCellReuseIdentifier:@"recruitTableViewCell"];
     }
     return _tableView;
+}
+
+- (RecruitHeaderView *)headerView {
+    if (!_headerView) {
+        _headerView = [[RecruitHeaderView alloc] init];
+        _headerView.frame = CGRectMake(0, 0, MAIN_WIDTH, kTableViewHeaderHeight);
+        
+        _headerView.dataSourceArray = @[@"前锋", @"后卫", @"门将"];
+        _headerView.selectedIndex = 1;
+    }
+    return _headerView;
 }
 
 @end
