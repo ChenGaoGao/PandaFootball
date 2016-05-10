@@ -55,7 +55,6 @@ static const CGFloat kTableViewCellHeight           = 44.0f;
     }
 }
 
-
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;

@@ -17,6 +17,8 @@
 		47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */; };
 		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
 		47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */; };
+		47CC75DD1CE18485004A0A66 /* FBTPostedHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CC75DC1CE18485004A0A66 /* FBTPostedHeaderView.m */; };
+		47CC75E01CE1C728004A0A66 /* FBTPostedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CC75DF1CE1C728004A0A66 /* FBTPostedCell.m */; };
 		47D646811CDAED51008E0331 /* PDFSegmentVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D646801CDAED51008E0331 /* PDFSegmentVCModel.m */; };
 		47DBBCC11CD8C56C00C8B630 /* FootballTeamAttendanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC01CD8C56C00C8B630 /* FootballTeamAttendanceController.m */; };
 		47DBBCC41CD8C58300C8B630 /* FootballTeamStandingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC31CD8C58300C8B630 /* FootballTeamStandingsController.m */; };
@@ -46,7 +48,6 @@
 		A76DF74A1CAAAC630086389D /* PandaFootballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7491CAAAC630086389D /* PandaFootballTests.m */; };
 		A76DF7551CAAAC630086389D /* PandaFootballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7541CAAAC630086389D /* PandaFootballUITests.m */; };
 		A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79263831CD23CE50054991D /* FootballTeamPostedController.m */; };
-		A79263871CD23CE50054991D /* FTPHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A79263851CD23CE50054991D /* FTPHeaderView.m */; };
 		A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */; };
 		A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F311CBA96D30034CE4B /* UIViewController+NavigationBar.m */; };
 		A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F331CBA96D30034CE4B /* UIViewController+StatusBar.m */; };
@@ -110,6 +111,10 @@
 		47CBDE3C1CBCD9BC0003F746 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		47CBDE401CBCDAA60003F746 /* CYGBasePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGBasePopupView.h; sourceTree = "<group>"; };
 		47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGBasePopupView.m; sourceTree = "<group>"; };
+		47CC75DB1CE18485004A0A66 /* FBTPostedHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTPostedHeaderView.h; sourceTree = "<group>"; };
+		47CC75DC1CE18485004A0A66 /* FBTPostedHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTPostedHeaderView.m; sourceTree = "<group>"; };
+		47CC75DE1CE1C728004A0A66 /* FBTPostedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTPostedCell.h; sourceTree = "<group>"; };
+		47CC75DF1CE1C728004A0A66 /* FBTPostedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTPostedCell.m; sourceTree = "<group>"; };
 		47D6467F1CDAED51008E0331 /* PDFSegmentVCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentVCModel.h; sourceTree = "<group>"; };
 		47D646801CDAED51008E0331 /* PDFSegmentVCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentVCModel.m; sourceTree = "<group>"; };
 		47DBBCBF1CD8C56C00C8B630 /* FootballTeamAttendanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamAttendanceController.h; sourceTree = "<group>"; };
@@ -169,8 +174,6 @@
 		A76DF7561CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A79263821CD23CE50054991D /* FootballTeamPostedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamPostedController.h; sourceTree = "<group>"; };
 		A79263831CD23CE50054991D /* FootballTeamPostedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamPostedController.m; sourceTree = "<group>"; };
-		A79263841CD23CE50054991D /* FTPHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPHeaderView.h; sourceTree = "<group>"; };
-		A79263851CD23CE50054991D /* FTPHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPHeaderView.m; sourceTree = "<group>"; };
 		A7A80F2D1CBA96D30034CE4B /* UIImage+PureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColor.h"; sourceTree = "<group>"; };
 		A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColor.m"; sourceTree = "<group>"; };
 		A7A80F301CBA96D30034CE4B /* UIViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBar.h"; sourceTree = "<group>"; };
@@ -553,8 +556,10 @@
 			children = (
 				A79263821CD23CE50054991D /* FootballTeamPostedController.h */,
 				A79263831CD23CE50054991D /* FootballTeamPostedController.m */,
-				A79263841CD23CE50054991D /* FTPHeaderView.h */,
-				A79263851CD23CE50054991D /* FTPHeaderView.m */,
+				47CC75DB1CE18485004A0A66 /* FBTPostedHeaderView.h */,
+				47CC75DC1CE18485004A0A66 /* FBTPostedHeaderView.m */,
+				47CC75DE1CE1C728004A0A66 /* FBTPostedCell.h */,
+				47CC75DF1CE1C728004A0A66 /* FBTPostedCell.m */,
 			);
 			path = FootballTeamPosted;
 			sourceTree = "<group>";
@@ -1028,12 +1033,13 @@
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
+				47CC75DD1CE18485004A0A66 /* FBTPostedHeaderView.m in Sources */,
 				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
 				A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
 				477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */,
 				A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */,
-				A79263871CD23CE50054991D /* FTPHeaderView.m in Sources */,
+				47CC75E01CE1C728004A0A66 /* FBTPostedCell.m in Sources */,
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
 				47DBBCCA1CD8C5AB00C8B630 /* FootballTeamEventController.m in Sources */,
