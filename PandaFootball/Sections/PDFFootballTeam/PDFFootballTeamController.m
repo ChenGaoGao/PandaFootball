@@ -12,8 +12,13 @@
 #import "FootballTeamHeaderView.h"
 #import "FootballTeamCell.h"
 
+#import "FootballTeamAlbumController.h"
 #import "FootballTeamPostedController.h"
 #import "FootballTeamScheduleController.h"
+#import "FootballTeamPlayerController.h"
+#import "FootballTeamEventController.h"
+#import "FootballTeamCostController.h"
+#import "FootballTeamStandingsController.h"
 #import "FootballTeamAttendanceController.h"
 #import "FootballTeamManageController.h"
 
@@ -129,6 +134,12 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        FootballTeamAlbumController *viewController = [[FootballTeamAlbumController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
     if (indexPath.row == 1) {
         FootballTeamPostedController *viewController = [[FootballTeamPostedController alloc] init];
         viewController.hidesBottomBarWhenPushed = YES;
@@ -137,6 +148,30 @@ referenceSizeForHeaderInSection:(NSInteger)section {
     
     if (indexPath.row == 2) {
         FootballTeamScheduleController *viewController = [[FootballTeamScheduleController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.row == 3) {
+        FootballTeamPlayerController *viewController = [[FootballTeamPlayerController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.row == 4) {
+        FootballTeamEventController *viewController = [[FootballTeamEventController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.row == 5) {
+        FootballTeamCostController *viewController = [[FootballTeamCostController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.row == 6) {
+        FootballTeamStandingsController *viewController = [[FootballTeamStandingsController alloc] init];
         viewController.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:viewController animated:YES];
     }
