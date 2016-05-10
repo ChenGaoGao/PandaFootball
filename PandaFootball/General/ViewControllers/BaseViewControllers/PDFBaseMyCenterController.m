@@ -138,6 +138,7 @@
         _tableView.tableHeaderView = self.tableViewHeader;
         _tableView.tableHeaderView.backgroundColor = [UIColor clearColor];
         _tableView.delegate = self;
+        _tableView.separatorColor = PDFColorLineSplit;
     }
     return _tableView;
 }

@@ -1,36 +1,35 @@
 //
-//  FootballTeamManageController.m
+//  DiscoverRecruitViewController.m
 //  PandaFootball
 //
-//  Created by Oliver Chen on 16/4/19.
+//  Created by Oliver Chen on 16/5/7.
 //  Copyright © 2016年 myjoy. All rights reserved.
 //
 
-#import "FootballTeamManageController.h"
+#import "DiscoverRecruitViewController.h"
 #import "PDFPCHMacro.h"
 
 #import "PDFSpaceView.h"
+#import "RecruitTableViewCell.h"
+#import "RecruitHeaderView.h"
+#import "RecruitDetailViewController.h"
 
 
-static const CGFloat kTableViewCellHeight        = 55.0f;
+static const CGFloat kTableViewCellHeight           = 68.0f;
+static const CGFloat kTableViewHeaderHeight         = 59.0f;
 
-@interface FootballTeamManageController () <UITableViewDelegate, UITableViewDataSource>
+@interface DiscoverRecruitViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataSourceArray;
+@property (nonatomic, strong) RecruitHeaderView *headerView;
 
 @end
 
-@implementation FootballTeamManageController
+@implementation DiscoverRecruitViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self setLeftBarButton];
-    [self setNavigationTitleWhite:@"球队管理"];
-    
-    self.view.backgroundColor = PDFColorBackground;
     
     [self.view addSubview:self.tableView];
 }
@@ -54,31 +53,24 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataSourceArray.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return ((NSArray *)[self.dataSourceArray objectAtIndex:section]).count;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dataDic = [(NSArray *)[self.dataSourceArray objectAtIndex:indexPath.section]
-                             objectAtIndex:indexPath.row];
+    RecruitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"recruitTableViewCell"
+                                                                 forIndexPath:indexPath];
     
-    static NSString *identify = @"identify";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.imageView.image = [UIImage imageNamed:[dataDic objectForKey:@"image"]];
     
-    cell.textLabel.text = [dataDic objectForKey:@"title"];
-    cell.textLabel.font = PDFFontDetailBigger;
-    cell.textLabel.textColor = PDFColorTextDetailMoreDeep;
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.nameLabel.text = @"招募：后卫一名";
+    cell.teamLabel.text = @"星月球队";
+    cell.timeLabel.text = @"04-01";
+    cell.addressLabel.text = @"深圳-南山";
     
     return cell;
 }
@@ -89,10 +81,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section < self.dataSourceArray.count - 1) {
-        return;
-    }
-    
+     
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
     }
@@ -109,6 +98,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
     return PDFSpaceSmallest;
 }
 
@@ -122,51 +112,37 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
-
-#pragma mark - Getters
-- (NSMutableArray *)dataSourceArray {
-    _dataSourceArray = (NSMutableArray *)@[
-                                           @[
-                                               @{@"image":@"FTMManagePlayers",
-                                                 @"title":@"球员管理"}
-                                               ],
-                                           @[
-                                               @{@"image":@"FTMPublishGame",
-                                                 @"title":@"发布比赛"}
-                                               ],
-                                           @[
-                                               @{@"image":@"FTMInputStandings",
-                                                 @"title":@"战绩录入"}
-                                               ],
-                                           @[
-                                               @{@"image":@"FTMInputFinancial",
-                                                 @"title":@"财务录入"}
-                                               ],
-                                           @[
-                                               @{@"image":@"FTMPublishActivity",
-                                                 @"title":@"发起活动"}
-                                               ]
-                                           ];
-    return _dataSourceArray;
+    RecruitDetailViewController *viewController = [[RecruitDetailViewController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - LazyLoad
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT)
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT - 49)
                                                   style:UITableViewStylePlain];
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableHeaderView = self.headerView;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        _tableView.backgroundColor = PDFColorBackground;
         _tableView.separatorColor = PDFColorLineSplit;
+        
+        [_tableView registerClass:[RecruitTableViewCell class] forCellReuseIdentifier:@"recruitTableViewCell"];
     }
-    
     return _tableView;
+}
+
+- (RecruitHeaderView *)headerView {
+    if (!_headerView) {
+        _headerView = [[RecruitHeaderView alloc] init];
+        _headerView.frame = CGRectMake(0, 0, MAIN_WIDTH, kTableViewHeaderHeight);
+        
+        _headerView.dataSourceArray = @[@"前锋", @"后卫", @"门将"];
+        _headerView.selectedIndex = 1;
+    }
+    return _headerView;
 }
 
 @end

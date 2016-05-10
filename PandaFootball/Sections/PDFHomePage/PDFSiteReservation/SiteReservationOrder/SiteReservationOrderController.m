@@ -43,6 +43,17 @@ static const CGFloat kTableViewCellHeight           = 44.0f;
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UIScrollViewDelegate
+// 去掉UItableview headerview黏性(sticky)
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat sectionHeaderHeight = PDFSpaceSmallest;
+    if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y >= 0) {
+        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+    }
+    else if (scrollView.contentOffset.y >= sectionHeaderHeight) {
+        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+    }
+}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -191,6 +202,7 @@ static const CGFloat kTableViewCellHeight           = 44.0f;
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        _tableView.separatorColor = PDFColorLineSplit;
     }
     return _tableView;
 }

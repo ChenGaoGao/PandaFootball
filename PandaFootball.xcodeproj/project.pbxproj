@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47009E841CE03C9C00D7986D /* RecruitHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47009E831CE03C9C00D7986D /* RecruitHeaderView.m */; };
 		474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */; };
 		477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477E1F671CDB35E80055B86D /* SRDetailCell.m */; };
+		478454721CE07A34004F86F9 /* RecruitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454711CE07A34004F86F9 /* RecruitDetailViewController.m */; };
+		478454751CE08BE5004F86F9 /* RecruitInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454741CE08BE5004F86F9 /* RecruitInforView.m */; };
 		47B92CD81CD992D600EBECCD /* FBTAttendanceTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */; };
 		47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */; };
 		47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */; };
 		47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE391CBCCF800003F746 /* CYGLocationManager.m */; };
 		47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */; };
+		47CC75DD1CE18485004A0A66 /* FBTPostedHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CC75DC1CE18485004A0A66 /* FBTPostedHeaderView.m */; };
+		47CC75E01CE1C728004A0A66 /* FBTPostedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CC75DF1CE1C728004A0A66 /* FBTPostedCell.m */; };
 		47D646811CDAED51008E0331 /* PDFSegmentVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D646801CDAED51008E0331 /* PDFSegmentVCModel.m */; };
 		47DBBCC11CD8C56C00C8B630 /* FootballTeamAttendanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC01CD8C56C00C8B630 /* FootballTeamAttendanceController.m */; };
 		47DBBCC41CD8C58300C8B630 /* FootballTeamStandingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47DBBCC31CD8C58300C8B630 /* FootballTeamStandingsController.m */; };
@@ -26,6 +31,9 @@
 		47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E0DE5F1CD1F11D005AF586 /* PDFSegmentModel.m */; };
 		47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */; };
 		47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */; };
+		47EA2D221CDDC0D400A4545D /* DiscoverRecruitMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2D211CDDC0D400A4545D /* DiscoverRecruitMainController.m */; };
+		47EA2D251CDDC12100A4545D /* DiscoverRecruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2D241CDDC12100A4545D /* DiscoverRecruitViewController.m */; };
+		47EA2D281CDDC33C00A4545D /* RecruitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EA2D271CDDC33C00A4545D /* RecruitTableViewCell.m */; };
 		47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */; };
 		47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FA1CDC7541002F9099 /* SROFootballTeamCell.m */; };
 		47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ED38FD1CDC7E2E002F9099 /* SROConfirmView.m */; };
@@ -40,7 +48,6 @@
 		A76DF74A1CAAAC630086389D /* PandaFootballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7491CAAAC630086389D /* PandaFootballTests.m */; };
 		A76DF7551CAAAC630086389D /* PandaFootballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7541CAAAC630086389D /* PandaFootballUITests.m */; };
 		A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79263831CD23CE50054991D /* FootballTeamPostedController.m */; };
-		A79263871CD23CE50054991D /* FTPHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A79263851CD23CE50054991D /* FTPHeaderView.m */; };
 		A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */; };
 		A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F311CBA96D30034CE4B /* UIViewController+NavigationBar.m */; };
 		A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F331CBA96D30034CE4B /* UIViewController+StatusBar.m */; };
@@ -83,10 +90,16 @@
 
 /* Begin PBXFileReference section */
 		1A9C4C920C85CE8EE7F30BB0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		47009E821CE03C9C00D7986D /* RecruitHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitHeaderView.h; sourceTree = "<group>"; };
+		47009E831CE03C9C00D7986D /* RecruitHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitHeaderView.m; sourceTree = "<group>"; };
 		4749238E1CBF9AA5000E26A2 /* PDFDatingFightingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDatingFightingCell.h; sourceTree = "<group>"; };
 		4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingCell.m; sourceTree = "<group>"; };
 		477E1F661CDB35E80055B86D /* SRDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDetailCell.h; sourceTree = "<group>"; };
 		477E1F671CDB35E80055B86D /* SRDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDetailCell.m; sourceTree = "<group>"; };
+		478454701CE07A34004F86F9 /* RecruitDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitDetailViewController.h; sourceTree = "<group>"; };
+		478454711CE07A34004F86F9 /* RecruitDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitDetailViewController.m; sourceTree = "<group>"; };
+		478454731CE08BE5004F86F9 /* RecruitInforView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitInforView.h; sourceTree = "<group>"; };
+		478454741CE08BE5004F86F9 /* RecruitInforView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitInforView.m; sourceTree = "<group>"; };
 		47B92CD61CD992D600EBECCD /* FBTAttendanceTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTAttendanceTableHeaderView.h; sourceTree = "<group>"; };
 		47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTAttendanceTableHeaderView.m; sourceTree = "<group>"; };
 		47BE6E7F1CC861BA009EC803 /* FootballTeamScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamScheduleController.h; sourceTree = "<group>"; };
@@ -98,6 +111,10 @@
 		47CBDE3C1CBCD9BC0003F746 /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
 		47CBDE401CBCDAA60003F746 /* CYGBasePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYGBasePopupView.h; sourceTree = "<group>"; };
 		47CBDE411CBCDAA60003F746 /* CYGBasePopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYGBasePopupView.m; sourceTree = "<group>"; };
+		47CC75DB1CE18485004A0A66 /* FBTPostedHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTPostedHeaderView.h; sourceTree = "<group>"; };
+		47CC75DC1CE18485004A0A66 /* FBTPostedHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTPostedHeaderView.m; sourceTree = "<group>"; };
+		47CC75DE1CE1C728004A0A66 /* FBTPostedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTPostedCell.h; sourceTree = "<group>"; };
+		47CC75DF1CE1C728004A0A66 /* FBTPostedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTPostedCell.m; sourceTree = "<group>"; };
 		47D6467F1CDAED51008E0331 /* PDFSegmentVCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentVCModel.h; sourceTree = "<group>"; };
 		47D646801CDAED51008E0331 /* PDFSegmentVCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentVCModel.m; sourceTree = "<group>"; };
 		47DBBCBF1CD8C56C00C8B630 /* FootballTeamAttendanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamAttendanceController.h; sourceTree = "<group>"; };
@@ -122,6 +139,12 @@
 		47E3E4141CBE438D00674F64 /* PDFBaseMyCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFBaseMyCenterController.m; sourceTree = "<group>"; };
 		47E3E4161CBE473600674F64 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		47E3E4171CBE473600674F64 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		47EA2D201CDDC0D400A4545D /* DiscoverRecruitMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverRecruitMainController.h; sourceTree = "<group>"; };
+		47EA2D211CDDC0D400A4545D /* DiscoverRecruitMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverRecruitMainController.m; sourceTree = "<group>"; };
+		47EA2D231CDDC12100A4545D /* DiscoverRecruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverRecruitViewController.h; sourceTree = "<group>"; };
+		47EA2D241CDDC12100A4545D /* DiscoverRecruitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverRecruitViewController.m; sourceTree = "<group>"; };
+		47EA2D261CDDC33C00A4545D /* RecruitTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitTableViewCell.h; sourceTree = "<group>"; };
+		47EA2D271CDDC33C00A4545D /* RecruitTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitTableViewCell.m; sourceTree = "<group>"; };
 		47ED38F61CDC2F2E002F9099 /* SiteReservationOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteReservationOrderController.h; sourceTree = "<group>"; };
 		47ED38F71CDC2F2E002F9099 /* SiteReservationOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteReservationOrderController.m; sourceTree = "<group>"; };
 		47ED38F91CDC7541002F9099 /* SROFootballTeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SROFootballTeamCell.h; sourceTree = "<group>"; };
@@ -151,8 +174,6 @@
 		A76DF7561CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A79263821CD23CE50054991D /* FootballTeamPostedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamPostedController.h; sourceTree = "<group>"; };
 		A79263831CD23CE50054991D /* FootballTeamPostedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamPostedController.m; sourceTree = "<group>"; };
-		A79263841CD23CE50054991D /* FTPHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPHeaderView.h; sourceTree = "<group>"; };
-		A79263851CD23CE50054991D /* FTPHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPHeaderView.m; sourceTree = "<group>"; };
 		A7A80F2D1CBA96D30034CE4B /* UIImage+PureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColor.h"; sourceTree = "<group>"; };
 		A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColor.m"; sourceTree = "<group>"; };
 		A7A80F301CBA96D30034CE4B /* UIViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBar.h"; sourceTree = "<group>"; };
@@ -225,6 +246,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4784546F1CE07A20004F86F9 /* RecruitDetail */ = {
+			isa = PBXGroup;
+			children = (
+				478454701CE07A34004F86F9 /* RecruitDetailViewController.h */,
+				478454711CE07A34004F86F9 /* RecruitDetailViewController.m */,
+				478454731CE08BE5004F86F9 /* RecruitInforView.h */,
+				478454741CE08BE5004F86F9 /* RecruitInforView.m */,
+			);
+			path = RecruitDetail;
+			sourceTree = "<group>";
+		};
 		479897DF1CB3C40300A23E62 /* CYGCommonAppLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +405,22 @@
 			path = FootballTeamManage;
 			sourceTree = "<group>";
 		};
+		47EA2D1C1CDDBE0C00A4545D /* DiscoverRecruit */ = {
+			isa = PBXGroup;
+			children = (
+				4784546F1CE07A20004F86F9 /* RecruitDetail */,
+				47EA2D201CDDC0D400A4545D /* DiscoverRecruitMainController.h */,
+				47EA2D211CDDC0D400A4545D /* DiscoverRecruitMainController.m */,
+				47EA2D231CDDC12100A4545D /* DiscoverRecruitViewController.h */,
+				47EA2D241CDDC12100A4545D /* DiscoverRecruitViewController.m */,
+				47EA2D261CDDC33C00A4545D /* RecruitTableViewCell.h */,
+				47EA2D271CDDC33C00A4545D /* RecruitTableViewCell.m */,
+				47009E821CE03C9C00D7986D /* RecruitHeaderView.h */,
+				47009E831CE03C9C00D7986D /* RecruitHeaderView.m */,
+			);
+			path = DiscoverRecruit;
+			sourceTree = "<group>";
+		};
 		47ED38F51CDC2F11002F9099 /* SiteReservationOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,8 +556,10 @@
 			children = (
 				A79263821CD23CE50054991D /* FootballTeamPostedController.h */,
 				A79263831CD23CE50054991D /* FootballTeamPostedController.m */,
-				A79263841CD23CE50054991D /* FTPHeaderView.h */,
-				A79263851CD23CE50054991D /* FTPHeaderView.m */,
+				47CC75DB1CE18485004A0A66 /* FBTPostedHeaderView.h */,
+				47CC75DC1CE18485004A0A66 /* FBTPostedHeaderView.m */,
+				47CC75DE1CE1C728004A0A66 /* FBTPostedCell.h */,
+				47CC75DF1CE1C728004A0A66 /* FBTPostedCell.m */,
 			);
 			path = FootballTeamPosted;
 			sourceTree = "<group>";
@@ -580,6 +630,7 @@
 		A7A80F451CBAB5B60034CE4B /* PDFDiscover */ = {
 			isa = PBXGroup;
 			children = (
+				47EA2D1C1CDDBE0C00A4545D /* DiscoverRecruit */,
 				A7A80F4B1CBAB6350034CE4B /* PDFDiscoverController.h */,
 				A7A80F4C1CBAB6350034CE4B /* PDFDiscoverController.m */,
 			);
@@ -952,7 +1003,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */,
+				47EA2D221CDDC0D400A4545D /* DiscoverRecruitMainController.m in Sources */,
 				47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */,
+				47009E841CE03C9C00D7986D /* RecruitHeaderView.m in Sources */,
 				47DBBCC41CD8C58300C8B630 /* FootballTeamStandingsController.m in Sources */,
 				47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */,
 				47D646811CDAED51008E0331 /* PDFSegmentVCModel.m in Sources */,
@@ -967,10 +1020,12 @@
 				47DBBCC71CD8C59800C8B630 /* FootballTeamCostController.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
+				47EA2D251CDDC12100A4545D /* DiscoverRecruitViewController.m in Sources */,
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
 				A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */,
 				47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */,
+				47EA2D281CDDC33C00A4545D /* RecruitTableViewCell.m in Sources */,
 				47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */,
 				A7BC21911CBEB0370058E5B0 /* FootballTeamCell.m in Sources */,
 				47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */,
@@ -978,12 +1033,13 @@
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
+				47CC75DD1CE18485004A0A66 /* FBTPostedHeaderView.m in Sources */,
 				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
 				A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
 				477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */,
 				A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */,
-				A79263871CD23CE50054991D /* FTPHeaderView.m in Sources */,
+				47CC75E01CE1C728004A0A66 /* FBTPostedCell.m in Sources */,
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
 				47DBBCCA1CD8C5AB00C8B630 /* FootballTeamEventController.m in Sources */,
@@ -995,8 +1051,10 @@
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
 				47ED39021CDC89D6002F9099 /* DatingFightingOrderController.m in Sources */,
 				47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */,
+				478454721CE07A34004F86F9 /* RecruitDetailViewController.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
 				47DBBCD31CD8C80E00C8B630 /* FootballTeamAttendanceCell.m in Sources */,
+				478454751CE08BE5004F86F9 /* RecruitInforView.m in Sources */,
 				47DBBCD01CD8C5CD00C8B630 /* FootballTeamAlbumController.m in Sources */,
 				A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */,
 				47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */,

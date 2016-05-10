@@ -10,6 +10,7 @@
 #import "PDFPCHMacro.h"
 
 #import "PDFSpaceView.h"
+#import "DiscoverRecruitMainController.h"
 
 static const CGFloat kTableViewCellHeight        = 55.0f;
 
@@ -120,7 +121,11 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.section == 0) {
+        DiscoverRecruitMainController *viewController = [[DiscoverRecruitMainController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 #pragma mark - Getters
@@ -156,6 +161,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         _tableView.backgroundColor = PDFColorBackground;
+        _tableView.separatorColor = PDFColorLineSplit;
     }
     
     return _tableView;
