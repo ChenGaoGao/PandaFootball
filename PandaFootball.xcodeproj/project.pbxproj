@@ -58,6 +58,9 @@
 		A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F4C1CBAB6350034CE4B /* PDFDiscoverController.m */; };
 		A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F4F1CBAB6470034CE4B /* PDFFootballTeamController.m */; };
 		A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */; };
+		A7BB35221CE2212C00E35FA3 /* FBTMPublishGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB35211CE2212C00E35FA3 /* FBTMPublishGameController.m */; };
+		A7BB35251CE2214100E35FA3 /* FBTMTypeInCostController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB35241CE2214100E35FA3 /* FBTMTypeInCostController.m */; };
+		A7BB35281CE2215200E35FA3 /* FBTMTypeInStandingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB35271CE2215200E35FA3 /* FBTMTypeInStandingsController.m */; };
 		A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC21671CBE76CA0058E5B0 /* PDFSpaceView.m */; };
 		A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC216B1CBE7C230058E5B0 /* MyCenterHeaderView.m */; };
 		A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC217D1CBE92140058E5B0 /* PDFSiteReservationController.m */; };
@@ -197,6 +200,12 @@
 		A7A80F511CBAB6560034CE4B /* PDFMyCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFMyCenterController.h; sourceTree = "<group>"; };
 		A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFMyCenterController.m; sourceTree = "<group>"; };
 		A7A80F551CBACB380034CE4B /* PDFPCHMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFPCHMacro.h; sourceTree = "<group>"; };
+		A7BB35201CE2212C00E35FA3 /* FBTMPublishGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTMPublishGameController.h; sourceTree = "<group>"; };
+		A7BB35211CE2212C00E35FA3 /* FBTMPublishGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTMPublishGameController.m; sourceTree = "<group>"; };
+		A7BB35231CE2214100E35FA3 /* FBTMTypeInCostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTMTypeInCostController.h; sourceTree = "<group>"; };
+		A7BB35241CE2214100E35FA3 /* FBTMTypeInCostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTMTypeInCostController.m; sourceTree = "<group>"; };
+		A7BB35261CE2215200E35FA3 /* FBTMTypeInStandingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTMTypeInStandingsController.h; sourceTree = "<group>"; };
+		A7BB35271CE2215200E35FA3 /* FBTMTypeInStandingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTMTypeInStandingsController.m; sourceTree = "<group>"; };
 		A7BC21661CBE76CA0058E5B0 /* PDFSpaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSpaceView.h; sourceTree = "<group>"; };
 		A7BC21671CBE76CA0058E5B0 /* PDFSpaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSpaceView.m; sourceTree = "<group>"; };
 		A7BC216A1CBE7C230058E5B0 /* MyCenterHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterHeaderView.h; sourceTree = "<group>"; };
@@ -399,6 +408,9 @@
 		47DEB7541CC630380007BD2B /* FootballTeamManage */ = {
 			isa = PBXGroup;
 			children = (
+				A7BB351D1CE21F6C00E35FA3 /* FBTMPublishGame */,
+				A7BB351F1CE21F6C00E35FA3 /* FBTMTypeInStandings */,
+				A7BB351E1CE21F6C00E35FA3 /* FBTMTypeInCost */,
 				47DEB7551CC6304C0007BD2B /* FootballTeamManageController.h */,
 				47DEB7561CC6304C0007BD2B /* FootballTeamManageController.m */,
 			);
@@ -646,6 +658,33 @@
 				A7A80F491CBAB6210034CE4B /* PDFHomePageController.m */,
 			);
 			path = PDFHomePage;
+			sourceTree = "<group>";
+		};
+		A7BB351D1CE21F6C00E35FA3 /* FBTMPublishGame */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB35201CE2212C00E35FA3 /* FBTMPublishGameController.h */,
+				A7BB35211CE2212C00E35FA3 /* FBTMPublishGameController.m */,
+			);
+			path = FBTMPublishGame;
+			sourceTree = "<group>";
+		};
+		A7BB351E1CE21F6C00E35FA3 /* FBTMTypeInCost */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB35231CE2214100E35FA3 /* FBTMTypeInCostController.h */,
+				A7BB35241CE2214100E35FA3 /* FBTMTypeInCostController.m */,
+			);
+			path = FBTMTypeInCost;
+			sourceTree = "<group>";
+		};
+		A7BB351F1CE21F6C00E35FA3 /* FBTMTypeInStandings */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB35261CE2215200E35FA3 /* FBTMTypeInStandingsController.h */,
+				A7BB35271CE2215200E35FA3 /* FBTMTypeInStandingsController.m */,
+			);
+			path = FBTMTypeInStandings;
 			sourceTree = "<group>";
 		};
 		A7BC21651CBE76B90058E5B0 /* PDFSpaceView */ = {
@@ -1016,12 +1055,14 @@
 				A7BC216C1CBE7C230058E5B0 /* MyCenterHeaderView.m in Sources */,
 				47CBDE3A1CBCCF800003F746 /* CYGLocationManager.m in Sources */,
 				A7BC218E1CBEB00B0058E5B0 /* FootballTeamHeaderView.m in Sources */,
+				A7BB35251CE2214100E35FA3 /* FBTMTypeInCostController.m in Sources */,
 				47DBBCC11CD8C56C00C8B630 /* FootballTeamAttendanceController.m in Sources */,
 				47DBBCC71CD8C59800C8B630 /* FootballTeamCostController.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
 				47EA2D251CDDC12100A4545D /* DiscoverRecruitViewController.m in Sources */,
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
+				A7BB35281CE2215200E35FA3 /* FBTMTypeInStandingsController.m in Sources */,
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
 				A7A80F501CBAB6470034CE4B /* PDFFootballTeamController.m in Sources */,
 				47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */,
@@ -1029,6 +1070,7 @@
 				47E3E4151CBE438D00674F64 /* PDFBaseMyCenterController.m in Sources */,
 				A7BC21911CBEB0370058E5B0 /* FootballTeamCell.m in Sources */,
 				47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */,
+				A7BB35221CE2212C00E35FA3 /* FBTMPublishGameController.m in Sources */,
 				A7BC21881CBEA1E80058E5B0 /* SiteReservationDetailController.m in Sources */,
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,

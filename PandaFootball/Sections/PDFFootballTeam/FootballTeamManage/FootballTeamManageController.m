@@ -11,6 +11,10 @@
 
 #import "PDFSpaceView.h"
 
+#import "FBTMPublishGameController.h"
+#import "FBTMTypeInStandingsController.h"
+#import "FBTMTypeInCostController.h"
+
 
 static const CGFloat kTableViewCellHeight        = 55.0f;
 
@@ -122,7 +126,23 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        FBTMPublishGameController *viewController = [[FBTMPublishGameController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
     
+    if (indexPath.section == 2) {
+        FBTMTypeInStandingsController *viewController = [[FBTMTypeInStandingsController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.section == 3) {
+        FBTMTypeInCostController *viewController = [[FBTMTypeInCostController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 #pragma mark - Getters
