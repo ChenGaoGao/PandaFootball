@@ -13,6 +13,7 @@
 
 
 static const CGFloat kBackgroundViewHeight          = 185.0f;
+static const CGFloat kBottomLayerHeight             = 40.0f;
 
 @interface FootballTeamEventCell ()
 
@@ -52,8 +53,22 @@ static const CGFloat kBackgroundViewHeight          = 185.0f;
 - (UIImageView *)backgroundImageView {
     if (!_backgroundImageView) {
         _backgroundImageView = [[UIImageView alloc] init];
+//        _backgroundImageView.frame = CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)
     }
     return _backgroundImageView;
+}
+
+- (CAGradientLayer *)bottomLayer {
+    if (!_bottomLayer) {
+        _bottomLayer = [CAGradientLayer new];
+        _bottomLayer.frame = CGRectMake(0, VIEW_HEIGHT(_backgroundImageView) - kBottomLayerHeight, VIEW_WIDTH(_backgroundImageView), kBottomLayerHeight);
+        
+        _bottomLayer.startPoint = CGPointMake(0, 0);
+        _bottomLayer.endPoint = CGPointMake(0, 1);
+        _bottomLayer.colors = @[(__bridge id)PDFColorWhite.CGColor, (__bridge id)PDFColorBlank.CGColor];
+        _bottomLayer.locations = @[@(0.0f), @(1.0f)];
+    }
+    return _bottomLayer;
 }
 
 @end
