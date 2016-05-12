@@ -12,6 +12,8 @@
 		477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477E1F671CDB35E80055B86D /* SRDetailCell.m */; };
 		478454721CE07A34004F86F9 /* RecruitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454711CE07A34004F86F9 /* RecruitDetailViewController.m */; };
 		478454751CE08BE5004F86F9 /* RecruitInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454741CE08BE5004F86F9 /* RecruitInforView.m */; };
+		4793EFA41CE45F6000CCEEE9 /* FootballTeamCostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4793EFA31CE45F6000CCEEE9 /* FootballTeamCostCell.m */; };
+		4793EFA71CE45F8200CCEEE9 /* FBTCostHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4793EFA61CE45F8200CCEEE9 /* FBTCostHeaderView.m */; };
 		47B92CD81CD992D600EBECCD /* FBTAttendanceTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */; };
 		47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */; };
 		47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */; };
@@ -105,6 +107,10 @@
 		478454711CE07A34004F86F9 /* RecruitDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitDetailViewController.m; sourceTree = "<group>"; };
 		478454731CE08BE5004F86F9 /* RecruitInforView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitInforView.h; sourceTree = "<group>"; };
 		478454741CE08BE5004F86F9 /* RecruitInforView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitInforView.m; sourceTree = "<group>"; };
+		4793EFA21CE45F6000CCEEE9 /* FootballTeamCostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamCostCell.h; sourceTree = "<group>"; };
+		4793EFA31CE45F6000CCEEE9 /* FootballTeamCostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamCostCell.m; sourceTree = "<group>"; };
+		4793EFA51CE45F8200CCEEE9 /* FBTCostHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTCostHeaderView.h; sourceTree = "<group>"; };
+		4793EFA61CE45F8200CCEEE9 /* FBTCostHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTCostHeaderView.m; sourceTree = "<group>"; };
 		47B92CD61CD992D600EBECCD /* FBTAttendanceTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTAttendanceTableHeaderView.h; sourceTree = "<group>"; };
 		47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTAttendanceTableHeaderView.m; sourceTree = "<group>"; };
 		47BE6E7F1CC861BA009EC803 /* FootballTeamScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamScheduleController.h; sourceTree = "<group>"; };
@@ -380,6 +386,10 @@
 			children = (
 				47DBBCC51CD8C59800C8B630 /* FootballTeamCostController.h */,
 				47DBBCC61CD8C59800C8B630 /* FootballTeamCostController.m */,
+				4793EFA21CE45F6000CCEEE9 /* FootballTeamCostCell.h */,
+				4793EFA31CE45F6000CCEEE9 /* FootballTeamCostCell.m */,
+				4793EFA51CE45F8200CCEEE9 /* FBTCostHeaderView.h */,
+				4793EFA61CE45F8200CCEEE9 /* FBTCostHeaderView.m */,
 			);
 			path = FootballTeamCost;
 			sourceTree = "<group>";
@@ -1096,7 +1106,9 @@
 				47CC75E01CE1C728004A0A66 /* FBTPostedCell.m in Sources */,
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
+				4793EFA71CE45F8200CCEEE9 /* FBTCostHeaderView.m in Sources */,
 				47DBBCCA1CD8C5AB00C8B630 /* FootballTeamEventController.m in Sources */,
+				4793EFA41CE45F6000CCEEE9 /* FootballTeamCostCell.m in Sources */,
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
 				47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */,

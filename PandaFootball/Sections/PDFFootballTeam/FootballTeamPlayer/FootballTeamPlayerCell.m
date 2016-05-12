@@ -11,10 +11,10 @@
 
 
 
-static const CGFloat kTableViewCellHeight       = 94.0f;
+static const CGFloat kCellBackgroundViewHeight  = 94.0f;
 static const CGFloat kIconImageWidth            = 50.0f;
 static const CGFloat kPerIconImageWidth         = 16.0f;
-static const CGFloat kLabelWidth                = 75.0f;
+static const CGFloat kLabelWidth                = 63.0f;
 
 @interface FootballTeamPlayerCell ()
 
@@ -67,8 +67,8 @@ static const CGFloat kLabelWidth                = 75.0f;
 - (UIView *)cellBackgroundView {
     if (!_cellBackgroundView) {
         _cellBackgroundView = [[UIView alloc] init];
-        _cellBackgroundView.frame = CGRectMake(PDFSpaceSmallest, 0,
-                                               MAIN_WIDTH - PDFSpaceSmallest * 2, kTableViewCellHeight);
+        _cellBackgroundView.frame = CGRectMake(PDFSpaceSmallest, PDFSpaceDefault,
+                                               MAIN_WIDTH - PDFSpaceSmallest * 2, kCellBackgroundViewHeight);
         
         _cellBackgroundView.backgroundColor = PDFColorWhite;
         
@@ -83,7 +83,7 @@ static const CGFloat kLabelWidth                = 75.0f;
 - (UIView *)tagView {
     if (!_tagView) {
         _tagView = [[UIView alloc] init];
-        _tagView.frame = CGRectMake(0, 0, PDFSpaceSmallest, kTableViewCellHeight);
+        _tagView.frame = CGRectMake(0, 0, PDFSpaceSmallest, kCellBackgroundViewHeight);
         
         _tagView.backgroundColor = PDFColorGreen;
     }

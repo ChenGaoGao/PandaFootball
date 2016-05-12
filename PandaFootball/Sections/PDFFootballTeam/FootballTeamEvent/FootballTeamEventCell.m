@@ -14,6 +14,7 @@
 
 static const CGFloat kBackgroundViewHeight          = 185.0f;
 static const CGFloat kBottomLayerHeight             = 40.0f;
+static const CGFloat kTimeLabelWidth                = 85.0f;
 
 @interface FootballTeamEventCell ()
 
@@ -32,8 +33,8 @@ static const CGFloat kBottomLayerHeight             = 40.0f;
         
         [self.backgroundImageView.layer addSublayer:self.bottomLayer];
         
-        [self addSubview:self.titleLabel];
-        [self addSubview:self.timeLabel];
+        [self.backgroundImageView addSubview:self.titleLabel];
+        [self.backgroundImageView addSubview:self.timeLabel];
     }
     return self;
 }
@@ -53,7 +54,15 @@ static const CGFloat kBottomLayerHeight             = 40.0f;
 - (UIImageView *)backgroundImageView {
     if (!_backgroundImageView) {
         _backgroundImageView = [[UIImageView alloc] init];
-//        _backgroundImageView.frame = CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>)
+        _backgroundImageView.frame = CGRectMake(PDFSpaceSmallest,
+                                                PDFSpaceDefault,
+                                                MAIN_WIDTH - PDFSpaceSmallest * 2,
+                                                HEIGHT_From_4_7(kBackgroundViewHeight));
+        
+        _backgroundImageView.clipsToBounds = YES;
+        _backgroundImageView.layer.borderWidth = 0.5;
+        _backgroundImageView.layer.borderColor = PDFColorLineBorder.CGColor;
+        _backgroundImageView.layer.cornerRadius = 4.0;
     }
     return _backgroundImageView;
 }
@@ -61,7 +70,8 @@ static const CGFloat kBottomLayerHeight             = 40.0f;
 - (CAGradientLayer *)bottomLayer {
     if (!_bottomLayer) {
         _bottomLayer = [CAGradientLayer new];
-        _bottomLayer.frame = CGRectMake(0, VIEW_HEIGHT(_backgroundImageView) - kBottomLayerHeight, VIEW_WIDTH(_backgroundImageView), kBottomLayerHeight);
+        _bottomLayer.frame = CGRectMake(0, VIEW_HEIGHT(_backgroundImageView) - kBottomLayerHeight,
+                                        VIEW_WIDTH(_backgroundImageView), kBottomLayerHeight);
         
         _bottomLayer.startPoint = CGPointMake(0, 0);
         _bottomLayer.endPoint = CGPointMake(0, 1);
@@ -69,6 +79,35 @@ static const CGFloat kBottomLayerHeight             = 40.0f;
         _bottomLayer.locations = @[@(0.0f), @(1.0f)];
     }
     return _bottomLayer;
+}
+
+- (UILabel *)titleLabel {
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc] init];
+        _titleLabel.frame = CGRectMake(PDFSpaceSmallest,
+                                       VIEW_TOP(_bottomLayer),
+                                       VIEW_WIDTH(_bottomLayer) - kTimeLabelWidth - PDFSpaceSmallest * 2,
+                                       kBottomLayerHeight);
+        
+        _titleLabel.font = PDFFontDetailDefault;
+        _titleLabel.textColor = PDFColorWhite;
+    }
+    return _titleLabel;
+}
+
+- (UILabel *)timeLabel {
+    if (!_timeLabel) {
+        _timeLabel = [[UILabel alloc] init];
+        _timeLabel.frame = CGRectMake(VIEW_RIGHT(_titleLabel),
+                                      VIEW_TOP(_bottomLayer),
+                                      kTimeLabelWidth,
+                                      kBottomLayerHeight);
+        
+        _timeLabel.font = PDFFontDetailDefault;
+        _timeLabel.textColor = PDFColorWhite;
+        _timeLabel.textAlignment = NSTextAlignmentRight;
+    }
+    return _timeLabel;
 }
 
 @end

@@ -64,6 +64,7 @@
 #define PDFFontDetailDefault        [UIFont systemFontOfSize:13.0f]
 #define PDFFontDetailBigger         [UIFont systemFontOfSize:14.0f]
 #define PDFFontDetailSmaller        [UIFont systemFontOfSize:12.0f]
+#define PDFFontDetailSmallest       [UIFont systemFontOfSize:10.0f]
 
 #define PDFFontTabBarDefault        [UIFont systemFontOfSize:11.0f]
 
@@ -82,6 +83,7 @@
 #define PDFLabelHeightDetailDefault (13.0f)
 #define PDFLabelHeightDetailBigger  (14.0f)
 #define PDFLabelHeightDetailSmaller (12.0f)
+#define PDFLabelHeightDetailSmallest (10.0f)
 
 
 

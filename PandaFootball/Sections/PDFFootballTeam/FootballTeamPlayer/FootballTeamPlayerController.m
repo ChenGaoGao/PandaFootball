@@ -13,7 +13,7 @@
 
 
 
-static const CGFloat kTableViewCellHeight       = 94.0f;
+static const CGFloat kCellBackgroundViewHeight       = 94.0f;
 
 @interface FootballTeamPlayerController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -54,11 +54,11 @@ static const CGFloat kTableViewCellHeight       = 94.0f;
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,7 +77,7 @@ static const CGFloat kTableViewCellHeight       = 94.0f;
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kTableViewCellHeight;
+    return kCellBackgroundViewHeight + PDFSpaceDefault;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -95,19 +95,6 @@ static const CGFloat kTableViewCellHeight       = 94.0f;
     }
 #endif
 }
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return PDFSpaceSmallest;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *headerView = [[UIView alloc] init];
-    headerView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest);
-    headerView.backgroundColor = PDFColorBackground;
-    
-    return headerView;
-}
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //    SiteReservationDetailController *viewController = [[SiteReservationDetailController alloc] init];
