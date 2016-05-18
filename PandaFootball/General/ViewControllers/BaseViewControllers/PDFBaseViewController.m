@@ -25,16 +25,24 @@
     // NO 代表展开的时候不要包含那个导航条
     self.extendedLayoutIncludesOpaqueBars = NO;
     
-    
+    //设置View背景
+    self.view.backgroundColor = [UIColor whiteColor];
     
     //设置状态栏
     [self setStatusBarWhite];
     
     //设置导航栏
     [self setNavigationBackgroundColorWithoutLine];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    //设置View背景
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {

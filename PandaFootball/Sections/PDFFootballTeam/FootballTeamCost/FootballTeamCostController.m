@@ -95,8 +95,8 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT)];
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
+//        _tableView.delegate = self;
+//        _tableView.dataSource = self;
         _tableView.backgroundColor = PDFColorBackground;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         _tableView.separatorColor = PDFColorBackground;

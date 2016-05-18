@@ -12,6 +12,8 @@
 #import "MyCenterHeaderView.h"
 #import "PDFSpaceView.h"
 
+#import "MyCenterMessageViewController.h"
+
 
 static const CGFloat kTableViewCellHeight        = 55.0f;
 
@@ -38,6 +40,13 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.frame = CGRectMake(0, 0, 205, 155);
+    imageView.image = [[UIImage imageNamed:@"MyOrderBackground"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10) resizingMode:UIImageResizingModeTile];
+    
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -129,7 +138,13 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            MyCenterMessageViewController *viewController = [[MyCenterMessageViewController alloc] init];
+            viewController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:viewController animated:YES];
+        }
+    }
 }
 
 #pragma mark - Getters
@@ -137,12 +152,8 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
     _dataSourceArray = @[
                          @[
                              @{@"image":@"MyCenterCreate",
-                               @"title":@"创建球队"},
+                               @"title":@"我的订单"},
                              
-                             @{@"image":@"MyCenterSetting",
-                               @"title":@"账号设置"}
-                             ],
-                         @[
                              @{@"image":@"MyCenterInviteTeam",
                                @"title":@"邀请球队"},
                              
@@ -152,6 +163,9 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
                          @[
                              @{@"image":@"MyCenterMessage",
                                @"title":@"我的消息"},
+                             
+                             @{@"image":@"MyCenterSetting",
+                               @"title":@"账号设置"},
                              
                              @{@"image":@"MyCenterOther",
                                @"title":@"其他"}

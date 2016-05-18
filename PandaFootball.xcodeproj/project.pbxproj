@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		47009E841CE03C9C00D7986D /* RecruitHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47009E831CE03C9C00D7986D /* RecruitHeaderView.m */; };
+		471F68351CEC0A7400E122C4 /* MyCenterMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F68341CEC0A7400E122C4 /* MyCenterMessageViewController.m */; };
+		471F68391CEC553E00E122C4 /* MyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F68381CEC553E00E122C4 /* MyOrderViewController.m */; };
+		471F683C1CEC572A00E122C4 /* MyOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F683B1CEC572A00E122C4 /* MyOrderCell.m */; };
 		474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */; };
 		477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477E1F671CDB35E80055B86D /* SRDetailCell.m */; };
 		478454721CE07A34004F86F9 /* RecruitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454711CE07A34004F86F9 /* RecruitDetailViewController.m */; };
@@ -99,6 +102,12 @@
 		1A9C4C920C85CE8EE7F30BB0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		47009E821CE03C9C00D7986D /* RecruitHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitHeaderView.h; sourceTree = "<group>"; };
 		47009E831CE03C9C00D7986D /* RecruitHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecruitHeaderView.m; sourceTree = "<group>"; };
+		471F68331CEC0A7400E122C4 /* MyCenterMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterMessageViewController.h; sourceTree = "<group>"; };
+		471F68341CEC0A7400E122C4 /* MyCenterMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterMessageViewController.m; sourceTree = "<group>"; };
+		471F68371CEC553E00E122C4 /* MyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderViewController.h; sourceTree = "<group>"; };
+		471F68381CEC553E00E122C4 /* MyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderViewController.m; sourceTree = "<group>"; };
+		471F683A1CEC572A00E122C4 /* MyOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderCell.h; sourceTree = "<group>"; };
+		471F683B1CEC572A00E122C4 /* MyOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderCell.m; sourceTree = "<group>"; };
 		4749238E1CBF9AA5000E26A2 /* PDFDatingFightingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDatingFightingCell.h; sourceTree = "<group>"; };
 		4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingCell.m; sourceTree = "<group>"; };
 		477E1F661CDB35E80055B86D /* SRDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDetailCell.h; sourceTree = "<group>"; };
@@ -267,6 +276,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		471F68321CEC0A6300E122C4 /* MyCenterMessage */ = {
+			isa = PBXGroup;
+			children = (
+				471F68331CEC0A7400E122C4 /* MyCenterMessageViewController.h */,
+				471F68341CEC0A7400E122C4 /* MyCenterMessageViewController.m */,
+			);
+			path = MyCenterMessage;
+			sourceTree = "<group>";
+		};
+		471F68361CEC552B00E122C4 /* MyOrder */ = {
+			isa = PBXGroup;
+			children = (
+				471F68371CEC553E00E122C4 /* MyOrderViewController.h */,
+				471F68381CEC553E00E122C4 /* MyOrderViewController.m */,
+				471F683A1CEC572A00E122C4 /* MyOrderCell.h */,
+				471F683B1CEC572A00E122C4 /* MyOrderCell.m */,
+			);
+			path = MyOrder;
+			sourceTree = "<group>";
+		};
 		4784546F1CE07A20004F86F9 /* RecruitDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +659,8 @@
 		A7A80F431CBAB5A90034CE4B /* PDFMyCenter */ = {
 			isa = PBXGroup;
 			children = (
+				471F68361CEC552B00E122C4 /* MyOrder */,
+				471F68321CEC0A6300E122C4 /* MyCenterMessage */,
 				A7BC21691CBE7C190058E5B0 /* MyCenterHeaderView */,
 				A7A80F511CBAB6560034CE4B /* PDFMyCenterController.h */,
 				A7A80F521CBAB6560034CE4B /* PDFMyCenterController.m */,
@@ -1098,6 +1129,7 @@
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
 				47CC75DD1CE18485004A0A66 /* FBTPostedHeaderView.m in Sources */,
+				471F68351CEC0A7400E122C4 /* MyCenterMessageViewController.m in Sources */,
 				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
 				A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
@@ -1106,6 +1138,7 @@
 				47CC75E01CE1C728004A0A66 /* FBTPostedCell.m in Sources */,
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
+				471F683C1CEC572A00E122C4 /* MyOrderCell.m in Sources */,
 				4793EFA71CE45F8200CCEEE9 /* FBTCostHeaderView.m in Sources */,
 				47DBBCCA1CD8C5AB00C8B630 /* FootballTeamEventController.m in Sources */,
 				4793EFA41CE45F6000CCEEE9 /* FootballTeamCostCell.m in Sources */,
@@ -1117,6 +1150,7 @@
 				A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */,
 				47ED39021CDC89D6002F9099 /* DatingFightingOrderController.m in Sources */,
 				47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */,
+				471F68391CEC553E00E122C4 /* MyOrderViewController.m in Sources */,
 				478454721CE07A34004F86F9 /* RecruitDetailViewController.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
 				47DBBCD31CD8C80E00C8B630 /* FootballTeamAttendanceCell.m in Sources */,

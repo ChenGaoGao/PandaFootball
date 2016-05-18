@@ -62,8 +62,22 @@ static const CGFloat kTimeButtonHeight          = 50.0f;
     if (!_timeYearLabel) {
         _timeYearLabel = [[UILabel alloc] init];
         _timeYearLabel.frame = CGRectMake(0, 0, kTimeButtonWidth, PDFLabelHeightDetailSmallest + PDFSpaceSmallest * 2);
+        _timeYearLabel.font = PDFFontDetailSmallest;
+        _timeYearLabel.textColor = PDFColorWhite;
+        _timeYearLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _timeYearLabel;
+}
+
+- (UILabel *)timeMonthLabel {
+    if (!_timeMonthLabel) {
+        _timeMonthLabel = [[UILabel alloc] init];
+        _timeMonthLabel.frame = CGRectMake(0, VIEW_BOTTOM(_timeYearLabel), kTimeButtonWidth, PDFLabelHeightDetailSmallest + PDFSpaceSmallest * 2);
+        _timeMonthLabel.font = PDFFontDetailSmallest;
+        _timeMonthLabel.textColor = PDFColorWhite;
+        _timeMonthLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _timeMonthLabel;
 }
 
 @end
