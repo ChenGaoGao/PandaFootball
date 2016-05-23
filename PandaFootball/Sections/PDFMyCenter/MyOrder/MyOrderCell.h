@@ -10,4 +10,11 @@
 
 @interface MyOrderCell : UITableViewCell
 
+@property (nonatomic, strong) UILabel *titleTimeLabel;
+@property (nonatomic, strong) UILabel *orderIdLabel;
+@property (nonatomic, strong) UILabel *siteNameLabel;
+@property (nonatomic, strong) UILabel *siteTypeLabel;
+@property (nonatomic, strong) UILabel *costLabel;
+@property (nonatomic, strong) UILabel *orderTimeLabel;
+
 @end
