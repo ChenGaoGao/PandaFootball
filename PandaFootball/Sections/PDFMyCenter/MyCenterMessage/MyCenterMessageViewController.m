@@ -49,7 +49,7 @@ static const CGFloat kTableViewCellHeight        = 50.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *dataDic = [self.dataSourceArray objectAtIndex:indexPath.section];
+    NSDictionary *dataDic = [self.dataSourceArray objectAtIndex:indexPath.row];
     
     static NSString *identify = @"identify";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
