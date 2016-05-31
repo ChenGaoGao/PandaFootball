@@ -11,9 +11,9 @@
 		471F68351CEC0A7400E122C4 /* MyCenterMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F68341CEC0A7400E122C4 /* MyCenterMessageViewController.m */; };
 		471F68391CEC553E00E122C4 /* MyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F68381CEC553E00E122C4 /* MyOrderViewController.m */; };
 		471F683C1CEC572A00E122C4 /* MyOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F683B1CEC572A00E122C4 /* MyOrderCell.m */; };
-		472CC0431CF5AC1600B9FE41 /* MyMessageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472CC0421CF5AC1600B9FE41 /* MyMessageDetailViewController.m */; };
-		472CC0461CF5AE3F00B9FE41 /* MyMessageDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 472CC0451CF5AE3F00B9FE41 /* MyMessageDetailCell.m */; };
 		474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */; };
+		477986131CFD2E7500717FE2 /* MyMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477986121CFD2E7500717FE2 /* MyMessageListViewController.m */; };
+		477986161CFD2EA900717FE2 /* MyMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477986151CFD2EA900717FE2 /* MyMessageListCell.m */; };
 		477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477E1F671CDB35E80055B86D /* SRDetailCell.m */; };
 		478454721CE07A34004F86F9 /* RecruitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454711CE07A34004F86F9 /* RecruitDetailViewController.m */; };
 		478454751CE08BE5004F86F9 /* RecruitInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454741CE08BE5004F86F9 /* RecruitInforView.m */; };
@@ -110,12 +110,12 @@
 		471F68381CEC553E00E122C4 /* MyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderViewController.m; sourceTree = "<group>"; };
 		471F683A1CEC572A00E122C4 /* MyOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderCell.h; sourceTree = "<group>"; };
 		471F683B1CEC572A00E122C4 /* MyOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderCell.m; sourceTree = "<group>"; };
-		472CC0411CF5AC1600B9FE41 /* MyMessageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageDetailViewController.h; sourceTree = "<group>"; };
-		472CC0421CF5AC1600B9FE41 /* MyMessageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageDetailViewController.m; sourceTree = "<group>"; };
-		472CC0441CF5AE3F00B9FE41 /* MyMessageDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageDetailCell.h; sourceTree = "<group>"; };
-		472CC0451CF5AE3F00B9FE41 /* MyMessageDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageDetailCell.m; sourceTree = "<group>"; };
 		4749238E1CBF9AA5000E26A2 /* PDFDatingFightingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDatingFightingCell.h; sourceTree = "<group>"; };
 		4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingCell.m; sourceTree = "<group>"; };
+		477986111CFD2E7500717FE2 /* MyMessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageListViewController.h; sourceTree = "<group>"; };
+		477986121CFD2E7500717FE2 /* MyMessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageListViewController.m; sourceTree = "<group>"; };
+		477986141CFD2EA900717FE2 /* MyMessageListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageListCell.h; sourceTree = "<group>"; };
+		477986151CFD2EA900717FE2 /* MyMessageListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageListCell.m; sourceTree = "<group>"; };
 		477E1F661CDB35E80055B86D /* SRDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDetailCell.h; sourceTree = "<group>"; };
 		477E1F671CDB35E80055B86D /* SRDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDetailCell.m; sourceTree = "<group>"; };
 		478454701CE07A34004F86F9 /* RecruitDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecruitDetailViewController.h; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		471F68321CEC0A6300E122C4 /* MyCenterMessage */ = {
 			isa = PBXGroup;
 			children = (
-				472CC0401CF5ABF900B9FE41 /* MyCenterMessageDetail */,
+				477986101CFD2E5C00717FE2 /* MyMessageList */,
 				471F68331CEC0A7400E122C4 /* MyCenterMessageViewController.h */,
 				471F68341CEC0A7400E122C4 /* MyCenterMessageViewController.m */,
 			);
@@ -303,15 +303,15 @@
 			path = MyOrder;
 			sourceTree = "<group>";
 		};
-		472CC0401CF5ABF900B9FE41 /* MyCenterMessageDetail */ = {
+		477986101CFD2E5C00717FE2 /* MyMessageList */ = {
 			isa = PBXGroup;
 			children = (
-				472CC0411CF5AC1600B9FE41 /* MyMessageDetailViewController.h */,
-				472CC0421CF5AC1600B9FE41 /* MyMessageDetailViewController.m */,
-				472CC0441CF5AE3F00B9FE41 /* MyMessageDetailCell.h */,
-				472CC0451CF5AE3F00B9FE41 /* MyMessageDetailCell.m */,
+				477986111CFD2E7500717FE2 /* MyMessageListViewController.h */,
+				477986121CFD2E7500717FE2 /* MyMessageListViewController.m */,
+				477986141CFD2EA900717FE2 /* MyMessageListCell.h */,
+				477986151CFD2EA900717FE2 /* MyMessageListCell.m */,
 			);
-			path = MyCenterMessageDetail;
+			path = MyMessageList;
 			sourceTree = "<group>";
 		};
 		4784546F1CE07A20004F86F9 /* RecruitDetail */ = {
@@ -1128,7 +1128,6 @@
 				47DBBCC11CD8C56C00C8B630 /* FootballTeamAttendanceController.m in Sources */,
 				47F1AF641CE31FD0009519AD /* FootballTeamEventCell.m in Sources */,
 				47DBBCC71CD8C59800C8B630 /* FootballTeamCostController.m in Sources */,
-				472CC0461CF5AE3F00B9FE41 /* MyMessageDetailCell.m in Sources */,
 				A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */,
 				47F1AF611CE2CF21009519AD /* FootballTeamPlayerCell.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
@@ -1147,10 +1146,10 @@
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
 				A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */,
+				477986161CFD2EA900717FE2 /* MyMessageListCell.m in Sources */,
 				47CC75DD1CE18485004A0A66 /* FBTPostedHeaderView.m in Sources */,
 				471F68351CEC0A7400E122C4 /* MyCenterMessageViewController.m in Sources */,
 				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
-				472CC0431CF5AC1600B9FE41 /* MyMessageDetailViewController.m in Sources */,
 				A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
 				477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */,
@@ -1175,6 +1174,7 @@
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
 				47DBBCD31CD8C80E00C8B630 /* FootballTeamAttendanceCell.m in Sources */,
 				478454751CE08BE5004F86F9 /* RecruitInforView.m in Sources */,
+				477986131CFD2E7500717FE2 /* MyMessageListViewController.m in Sources */,
 				47DBBCD01CD8C5CD00C8B630 /* FootballTeamAlbumController.m in Sources */,
 				A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */,
 				47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */,

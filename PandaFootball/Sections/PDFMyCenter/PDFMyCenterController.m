@@ -153,7 +153,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
 - (NSArray *)dataSourceArray {
     _dataSourceArray = @[
                          @[
-                             @{@"image":@"MyCenterCreate",
+                             @{@"image":@"MyCenterOrder",
                                @"title":@"我的订单"},
                              
                              @{@"image":@"MyCenterInviteTeam",

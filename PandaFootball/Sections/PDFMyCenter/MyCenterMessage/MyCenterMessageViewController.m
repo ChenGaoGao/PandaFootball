@@ -10,6 +10,7 @@
 #import "PDFPCHMacro.h"
 
 #import "MyCenterHeaderView.h"
+#import "MyMessageListViewController.h"
 
 
 
@@ -91,7 +92,26 @@ static const CGFloat kTableViewCellHeight        = 50.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
+    if (indexPath.row == 0) {
+        MyMessageListViewController *viewController = [[MyMessageListViewController alloc] init];
+        viewController.listType = MyMessageListTypePlayers;
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.row == 1) {
+        MyMessageListViewController *viewController = [[MyMessageListViewController alloc] init];
+        viewController.listType = MyMessageListTypeRecruit;
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.row == 2) {
+        MyMessageListViewController *viewController = [[MyMessageListViewController alloc] init];
+        viewController.listType = MyMessageListTypeSystem;
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 #pragma mark - LazyLoad
@@ -117,13 +137,13 @@ static const CGFloat kTableViewCellHeight        = 50.0f;
     }
     
     _dataSourceArray = (NSMutableArray *)@[
-                                           @{@"image":@"MyCenterSetting",
+                                           @{@"image":@"MyMessageListPlayers",
                                              @"title":@"球员比赛"},
                                            
-                                           @{@"image":@"MyCenterSetting",
+                                           @{@"image":@"MyMessageListRecruit",
                                              @"title":@"招募审核"},
                                            
-                                           @{@"image":@"MyCenterSetting",
+                                           @{@"image":@"MyMessageListSystem",
                                              @"title":@"系统消息"}
                                            ];
     return _dataSourceArray;
