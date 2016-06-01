@@ -50,6 +50,8 @@
 		47F1AF641CE31FD0009519AD /* FootballTeamEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F1AF631CE31FD0009519AD /* FootballTeamEventCell.m */; };
 		47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */; };
 		47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F43FEE1CD1AD16009C7414 /* PDFSegmentControl.m */; };
+		47FAF60E1CFED39300B6514E /* HomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FAF60D1CFED39300B6514E /* HomePageHeaderView.m */; };
+		47FAF6111CFED3D200B6514E /* HomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FAF6101CFED3D200B6514E /* HomePageCell.m */; };
 		A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */; };
 		A76DF72E1CAAAC630086389D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF72D1CAAAC630086389D /* main.m */; };
 		A76DF73A1CAAAC630086389D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76DF7381CAAAC630086389D /* Main.storyboard */; };
@@ -190,6 +192,10 @@
 		47F43FEB1CD1AC57009C7414 /* PDFSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentViewController.m; sourceTree = "<group>"; };
 		47F43FED1CD1AD16009C7414 /* PDFSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFSegmentControl.h; sourceTree = "<group>"; };
 		47F43FEE1CD1AD16009C7414 /* PDFSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFSegmentControl.m; sourceTree = "<group>"; };
+		47FAF60C1CFED39300B6514E /* HomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeaderView.h; sourceTree = "<group>"; };
+		47FAF60D1CFED39300B6514E /* HomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeaderView.m; sourceTree = "<group>"; };
+		47FAF60F1CFED3D200B6514E /* HomePageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageCell.h; sourceTree = "<group>"; };
+		47FAF6101CFED3D200B6514E /* HomePageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageCell.m; sourceTree = "<group>"; };
 		86A4363722270C0B13F51029 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75F5A1A1CBD370F00EF1CD3 /* PDFPopupContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFPopupContentView.h; sourceTree = "<group>"; };
 		A75F5A1B1CBD370F00EF1CD3 /* PDFPopupContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFPopupContentView.m; sourceTree = "<group>"; };
@@ -730,6 +736,10 @@
 				A7BC217A1CBE91F90058E5B0 /* PDFDatingFighting */,
 				A7A80F481CBAB6210034CE4B /* PDFHomePageController.h */,
 				A7A80F491CBAB6210034CE4B /* PDFHomePageController.m */,
+				47FAF60C1CFED39300B6514E /* HomePageHeaderView.h */,
+				47FAF60D1CFED39300B6514E /* HomePageHeaderView.m */,
+				47FAF60F1CFED3D200B6514E /* HomePageCell.h */,
+				47FAF6101CFED3D200B6514E /* HomePageCell.m */,
 			);
 			path = PDFHomePage;
 			sourceTree = "<group>";
@@ -1118,8 +1128,10 @@
 				47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */,
 				47EA2D221CDDC0D400A4545D /* DiscoverRecruitMainController.m in Sources */,
 				47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */,
+				47FAF6111CFED3D200B6514E /* HomePageCell.m in Sources */,
 				47009E841CE03C9C00D7986D /* RecruitHeaderView.m in Sources */,
 				47DBBCC41CD8C58300C8B630 /* FootballTeamStandingsController.m in Sources */,
+				47FAF60E1CFED39300B6514E /* HomePageHeaderView.m in Sources */,
 				47F43FEC1CD1AC57009C7414 /* PDFSegmentViewController.m in Sources */,
 				47D646811CDAED51008E0331 /* PDFSegmentVCModel.m in Sources */,
 				A7BC21811CBE922A0058E5B0 /* PDFDatingFightingController.m in Sources */,

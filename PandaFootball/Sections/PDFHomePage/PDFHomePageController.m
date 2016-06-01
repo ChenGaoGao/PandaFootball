@@ -15,9 +15,13 @@
 #import "PDFSiteReservationController.h"
 #import "PDFDatingFightingController.h"
 
-static const CGFloat kLeftButtonWidth       = 50.0f;
+#import "HomePageHeaderView.h"
+#import "HomePageCell.h"
 
-@interface PDFHomePageController () <CYGBasePopupViewDelegate, PDFPopupContentViewDelegate>
+static const CGFloat kLeftButtonWidth           = 50.0f;
+static const CGFloat kHeaderViewHeight          = 158.0f;
+
+@interface PDFHomePageController () <CYGBasePopupViewDelegate, PDFPopupContentViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIButton *leftButton;
 @property (nonatomic, strong) UIButton *rightButton;
@@ -26,6 +30,10 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
 @property (nonatomic, strong) PDFPopupContentView *areaContentView;
 @property (nonatomic, strong) CYGBasePopupView *sitePopupView;          //场地（三人场，五人场等）
 @property (nonatomic, strong) PDFPopupContentView *siteContentView;
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, strong) NSMutableArray *dataSourceArray;
 
 @end
 
@@ -41,40 +49,8 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     [self setRightBarButtonItem:self.rightButton offset:PDFSpaceDefault -
      (PDFNavagationBarWidth - _rightButton.imageView.image.size.width) / 2 ];
     
-
-    NSMutableArray *titleVCModelArray = [[NSMutableArray alloc] init];
-    
-    //订场
-    PDFSegmentModel *siteSegmentModel = [[PDFSegmentModel alloc] init];
-    siteSegmentModel.title = @"订场";
-    siteSegmentModel.icon = [UIImage imageNamed:@"SiteReservationGray"];
-    siteSegmentModel.highlightedIcon = [UIImage imageNamed:@"SiteReservationGreen"];
-    
-    PDFSiteReservationController *siteReservationVC = [[PDFSiteReservationController alloc] init];
-    
-    PDFSegmentVCModel *siteVCModel = [[PDFSegmentVCModel alloc] init];
-    siteVCModel.titleModel = siteSegmentModel;
-    siteVCModel.viewController = siteReservationVC;
-    
-    [titleVCModelArray addObject:siteVCModel];
-    
-    
-    //约战
-    PDFSegmentModel *datingSegmentModel = [[PDFSegmentModel alloc] init];
-    datingSegmentModel.title = @"约战";
-    datingSegmentModel.icon = [UIImage imageNamed:@"DatingFightingGray"];
-    datingSegmentModel.highlightedIcon = [UIImage imageNamed:@"DatingFightingGreen"];
-    
-    PDFDatingFightingController *datingFightingVC = [[PDFDatingFightingController alloc] init];
-    
-    PDFSegmentVCModel *datingVCModel = [[PDFSegmentVCModel alloc] init];
-    datingVCModel.titleModel = datingSegmentModel;
-    datingVCModel.viewController = datingFightingVC;
-    
-    [titleVCModelArray addObject:datingVCModel];
-    
-    
-    self.segmentVCArray = titleVCModelArray;
+    self.view.backgroundColor = PDFColorBackground;
+    [self.view addSubview:self.collectionView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -161,6 +137,82 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     }
 }
 
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView
+     numberOfItemsInSection:(NSInteger)section {
+    return self.dataSourceArray.count;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath {
+    
+    HomePageHeaderView *reusableView =
+    [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                       withReuseIdentifier:@"HomePageHeaderViewIdertifier"
+                                              forIndexPath:indexPath];
+    
+    return reusableView;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    HomePageCell *cell =
+    [collectionView dequeueReusableCellWithReuseIdentifier:@"HomePageCellIdentifier"
+                                              forIndexPath:indexPath];
+    
+    NSDictionary *dataDic = [self.dataSourceArray objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+referenceSizeForHeaderInSection:(NSInteger)section {
+    
+    return CGSizeMake(MAIN_WIDTH, HEIGHT_From_4_7(kHeaderViewHeight));
+    
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake(MAIN_WIDTH / 2 - 0.5, MAIN_WIDTH / 2 - 1);
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+                       layout:(UICollectionViewLayout *)collectionViewLayout
+       insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        
+    }
+    
+    if (indexPath.row == 1) {
+        
+    }
+    
+    if (indexPath.row == 2) {
+        
+    }
+    
+    if (indexPath.row == 3) {
+        
+    }
+}
+
 #pragma mark - LazyLoad
 - (UIButton *)leftButton {
     if (!_leftButton) {
@@ -243,5 +295,55 @@ static const CGFloat kLeftButtonWidth       = 50.0f;
     }
     return _siteContentView;
 }
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.minimumLineSpacing = 1;
+        flowLayout.minimumInteritemSpacing = 1;
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, MAIN_WIDTH, MAIN_HEIGHT - TABBAR_HEIGHT)
+                                             collectionViewLayout:flowLayout];
+        _collectionView.backgroundColor = PDFColorBackground;
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        
+        [_collectionView registerClass:[HomePageHeaderView class]
+            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                   withReuseIdentifier:@"HomePageHeaderViewIdertifier"];
+        
+        [_collectionView registerClass:[HomePageCell class]
+            forCellWithReuseIdentifier:@"HomePageCellIdentifier"];
+    }
+    return _collectionView;
+}
+
+
+- (NSMutableArray *)dataSourceArray {
+    if (_dataSourceArray) {
+        return _dataSourceArray;
+    }
+    _dataSourceArray = (NSMutableArray *) @[ @{@"image" : @"FootballTeamAlbum",
+                                               @"title" : @"球队相册",
+                                               @"controller" : @""},
+                                             
+                                             @{@"image" : @"FootballTeamPosted",
+                                               @"title" : @"发帖招人",
+                                               @"controller" : @""},
+                                             
+                                             @{@"image" : @"FootballTeamSchedule",
+                                               @"title" : @"球队赛程",
+                                               @"controller" : @""},
+                                             
+                                             @{@"image" : @"FootballTeamPlayer",
+                                               @"title" : @"球员列表",
+                                               @"controller" : @""} ];
+    
+    return _dataSourceArray;
+}
+
 
 @end
