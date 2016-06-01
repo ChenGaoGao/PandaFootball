@@ -10,6 +10,7 @@
 #import "PDFPCHMacro.h"
 
 #import "MyMessageListCell.h"
+#import "MyMessageRecruitDetailViewController.h"
 
 
 
@@ -110,7 +111,11 @@ static const CGFloat kTableViewCellHeight        = 66.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (self.listType == MyMessageListTypeRecruit) {
+        MyMessageRecruitDetailViewController *viewController = [[MyMessageRecruitDetailViewController alloc] init];
+        viewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 #pragma mark - LazyLoad
