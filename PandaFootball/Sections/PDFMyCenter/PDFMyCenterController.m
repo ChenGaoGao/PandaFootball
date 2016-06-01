@@ -13,6 +13,7 @@
 #import "PDFSpaceView.h"
 
 #import "MyOrderViewController.h"
+#import "MyCourseViewController.h"
 #import "MyCenterMessageViewController.h"
 
 
@@ -138,6 +139,12 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
             viewController.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:viewController animated:YES];
         }
+        
+        if (indexPath.row == 1) {
+            MyCourseViewController *viewController = [[MyCourseViewController alloc] init];
+            viewController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:viewController animated:YES];
+        }
     }
     
     if (indexPath.section == 2) {
@@ -157,7 +164,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
                                @"title":@"我的订单"},
                              
                              @{@"image":@"MyCenterCourse",
-                               @"title":@"邀请好友"}
+                               @"title":@"我的球场"}
                              ],
                          @[
                              @{@"image":@"MyCenterInviteTeam",

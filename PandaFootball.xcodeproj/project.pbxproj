@@ -60,6 +60,10 @@
 		A76DF74A1CAAAC630086389D /* PandaFootballTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7491CAAAC630086389D /* PandaFootballTests.m */; };
 		A76DF7551CAAAC630086389D /* PandaFootballUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76DF7541CAAAC630086389D /* PandaFootballUITests.m */; };
 		A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79263831CD23CE50054991D /* FootballTeamPostedController.m */; };
+		A79F41051CFF5B4300538DEA /* MyCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79F41041CFF5B4300538DEA /* MyCourseViewController.m */; };
+		A79F41091CFF609900538DEA /* MyCourseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79F41081CFF609900538DEA /* MyCourseHomeViewController.m */; };
+		A79F410C1CFF60C500538DEA /* MyCourseHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A79F410B1CFF60C500538DEA /* MyCourseHomeCell.m */; };
+		A79F410F1CFF64B400538DEA /* MyCourseHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A79F410E1CFF64B400538DEA /* MyCourseHomeHeaderView.m */; };
 		A7A80F341CBA96D30034CE4B /* UIImage+PureColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */; };
 		A7A80F351CBA96D30034CE4B /* UIViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F311CBA96D30034CE4B /* UIViewController+NavigationBar.m */; };
 		A7A80F361CBA96D30034CE4B /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A80F331CBA96D30034CE4B /* UIViewController+StatusBar.m */; };
@@ -213,6 +217,14 @@
 		A76DF7561CAAAC630086389D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A79263821CD23CE50054991D /* FootballTeamPostedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamPostedController.h; sourceTree = "<group>"; };
 		A79263831CD23CE50054991D /* FootballTeamPostedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamPostedController.m; sourceTree = "<group>"; };
+		A79F41031CFF5B4300538DEA /* MyCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseViewController.h; sourceTree = "<group>"; };
+		A79F41041CFF5B4300538DEA /* MyCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseViewController.m; sourceTree = "<group>"; };
+		A79F41071CFF609900538DEA /* MyCourseHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseHomeViewController.h; sourceTree = "<group>"; };
+		A79F41081CFF609900538DEA /* MyCourseHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseHomeViewController.m; sourceTree = "<group>"; };
+		A79F410A1CFF60C500538DEA /* MyCourseHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseHomeCell.h; sourceTree = "<group>"; };
+		A79F410B1CFF60C500538DEA /* MyCourseHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseHomeCell.m; sourceTree = "<group>"; };
+		A79F410D1CFF64B400538DEA /* MyCourseHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseHomeHeaderView.h; sourceTree = "<group>"; };
+		A79F410E1CFF64B400538DEA /* MyCourseHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseHomeHeaderView.m; sourceTree = "<group>"; };
 		A7A80F2D1CBA96D30034CE4B /* UIImage+PureColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PureColor.h"; sourceTree = "<group>"; };
 		A7A80F2E1CBA96D30034CE4B /* UIImage+PureColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PureColor.m"; sourceTree = "<group>"; };
 		A7A80F301CBA96D30034CE4B /* UIViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationBar.h"; sourceTree = "<group>"; };
@@ -654,6 +666,29 @@
 			path = FootballTeamPosted;
 			sourceTree = "<group>";
 		};
+		A79F41021CFF5B1800538DEA /* MyCourse */ = {
+			isa = PBXGroup;
+			children = (
+				A79F41061CFF607500538DEA /* MyCourseHome */,
+				A79F41031CFF5B4300538DEA /* MyCourseViewController.h */,
+				A79F41041CFF5B4300538DEA /* MyCourseViewController.m */,
+			);
+			path = MyCourse;
+			sourceTree = "<group>";
+		};
+		A79F41061CFF607500538DEA /* MyCourseHome */ = {
+			isa = PBXGroup;
+			children = (
+				A79F41071CFF609900538DEA /* MyCourseHomeViewController.h */,
+				A79F41081CFF609900538DEA /* MyCourseHomeViewController.m */,
+				A79F410A1CFF60C500538DEA /* MyCourseHomeCell.h */,
+				A79F410B1CFF60C500538DEA /* MyCourseHomeCell.m */,
+				A79F410D1CFF64B400538DEA /* MyCourseHomeHeaderView.h */,
+				A79F410E1CFF64B400538DEA /* MyCourseHomeHeaderView.m */,
+			);
+			path = MyCourseHome;
+			sourceTree = "<group>";
+		};
 		A7A80F2C1CBA96D30034CE4B /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -689,6 +724,7 @@
 			isa = PBXGroup;
 			children = (
 				471F68361CEC552B00E122C4 /* MyOrder */,
+				A79F41021CFF5B1800538DEA /* MyCourse */,
 				471F68321CEC0A6300E122C4 /* MyCenterMessage */,
 				A7BC21691CBE7C190058E5B0 /* MyCenterHeaderView */,
 				A7A80F511CBAB6560034CE4B /* PDFMyCenterController.h */,
@@ -1150,6 +1186,7 @@
 				47F1AF611CE2CF21009519AD /* FootballTeamPlayerCell.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
 				47EA2D251CDDC12100A4545D /* DiscoverRecruitViewController.m in Sources */,
+				A79F41051CFF5B4300538DEA /* MyCourseViewController.m in Sources */,
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
 				A7BB35281CE2215200E35FA3 /* FBTMTypeInStandingsController.m in Sources */,
 				A7BDDDF11CAAB138009D9B04 /* AppDelegate.m in Sources */,
@@ -1174,6 +1211,7 @@
 				A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */,
 				47CC75E01CE1C728004A0A66 /* FBTPostedCell.m in Sources */,
 				A7BC21841CBE9BFB0058E5B0 /* PDFSiteReservationCell.m in Sources */,
+				A79F410F1CFF64B400538DEA /* MyCourseHomeHeaderView.m in Sources */,
 				A7A80F531CBAB6560034CE4B /* PDFMyCenterController.m in Sources */,
 				471F683C1CEC572A00E122C4 /* MyOrderCell.m in Sources */,
 				4793EFA71CE45F8200CCEEE9 /* FBTCostHeaderView.m in Sources */,
@@ -1181,6 +1219,7 @@
 				4793EFA41CE45F6000CCEEE9 /* FootballTeamCostCell.m in Sources */,
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
+				A79F410C1CFF60C500538DEA /* MyCourseHomeCell.m in Sources */,
 				47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */,
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
 				47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */,
@@ -1195,6 +1234,7 @@
 				477986131CFD2E7500717FE2 /* MyMessageListViewController.m in Sources */,
 				47DBBCD01CD8C5CD00C8B630 /* FootballTeamAlbumController.m in Sources */,
 				A7BC21681CBE76CA0058E5B0 /* PDFSpaceView.m in Sources */,
+				A79F41091CFF609900538DEA /* MyCourseHomeViewController.m in Sources */,
 				47E3E4181CBE473600674F64 /* UIImage+ImageEffects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

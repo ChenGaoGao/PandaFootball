@@ -40,7 +40,7 @@ static const CGFloat kTableViewCellHeight           = 89.0f;
     // Do any additional setup after loading the view.
     
     [self setLeftBarButton];
-    [self setNavigationTitleWhite:@" "];
+//    [self setNavigationTitleWhite:@"订场"];
     
 //    [self setLeftBarButtonItem:self.leftButton offset:PDFSpaceDefault];
 //    [self setRightBarButtonItem:self.rightButton offset:PDFSpaceDefault -
@@ -206,18 +206,18 @@ static const CGFloat kTableViewCellHeight           = 89.0f;
     if (!_leftButton) {
         _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftButton.frame = CGRectMake(0, 0, kLeftButtonWidth, PDFNavagationBarHeight);
-        _leftButton.backgroundColor = PDFColorRed;
+        _leftButton.frame = CGRectMake(0, 0, MAIN_WIDTH - 55 * 2 , PDFNavagationBarHeight);
         
-        [_leftButton setTitle:@"深圳" forState:UIControlStateNormal];
+        [_leftButton setTitle:@"订场－深圳" forState:UIControlStateNormal];
         [_leftButton setTitleColor:PDFColorWhite forState:UIControlStateNormal];
         [_leftButton.titleLabel setFont:PDFFontBodySmaller];
         
-        [_leftButton setImage:[UIImage imageNamed:@"PublicPullDown.png"] forState:UIControlStateNormal];
-        [_leftButton setImage:[UIImage imageNamed:@"PublicPullUp.png"] forState:UIControlStateSelected];
+//        [_leftButton setImage:[UIImage imageNamed:@"PublicPullDown.png"] forState:UIControlStateNormal];
+//        [_leftButton setImage:[UIImage imageNamed:@"PublicPullUp.png"] forState:UIControlStateSelected];
         
-        [_leftButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        [_leftButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_leftButton.imageView.image.size.width, 0, 0)];
-        [_leftButton setImageEdgeInsets:UIEdgeInsetsMake(0, kLeftButtonWidth - _leftButton.imageView.image.size.width, 0, 0)];
+        [_leftButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+//        [_leftButton setTitleEdgeInsets:UIEdgeInsetsMake(0, -_leftButton.imageView.image.size.width, 0, 0)];
+//        [_leftButton setImageEdgeInsets:UIEdgeInsetsMake(0, _leftButton.titleLabel.frame.size.width, 0, 0)];
         
         [_leftButton addTarget:self
                         action:@selector(leftButtonHandle:)

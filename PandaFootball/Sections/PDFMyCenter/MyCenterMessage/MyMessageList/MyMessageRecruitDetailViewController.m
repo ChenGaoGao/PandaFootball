@@ -19,7 +19,7 @@ static const CGFloat kIconViewWidth             = 40.0f;
 static const CGFloat kIconViewHeight            = 40.0f;
 static const CGFloat kRightIconWidth            = 8.0f;
 static const CGFloat kRightIconHeight           = 13.0f;
-static const CGFloat kItemViewHeight           = 50.0f;
+static const CGFloat kItemViewHeight            = 50.0f;
 static const CGFloat kPerLabelWidth             = 90.0f;
 
 @interface MyMessageRecruitDetailViewController ()
