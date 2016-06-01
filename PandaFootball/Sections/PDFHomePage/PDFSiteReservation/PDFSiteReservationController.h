@@ -6,8 +6,8 @@
 //  Copyright © 2016年 myjoy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "PDFBaseViewController.h"
 
-@interface PDFSiteReservationController : UIViewController
+@interface PDFSiteReservationController : PDFBaseViewController
 
 @end

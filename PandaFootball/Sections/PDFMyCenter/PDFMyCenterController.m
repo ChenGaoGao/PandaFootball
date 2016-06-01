@@ -140,7 +140,7 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
         }
     }
     
-    if (indexPath.section == 1) {
+    if (indexPath.section == 2) {
         if (indexPath.row == 0) {
             MyCenterMessageViewController *viewController = [[MyCenterMessageViewController alloc] init];
             viewController.hidesBottomBarWhenPushed = YES;
@@ -156,6 +156,10 @@ static const CGFloat kTableViewCellHeight        = 55.0f;
                              @{@"image":@"MyCenterOrder",
                                @"title":@"我的订单"},
                              
+                             @{@"image":@"MyCenterCourse",
+                               @"title":@"邀请好友"}
+                             ],
+                         @[
                              @{@"image":@"MyCenterInviteTeam",
                                @"title":@"邀请球队"},
                              
