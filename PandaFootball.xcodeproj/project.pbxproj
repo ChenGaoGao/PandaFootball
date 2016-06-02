@@ -20,6 +20,11 @@
 		478454751CE08BE5004F86F9 /* RecruitInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 478454741CE08BE5004F86F9 /* RecruitInforView.m */; };
 		4793EFA41CE45F6000CCEEE9 /* FootballTeamCostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4793EFA31CE45F6000CCEEE9 /* FootballTeamCostCell.m */; };
 		4793EFA71CE45F8200CCEEE9 /* FBTCostHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4793EFA61CE45F8200CCEEE9 /* FBTCostHeaderView.m */; };
+		47B7DE111D00168700E10370 /* MyCourseScheduleDayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DE101D00168700E10370 /* MyCourseScheduleDayController.m */; };
+		47B7DE141D00169B00E10370 /* MyCourseScheduleHourController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DE131D00169B00E10370 /* MyCourseScheduleHourController.m */; };
+		47B7DE171D0016AA00E10370 /* MyCourseScheduleTemplateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DE161D0016AA00E10370 /* MyCourseScheduleTemplateController.m */; };
+		47B7DE1A1D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DE191D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.m */; };
+		47B7DE1D1D00255E00E10370 /* MyCourseScheduleDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B7DE1C1D00255E00E10370 /* MyCourseScheduleDayCell.m */; };
 		47B92CD81CD992D600EBECCD /* FBTAttendanceTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */; };
 		47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E801CC861BA009EC803 /* FootballTeamScheduleController.m */; };
 		47BE6E841CC862E9009EC803 /* FootballTeamScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BE6E831CC862E9009EC803 /* FootballTeamScheduleCell.m */; };
@@ -135,6 +140,16 @@
 		4793EFA31CE45F6000CCEEE9 /* FootballTeamCostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballTeamCostCell.m; sourceTree = "<group>"; };
 		4793EFA51CE45F8200CCEEE9 /* FBTCostHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTCostHeaderView.h; sourceTree = "<group>"; };
 		4793EFA61CE45F8200CCEEE9 /* FBTCostHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTCostHeaderView.m; sourceTree = "<group>"; };
+		47B7DE0F1D00168700E10370 /* MyCourseScheduleDayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseScheduleDayController.h; sourceTree = "<group>"; };
+		47B7DE101D00168700E10370 /* MyCourseScheduleDayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseScheduleDayController.m; sourceTree = "<group>"; };
+		47B7DE121D00169B00E10370 /* MyCourseScheduleHourController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseScheduleHourController.h; sourceTree = "<group>"; };
+		47B7DE131D00169B00E10370 /* MyCourseScheduleHourController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseScheduleHourController.m; sourceTree = "<group>"; };
+		47B7DE151D0016AA00E10370 /* MyCourseScheduleTemplateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseScheduleTemplateController.h; sourceTree = "<group>"; };
+		47B7DE161D0016AA00E10370 /* MyCourseScheduleTemplateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseScheduleTemplateController.m; sourceTree = "<group>"; };
+		47B7DE181D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseScheduleTemplateDetailController.h; sourceTree = "<group>"; };
+		47B7DE191D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseScheduleTemplateDetailController.m; sourceTree = "<group>"; };
+		47B7DE1B1D00255E00E10370 /* MyCourseScheduleDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseScheduleDayCell.h; sourceTree = "<group>"; };
+		47B7DE1C1D00255E00E10370 /* MyCourseScheduleDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseScheduleDayCell.m; sourceTree = "<group>"; };
 		47B92CD61CD992D600EBECCD /* FBTAttendanceTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTAttendanceTableHeaderView.h; sourceTree = "<group>"; };
 		47B92CD71CD992D600EBECCD /* FBTAttendanceTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTAttendanceTableHeaderView.m; sourceTree = "<group>"; };
 		47BE6E7F1CC861BA009EC803 /* FootballTeamScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballTeamScheduleController.h; sourceTree = "<group>"; };
@@ -375,6 +390,46 @@
 				47CBDE371CBCCF780003F746 /* CYGLocationManager */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		47B7DE0B1D0014CF00E10370 /* MyCourseScheduleDay */ = {
+			isa = PBXGroup;
+			children = (
+				47B7DE0C1D0014FE00E10370 /* MyCourseScheduleHour */,
+				47B7DE0F1D00168700E10370 /* MyCourseScheduleDayController.h */,
+				47B7DE101D00168700E10370 /* MyCourseScheduleDayController.m */,
+				47B7DE1B1D00255E00E10370 /* MyCourseScheduleDayCell.h */,
+				47B7DE1C1D00255E00E10370 /* MyCourseScheduleDayCell.m */,
+			);
+			path = MyCourseScheduleDay;
+			sourceTree = "<group>";
+		};
+		47B7DE0C1D0014FE00E10370 /* MyCourseScheduleHour */ = {
+			isa = PBXGroup;
+			children = (
+				47B7DE121D00169B00E10370 /* MyCourseScheduleHourController.h */,
+				47B7DE131D00169B00E10370 /* MyCourseScheduleHourController.m */,
+			);
+			path = MyCourseScheduleHour;
+			sourceTree = "<group>";
+		};
+		47B7DE0D1D0015A600E10370 /* MyCourseScheduleTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				47B7DE0E1D0015D500E10370 /* MyCourseScheduleTemplateDetail */,
+				47B7DE151D0016AA00E10370 /* MyCourseScheduleTemplateController.h */,
+				47B7DE161D0016AA00E10370 /* MyCourseScheduleTemplateController.m */,
+			);
+			path = MyCourseScheduleTemplate;
+			sourceTree = "<group>";
+		};
+		47B7DE0E1D0015D500E10370 /* MyCourseScheduleTemplateDetail */ = {
+			isa = PBXGroup;
+			children = (
+				47B7DE181D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.h */,
+				47B7DE191D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.m */,
+			);
+			path = MyCourseScheduleTemplateDetail;
 			sourceTree = "<group>";
 		};
 		47BE6E7E1CC8619E009EC803 /* FootballTeamSchedule */ = {
@@ -679,6 +734,8 @@
 		A79F41061CFF607500538DEA /* MyCourseHome */ = {
 			isa = PBXGroup;
 			children = (
+				47B7DE0D1D0015A600E10370 /* MyCourseScheduleTemplate */,
+				47B7DE0B1D0014CF00E10370 /* MyCourseScheduleDay */,
 				A79F41071CFF609900538DEA /* MyCourseHomeViewController.h */,
 				A79F41081CFF609900538DEA /* MyCourseHomeViewController.m */,
 				A79F410A1CFF60C500538DEA /* MyCourseHomeCell.h */,
@@ -1161,6 +1218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B7DE111D00168700E10370 /* MyCourseScheduleDayController.m in Sources */,
 				47DEB7571CC6304C0007BD2B /* FootballTeamManageController.m in Sources */,
 				47EA2D221CDDC0D400A4545D /* DiscoverRecruitMainController.m in Sources */,
 				47E0DE601CD1F11D005AF586 /* PDFSegmentModel.m in Sources */,
@@ -1197,6 +1255,7 @@
 				A7BC21911CBEB0370058E5B0 /* FootballTeamCell.m in Sources */,
 				47ED38F81CDC2F2E002F9099 /* SiteReservationOrderController.m in Sources */,
 				A7BB35221CE2212C00E35FA3 /* FBTMPublishGameController.m in Sources */,
+				47B7DE1A1D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.m in Sources */,
 				A7BC21881CBEA1E80058E5B0 /* SiteReservationDetailController.m in Sources */,
 				A7A80F421CBAB4230034CE4B /* PDFTabBarController.m in Sources */,
 				47F43FEF1CD1AD16009C7414 /* PDFSegmentControl.m in Sources */,
@@ -1206,6 +1265,7 @@
 				471F68351CEC0A7400E122C4 /* MyCenterMessageViewController.m in Sources */,
 				A7BC218B1CBEA41C0058E5B0 /* SRDetailHeaderView.m in Sources */,
 				A79263861CD23CE50054991D /* FootballTeamPostedController.m in Sources */,
+				47B7DE141D00169B00E10370 /* MyCourseScheduleHourController.m in Sources */,
 				47CBDE421CBCDAA60003F746 /* CYGBasePopupView.m in Sources */,
 				477E1F681CDB35E80055B86D /* SRDetailCell.m in Sources */,
 				A7BC217E1CBE92140058E5B0 /* PDFSiteReservationController.m in Sources */,
@@ -1220,6 +1280,7 @@
 				A76DF72E1CAAAC630086389D /* main.m in Sources */,
 				A7A80F3E1CBAB3B80034CE4B /* PDFBaseNavigationController.m in Sources */,
 				A79F410C1CFF60C500538DEA /* MyCourseHomeCell.m in Sources */,
+				47B7DE171D0016AA00E10370 /* MyCourseScheduleTemplateController.m in Sources */,
 				47ED38FB1CDC7541002F9099 /* SROFootballTeamCell.m in Sources */,
 				A7A80F3B1CBAB39F0034CE4B /* PDFBaseViewController.m in Sources */,
 				47ED38FE1CDC7E2E002F9099 /* SROConfirmView.m in Sources */,
@@ -1227,6 +1288,7 @@
 				47ED39021CDC89D6002F9099 /* DatingFightingOrderController.m in Sources */,
 				47BE6E811CC861BA009EC803 /* FootballTeamScheduleController.m in Sources */,
 				471F68391CEC553E00E122C4 /* MyOrderViewController.m in Sources */,
+				47B7DE1D1D00255E00E10370 /* MyCourseScheduleDayCell.m in Sources */,
 				478454721CE07A34004F86F9 /* RecruitDetailViewController.m in Sources */,
 				A75F5A1C1CBD370F00EF1CD3 /* PDFPopupContentView.m in Sources */,
 				47DBBCD31CD8C80E00C8B630 /* FootballTeamAttendanceCell.m in Sources */,
