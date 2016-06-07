@@ -11,6 +11,7 @@
 
 #import "MyCourseHomeHeaderView.h"
 #import "MyCourseHomeCell.h"
+#import "MyCourseScheduleDayController.h"
 
 
 
@@ -99,8 +100,14 @@ static const CGFloat kTableViewHeaderHeight         = 150.0f;
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    RecruitDetailViewController *viewController = [[RecruitDetailViewController alloc] init];
-//    [self.navigationController pushViewController:viewController animated:YES];
+    if (indexPath.row == 0) {
+        MyCourseScheduleDayController *viewController = [[MyCourseScheduleDayController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.row == 1) {
+        
+    }
 }
 
 #pragma mark - LazyLoad

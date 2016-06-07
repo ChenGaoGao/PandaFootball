@@ -16,7 +16,6 @@
 #import "PDFSpaceView.h"
 #import "DatingFightingOrderController.h"
 
-static const CGFloat kLeftButtonWidth               = 50.0f;
 static const CGFloat kTableViewCellHeight           = 182.0f;
 
 @interface PDFDatingFightingController () <CYGBasePopupViewDelegate, PDFPopupContentViewDelegate, UITableViewDelegate, UITableViewDataSource>

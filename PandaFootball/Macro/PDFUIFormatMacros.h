@@ -85,7 +85,7 @@
 #define PDFLabelHeightDetailSmaller (12.0f)
 #define PDFLabelHeightDetailSmallest (10.0f)
 
-
+#define PDFLabelHeightTabBarDefault (11.0f)
 
 /**
  *  Space
