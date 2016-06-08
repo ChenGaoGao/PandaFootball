@@ -10,7 +10,7 @@
 #import "PDFPCHMacro.h"
 
 #import "MyCourseScheduleDayCell.h"
-
+#import "MyCourseScheduleHourController.h"
 
 
 static const CGFloat kTableViewCellHeight           = 70.0f;
@@ -44,6 +44,12 @@ static const CGFloat kBottomViewHeight              = 80.0f;
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - EventResponse
+- (void)checkButtonHandle:(UIButton *)sender {
+    MyCourseScheduleHourController *viewController = [[MyCourseScheduleHourController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -62,6 +68,10 @@ static const CGFloat kBottomViewHeight              = 80.0f;
     cell.dateLabel.text = @"05-22";
     cell.totalSeeeionLabel.text = @"20场";
     cell.reserveSeeeionLabel.text = @"16场";
+    cell.checkButton.tag = indexPath.row;
+    [cell.checkButton addTarget:self
+                         action:@selector(checkButtonHandle:)
+               forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -94,8 +104,8 @@ static const CGFloat kBottomViewHeight              = 80.0f;
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //    RecruitDetailViewController *viewController = [[RecruitDetailViewController alloc] init];
-    //    [self.navigationController pushViewController:viewController animated:YES];
+    MyCourseScheduleHourController *viewController = [[MyCourseScheduleHourController alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - LazyLoad
