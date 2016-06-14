@@ -12,6 +12,7 @@
 #import "MyCourseHomeHeaderView.h"
 #import "MyCourseHomeCell.h"
 #import "MyCourseScheduleDayController.h"
+#import "MyCourseScheduleTemplateController.h"
 
 
 
@@ -106,7 +107,8 @@ static const CGFloat kTableViewHeaderHeight         = 150.0f;
     }
     
     if (indexPath.row == 1) {
-        
+        MyCourseScheduleTemplateController *viewController = [[MyCourseScheduleTemplateController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
     }
 }
 

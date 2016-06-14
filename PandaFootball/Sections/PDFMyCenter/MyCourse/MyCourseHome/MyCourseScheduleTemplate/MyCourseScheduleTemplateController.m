@@ -9,11 +9,11 @@
 #import "MyCourseScheduleTemplateController.h"
 #import "PDFPCHMacro.h"
 
-#import "MyCourseScheduleHourCell.h"
+#import "MyCourseScheduleTemplateCell.h"
 
 
 
-static const CGFloat kTableViewCellHeight           = 77.0f;
+static const CGFloat kTableViewCellHeight           = 59.0f;
 
 @interface MyCourseScheduleTemplateController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -48,16 +48,12 @@ static const CGFloat kTableViewCellHeight           = 77.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MyCourseScheduleHourCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCourseScheduleHourCell"
+    MyCourseScheduleTemplateCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCourseScheduleTemplateCell"
                                                                      forIndexPath:indexPath];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.startTimeLabel.text = @"08:30";
-    cell.endTimeLabel.text = @"至 10:30";
-    cell.siteNumberLabel.text = @"1号场";
-    cell.headCountLabel.text = @"5人";
-    cell.costLabel.text = @"¥450";
+    cell.titleLabel.text = @"模版";
     
     return cell;
 }
@@ -106,7 +102,7 @@ static const CGFloat kTableViewCellHeight           = 77.0f;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         _tableView.separatorColor = PDFColorLineSplit;
         
-        [_tableView registerClass:[MyCourseScheduleHourCell class] forCellReuseIdentifier:@"MyCourseScheduleHourCell"];
+        [_tableView registerClass:[MyCourseScheduleTemplateCell class] forCellReuseIdentifier:@"MyCourseScheduleTemplateCell"];
     }
     return _tableView;
 }

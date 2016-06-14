@@ -12,6 +12,7 @@
 		471F68391CEC553E00E122C4 /* MyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F68381CEC553E00E122C4 /* MyOrderViewController.m */; };
 		471F683C1CEC572A00E122C4 /* MyOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471F683B1CEC572A00E122C4 /* MyOrderCell.m */; };
 		474923901CBF9AA5000E26A2 /* PDFDatingFightingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */; };
+		4764622F1D0FDDF00092BEEC /* MyCourseScheduleTemplateDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4764622E1D0FDDF00092BEEC /* MyCourseScheduleTemplateDetailCell.m */; };
 		477986131CFD2E7500717FE2 /* MyMessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477986121CFD2E7500717FE2 /* MyMessageListViewController.m */; };
 		477986161CFD2EA900717FE2 /* MyMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 477986151CFD2EA900717FE2 /* MyMessageListCell.m */; };
 		477986191CFD70FF00717FE2 /* MyMessageRecruitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 477986181CFD70FF00717FE2 /* MyMessageRecruitDetailViewController.m */; };
@@ -126,6 +127,8 @@
 		471F683B1CEC572A00E122C4 /* MyOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderCell.m; sourceTree = "<group>"; };
 		4749238E1CBF9AA5000E26A2 /* PDFDatingFightingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFDatingFightingCell.h; sourceTree = "<group>"; };
 		4749238F1CBF9AA5000E26A2 /* PDFDatingFightingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFDatingFightingCell.m; sourceTree = "<group>"; };
+		4764622D1D0FDDF00092BEEC /* MyCourseScheduleTemplateDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCourseScheduleTemplateDetailCell.h; sourceTree = "<group>"; };
+		4764622E1D0FDDF00092BEEC /* MyCourseScheduleTemplateDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCourseScheduleTemplateDetailCell.m; sourceTree = "<group>"; };
 		477986111CFD2E7500717FE2 /* MyMessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageListViewController.h; sourceTree = "<group>"; };
 		477986121CFD2E7500717FE2 /* MyMessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMessageListViewController.m; sourceTree = "<group>"; };
 		477986141CFD2EA900717FE2 /* MyMessageListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMessageListCell.h; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 			children = (
 				47B7DE181D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.h */,
 				47B7DE191D0016BC00E10370 /* MyCourseScheduleTemplateDetailController.m */,
+				4764622D1D0FDDF00092BEEC /* MyCourseScheduleTemplateDetailCell.h */,
+				4764622E1D0FDDF00092BEEC /* MyCourseScheduleTemplateDetailCell.m */,
 			);
 			path = MyCourseScheduleTemplateDetail;
 			sourceTree = "<group>";
@@ -1254,6 +1259,7 @@
 				47F1AF611CE2CF21009519AD /* FootballTeamPlayerCell.m in Sources */,
 				A7A80F4D1CBAB6350034CE4B /* PDFDiscoverController.m in Sources */,
 				47EA2D251CDDC12100A4545D /* DiscoverRecruitViewController.m in Sources */,
+				4764622F1D0FDDF00092BEEC /* MyCourseScheduleTemplateDetailCell.m in Sources */,
 				A79F41051CFF5B4300538DEA /* MyCourseViewController.m in Sources */,
 				A7A80F4A1CBAB6210034CE4B /* PDFHomePageController.m in Sources */,
 				A7BB35281CE2215200E35FA3 /* FBTMTypeInStandingsController.m in Sources */,

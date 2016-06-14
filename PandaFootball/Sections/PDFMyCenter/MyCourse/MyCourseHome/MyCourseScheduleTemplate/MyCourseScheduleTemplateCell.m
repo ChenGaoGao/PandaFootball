@@ -65,6 +65,8 @@ const static CGFloat kButtonHeight              = 49.0f;
     _iconView = [[UIImageView alloc] init];
     _iconView.frame = CGRectMake(PDFSpaceBigger, VIEW_BOTTOM(_spaceView) + PDFSpaceBiggish, kIconViewHeight, kIconViewHeight);
     
+    _iconView.backgroundColor = PDFColorRed;
+    
     return _iconView;
 }
 
@@ -74,7 +76,7 @@ const static CGFloat kButtonHeight              = 49.0f;
     }
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.frame = CGRectMake(VIEW_RIGHT(_iconView) + PDFSpaceSmallest,
-                                   VIEW_BOTTOM(_spaceView) + PDFSpaceBiggish,
+                                   VIEW_BOTTOM(_spaceView),
                                    MAIN_WIDTH - (VIEW_RIGHT(_iconView) + PDFSpaceSmallest)
                                    - (kButtonWidth * 2 + PDFSpaceSmallest),
                                    kButtonHeight);
@@ -102,7 +104,7 @@ const static CGFloat kButtonHeight              = 49.0f;
         return _deleteButton;
     }
     _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _deleteButton.frame = CGRectMake(VIEW_RIGHT(_editButton), VIEW_BOTTOM(_spaceView), kButtonHeight, kButtonHeight);
+    _deleteButton.frame = CGRectMake(VIEW_RIGHT(_editButton), VIEW_BOTTOM(_spaceView), kButtonWidth, kButtonHeight);
     
     _deleteButton.backgroundColor = PDFColorGreen;
     
