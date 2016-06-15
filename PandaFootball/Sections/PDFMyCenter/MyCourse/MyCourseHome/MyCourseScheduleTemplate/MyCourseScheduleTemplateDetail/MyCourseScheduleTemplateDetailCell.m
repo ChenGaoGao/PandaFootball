@@ -8,18 +8,26 @@
 
 #import "MyCourseScheduleTemplateDetailCell.h"
 #import "PDFUIFormatMacros.h"
+#import "PDFSpaceView.h"
 
 
 static const CGFloat kStartTimeLabelWidth       = 55.0f;
-static const CGFloat kStateLabelWidth           = 70.0f;
-static const CGFloat kStateLabelHeight          = 32.0f;
 const static CGFloat kButtonWidth               = 36.0f;
+const static CGFloat kButtonHeight              = 57.0f;
+
+
+@interface MyCourseScheduleTemplateDetailCell ()
+
+@property (nonatomic, strong) PDFSpaceView *spaceView;
+
+@end
 
 @implementation MyCourseScheduleTemplateDetailCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        [self addSubview:self.spaceView];
         [self addSubview:self.startTimeLabel];
         [self addSubview:self.endTimeLabel];
         [self addSubview:self.siteNumberLabel];
@@ -44,10 +52,18 @@ const static CGFloat kButtonWidth               = 36.0f;
 }
 
 #pragma mark - LazyLoad
+- (PDFSpaceView *)spaceView {
+    if (!_spaceView) {
+        _spaceView = [[PDFSpaceView alloc] init];
+        _spaceView.frame = CGRectMake(0, 0, MAIN_WIDTH, PDFSpaceSmallest);
+    }
+    return _spaceView;
+}
+
 - (UILabel *)startTimeLabel {
     if (!_startTimeLabel) {
         _startTimeLabel = [[UILabel alloc] init];
-        _startTimeLabel.frame = CGRectMake(PDFSpaceDefault, PDFSpaceBigger,
+        _startTimeLabel.frame = CGRectMake(PDFSpaceDefault, VIEW_BOTTOM(_spaceView) + PDFSpaceSmallest,
                                            kStartTimeLabelWidth, PDFLabelHeightBodyBigger);
         
         _startTimeLabel.font = [UIFont fontWithName:@"DBLCDTempBlack" size:17];
@@ -74,7 +90,7 @@ const static CGFloat kButtonWidth               = 36.0f;
     if (!_siteNumberLabel) {
         _siteNumberLabel = [[UILabel alloc] init];
         _siteNumberLabel.frame = CGRectMake(VIEW_RIGHT(_startTimeLabel) + PDFSpaceBigger,
-                                            PDFSpaceBigger,
+                                            VIEW_BOTTOM(_spaceView) + PDFSpaceSmallest,
                                             kStartTimeLabelWidth,
                                             PDFLabelHeightBodyBigger);
         
@@ -101,10 +117,12 @@ const static CGFloat kButtonWidth               = 36.0f;
 - (UILabel *)costLabel {
     if (!_costLabel) {
         _costLabel = [[UILabel alloc] init];
-        _costLabel.frame = CGRectMake(MAIN_WIDTH - PDFSpaceDefault - kStateLabelWidth * 2 - PDFSpaceBiggest,
-                                      22.5,
-                                      kStateLabelWidth,
-                                      kStateLabelHeight);
+        _costLabel.frame = CGRectMake(VIEW_RIGHT(_siteNumberLabel) + PDFSpaceDefault,
+                                      VIEW_BOTTOM(_spaceView),
+                                      MAIN_WIDTH - (VIEW_RIGHT(_siteNumberLabel) + PDFSpaceDefault)
+                                      - (kButtonWidth * 2 + PDFSpaceSmallest)
+                                      ,
+                                      kButtonHeight);
         
         _costLabel.font = PDFFontDetailDefault;
         _costLabel.textColor = PDFColorOrange;
@@ -118,7 +136,7 @@ const static CGFloat kButtonWidth               = 36.0f;
         return _editButton;
     }
     _editButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    _editButton.frame = CGRectMake(VIEW_RIGHT(_costLabel), 0, kButtonWidth, kButtonHeight);
+    _editButton.frame = CGRectMake(VIEW_RIGHT(_costLabel), VIEW_BOTTOM(_spaceView), kButtonWidth, kButtonHeight);
     
     _editButton.backgroundColor = PDFColorRed;
     
@@ -130,7 +148,7 @@ const static CGFloat kButtonWidth               = 36.0f;
         return _deleteButton;
     }
     _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    _deleteButton.frame = CGRectMake(VIEW_RIGHT(_costLabel), 0, kButtonWidth, kButtonHeight);
+    _deleteButton.frame = CGRectMake(VIEW_RIGHT(_editButton), VIEW_BOTTOM(_spaceView), kButtonWidth, kButtonHeight);
     
     _deleteButton.backgroundColor = PDFColorGreen;
     
